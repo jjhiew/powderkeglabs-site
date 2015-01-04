@@ -23,7 +23,7 @@
   @type Array
   @default []
 -->
-<polymer-element name="nav-service" attributes="navItems">
+<polymer-element name="pkl-nav-service" attributes="navItems">
   <template>
     <style>
     :host {
@@ -38,7 +38,7 @@
     </core-ajax>
   </template>
   <script>
-  Polymer('nav-service', {
+  Polymer('pkl-nav-service', {
     created: function() {
       this.navItems = [];
     },

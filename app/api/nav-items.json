@@ -1,5 +1,5 @@
 [
-      {"name": "Home", "hash": "home", "icon": "home", "url": "/"},
-      {"name": "Team", "hash": "team", "icon": "social:people", "url": "/team.html"},
-      {"name": "Contact", "hash": "contact", "icon": "mail", "url":"/contact.html"}
+      {"name": "Home", "hash": "home", "icon": "home", "url": "/#/"},
+      {"name": "Team", "hash": "team", "icon": "social:people", "url": "/#/team"},
+      {"name": "Contact", "hash": "contact", "icon": "mail", "url":"/#/contact"}
 ]

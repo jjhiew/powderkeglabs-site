@@ -1,0 +1,57 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+
+<polymer-element name="pkl-profile-card" noscript>
+  <template>      
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/styles/skeleton.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    
+    <style>
+      .person {
+          position: relative;
+          border-top: 1px solid #eee;
+          padding: 40px 0;
+          margin-bottom: 0;
+      }
+
+      polyfill-next-selector { content: '.person img'; }
+      .person ::content img {
+        width: 100%;
+        position: relative;
+      }
+
+      polyfill-next-selector { content: '.person h4'; }
+      .person ::content h4{
+        position: absolute;
+        top: 50px;
+        left: 10px;
+        font-size: 30px;
+        color:#fff;
+        background-color: #333;
+        padding: 5px 5px 5px 5px;
+        opacity: 0.93;
+      }
+
+      polyfill-next-selector { content: '.person h6'; }
+      .person ::content h6{
+        position: absolute;
+        top: 105px;
+        font-size: 18px;
+        left: 10px;
+        color:#fff;
+        background-color: #333;
+        padding: 5px 5px 5px 5px;
+        opacity: 0.93;
+      }
+
+    </style>
+
+   <div class="person">
+    <!-- <content select="img"></content> -->
+    <content select="h4"></content>
+    <content select="h6"></content>
+    <content select="p"></content>          
+  </div>
+    
+  </template>
+</polymer-element>

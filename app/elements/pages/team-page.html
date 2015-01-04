@@ -1,0 +1,38 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/elements/layouts/sidebar-layout.html">
+<link rel="import" href="/elements/profile-card/profile-card.html">
+<link rel="import" href="/elements/services/people-service.html">
+
+<polymer-element name="pkl-team-page" attributes="selected" noscript>
+
+  <template>    
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }    
+    </style>
+
+    <pkl-sidebar-layout selected="team">
+      <div class="title">The Team</div>
+
+    <!--Content Container Start -->
+      <div class="content">
+        <template repeat="{{person in peopleItems}}"> 
+          <profile-card>
+            <h4>{{person.name}}</h4>
+            <h6>{{person.title}}</h6>
+            <!-- <img src="{{person.image}}" /> -->
+            <p>{{person.description}}</p>
+          </profile-card>
+        </template>
+      </div>
+      <!-- End Container -->
+    </pkl-sidebar-layout>
+    <pkl-people-service id="peopleService" peopleItems="{{peopleItems}}"></pkl-people-service>
+  </template>
+
+</polymer-element>

@@ -23,7 +23,7 @@
   @type Array
   @default []
 -->
-<polymer-element name="people-service" attributes="peopleItems">
+<polymer-element name="pkl-people-service" attributes="peopleItems">
   <template>
     <style>
     :host {
@@ -38,7 +38,7 @@
     </core-ajax>
   </template>
   <script>
-  Polymer('people-service', {
+  Polymer('pkl-people-service', {
     created: function() {
       this.peopleItems = [];
     },

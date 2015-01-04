@@ -1,0 +1,53 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/elements/layouts/sidebar-layout.html">
+
+<polymer-element name="pkl-contact-page" attributes="selected" noscript>
+  <template>
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }
+      :host .container {
+        text-align: left;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+      :host #apply{
+        border-top: 0px;
+      }
+    </style>
+    <pkl-sidebar-layout selected="contact">
+      <div class="title">Contact Us</div>
+
+      <!-- Start Content Container -->
+      <div class="content">        
+
+        <section class="contact">
+          <div class="section container" id="apply">
+            <h6>Apply</h6>
+            <p>Send us an email at <a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a> with ... </p>
+            <ul>
+              <li>a brief description about your company and what you do;</li>
+              <li>what technical problems you're having; and</li>
+              <li>where you see us helping.</li>
+            </ul>
+
+            <p>Keep it short, 200 words or less.</p>
+
+            <p>We'll review your application and contact you with further details.</p>      
+          </div>
+
+          <div class="section container" layout horizontal center>
+            <p>For all other inquiries, please send an email to <a href="mailto:contact@powderkeglabs.com">contact@powderkeglabs.com</a>.</p>
+          </div>
+        </section>
+      </div>
+      <!-- End Content Container -->
+
+    </pkl-sidebar-layout>
+  </template>
+</polymer-element>

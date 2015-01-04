@@ -13,6 +13,9 @@
   <!-- FONT -->
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>  
 
+  <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" shim-shadowdom>
+  <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+
   <!-- build:css styles/main.css -->  
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
@@ -22,13 +25,13 @@
   <!-- endbuild -->
 
   <!-- build:vulcanized elements/elements.vulcanized.html -->
-  <link rel="import" href="elements/elements.html">
+  <link rel="import" href="/elements/app.html">
   <!-- endbuild-->
 </head>
 
 <body unresolved fullbleed layout horizontal>
 
-  <home-page selected="home"></home-page>
+  <pkl-app></pkl-app>
 
   <!-- build:js scripts/app.js -->
   <script src="scripts/app.js"></script>

@@ -1,6 +1,6 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 
-<polymer-element name="site-footer">
+<polymer-element name="pkl-site-footer">
   <template>      
     <style>
       :host {        
@@ -34,7 +34,7 @@
   </template>
 
   <script>  
-    Polymer({     
+    Polymer('pkl-site-footer',{     
       ready: function(){
         this.$.year.textContent = new Date().getFullYear();
       }

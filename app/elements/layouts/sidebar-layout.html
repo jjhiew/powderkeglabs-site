@@ -8,10 +8,10 @@
 <link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
 
 <!-- Custom Elements -->
-<link rel="import" href="/services/nav-service.html">
+<link rel="import" href="/elements/services/nav-service.html">
 <link rel="import" href="/elements/site-footer/site-footer.html">
 
-<polymer-element name="sidebar-layout" attributes="selected screenQuery">
+<polymer-element name="pkl-sidebar-layout" attributes="selected screenQuery">
 
   <template>
 
@@ -56,20 +56,20 @@
 
         </core-toolbar>
       
-        <div class="">
+        <div class="">          
           <content select=".content"></content>
-          <site-footer></site-footer>
+          <pkl-site-footer></pkl-site-footer>
         </div>
       </core-header-panel>
     </core-drawer-panel>
     
     <!-- Get the Nav Items -->
-    <nav-service id="navService" navItems="{{navItems}}"></nav-service>
+    <pkl-nav-service id="navService" navItems="{{navItems}}"></pkl-nav-service>
     <core-media-query query="{{screenQuery}}" queryMatches="{{smallScreen}}"></core-media-query>
     
   </template>
   <script>
-    Polymer('sidebar-layout', {
+    Polymer('pkl-sidebar-layout', {
       screenQuery: 'max-width: 800px',
       ready: function() {
         var menuIconButton = this.$.menuIconButton;

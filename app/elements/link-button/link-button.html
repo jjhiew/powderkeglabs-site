@@ -2,7 +2,7 @@
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/core-icons/core-icons.html">
 
-<polymer-element name="link-button" attributes="icon label href primary">
+<polymer-element name="pkl-link-button" attributes="icon label href primary">
   <template>
     <style>
     :host {
@@ -41,7 +41,7 @@
   </template>
 
   <script>
-    Polymer('link-button', {
+    Polymer('pkl-link-button', {
       buttonClick: function(e){
         var url = this.href;
         window.setTimeout(function(){

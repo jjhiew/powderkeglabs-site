@@ -1,0 +1,13 @@
+<!-- Polymer Imports -->
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/app-router/app-router.html">
+
+<polymer-element name="pkl-app" attributes="selected screenQuery" noscript>
+  <template>
+    <app-router>
+      <app-route path="/" import="/elements/pages/home-page.html" element="pkl-home-page"></app-route>
+      <app-route path="/contact" import="/elements/pages/contact-page.html" element="pkl-contact-page"></app-route>
+      <app-route path="/team" import="/elements/pages/team-page.html" element="pkl-team-page"><
+    </app-router>
+  </template>
+</polymer-element>
