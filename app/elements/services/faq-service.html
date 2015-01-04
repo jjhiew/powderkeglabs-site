@@ -1,0 +1,50 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+<!-- 
+  
+  Provides a very simple API: `faq` returns the list of faq items.
+  
+  @element faq-service
+  @demo 
+  @homepage 
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  {
+    "question": "Am I Cool?", 
+    "answer": "Oh yea.  Very cool."
+  }
+  
+  @attribute faqItems 
+  @type Array
+  @default []
+-->
+<polymer-element name="pkl-faq-service" attributes="faqItems">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="/api/faq.json"
+      on-core-response="{{faqItemsLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('pkl-faq-service', {
+    created: function() {
+      this.faqItems = [];
+    },
+    faqItemsLoaded: function() {
+      // Make a copy of the loaded data
+      this.faqItems = this.$.ajax.response.slice(0);
+      console.log(this.faqItems);
+    }
+  });
+  </script>
+</polymer-element>

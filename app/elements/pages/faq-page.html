@@ -1,0 +1,43 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/elements/layouts/sidebar-layout.html">
+<link rel="import" href="/elements/services/faq-service.html">
+
+<polymer-element name="pkl-faq-page" attributes="selected" noscript>
+
+  <template>    
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
+    <style>
+      :host {
+        display: block;
+        width: 100%;
+      }
+
+      :host h6 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+
+    <pkl-sidebar-layout selected="faq">
+      <div class="title">FAQ</div>
+
+      <!--Content Container Start -->
+      <div class="content">
+
+        <section class="faq">
+          <div class="container">
+            <template repeat="{{faq in faqItems}}"> 
+              <h6>{{faq.question}}</h6>
+              <p>{{faq.answer}}</p>
+            </template>
+          </div>
+        </section>
+      </div>
+      <!-- End Container -->
+    </pkl-sidebar-layout>
+    <pkl-faq-service id="faqService" faqItems="{{faqItems}}"></pkl-faq-service>
+  </template>
+
+</polymer-element>
