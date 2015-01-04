@@ -1,0 +1,76 @@
+/** sidebar */
+:host /deep/ core-header-panel[navigation] {
+  background-color: #fff
+}
+
+:host /deep/ core-header-panel[navigation] core-toolbar{
+  background-color: #607d8b;
+  color: #fff;
+}
+
+:host /deep/ core-header-panel[navigation] core-item {
+  padding: 2px 12px;
+  line-height: 40px;
+}
+:host /deep/ core-header-panel[navigation] a:not(:first-of-type) core-item {
+  border-top: 1px solid #f5f5f5;
+}
+:host /deep/ core-header-panel[navigation] a {
+  color: #555;
+  text-decoration: none;
+}
+:host /deep/ core-header-panel[navigation] a:hover core-item,
+:host /deep/ core-header-panel[navigation] a:focus core-item {
+}
+
+:host /deep/ core-header-panel[navigation] a[active] core-item {
+  color: #000;
+  font-weight: 600;
+  background-color: #cfd8dc
+}
+
+/** toolbar */
+:host /deep/ core-toolbar {
+}
+
+/** main content */
+:host /deep/ core-header-panel[main] {
+  background-color: #fff;
+}
+
+:host /deep/ core-header-panel[main] core-toolbar{
+  background-color: #607d8b;
+  color: #fff;
+}
+
+.container {
+  padding: 20px;
+}
+
+:host /deep/ .dark {
+  color: #555;
+}
+
+:host /deep/ a.nav-links{
+  text-decoration: none;
+  color: #ddd;
+  padding-left: 20px;
+  font-size: 18px;
+  -o-transition: color 0.2s linear;
+  -moz-transition: color 0.2s linear;
+  -khtml-transition: color 0.2s linear;
+  -webkit-transition: color 0.2s linear;
+  -ms-transition: color 0.2s linear;
+  transition: color 0.2s linear;        
+}
+
+:host /deep/ a.nav-links[active]{
+  color: #fff;
+  font-weight: 600
+}
+
+:host /deep/ a.nav-links:hover, a.nav-links:focus {
+  color: #1EAEDB;
+};
+
+

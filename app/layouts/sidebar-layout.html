@@ -1,0 +1,84 @@
+<!-- Polymer Imports -->
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-drawer-panel/core-drawer-panel.html">
+<link rel="import" href="/bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="/bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="/bower_components/core-item/core-item.html">
+<link rel="import" href="/bower_components/core-icons/social-icons.html">
+<link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+
+<!-- Custom Elements -->
+<link rel="import" href="/services/nav-service.html">
+<link rel="import" href="/elements/site-footer/site-footer.html">
+
+<polymer-element name="sidebar-layout" attributes="selected screenQuery">
+
+  <template>
+
+    <link rel="stylesheet" href="sidebar-layout.css">
+
+    <core-drawer-panel rightDrawer disableSwipe="true" responsiveWidth="9999px" id="drawerPanel">
+
+      <core-header-panel drawer navigation flex mode="standard">
+        <core-toolbar>Powder Keg Labs</core-toolbar>
+
+        <template repeat="{{navItem in navItems}}">
+          <a active?="{{selected == navItem.hash}}" href="{{navItem.url}}">
+            <core-item icon="{{navItem.icon}}" label="{{navItem.name}}"></core-item>
+          </a>
+        </template>
+
+      </core-header-panel>
+
+      <core-header-panel main id="mainPanel" mode="standard">
+        <core-toolbar id="mainHeader">
+          <div flex tool class="header-title">
+            <content select=".title"></content>
+          </div>
+
+          <!-- Show links for larger screen sizes -->
+          <div tool horizontal layout flex end-justified hidden?="{{smallScreen}}" class="large-nav">
+            <template repeat="{{navItem in navItems}}">
+              <a active?="{{selected == navItem.hash}}" href="{{navItem.url}}" class="nav-links">
+                <core-item label="{{navItem.name}}"></core-item>
+              </a>
+            </template>
+          </div>
+          <!-- /Links for larger screen sizes -->
+
+          <!-- Show menu button for smaller screen sizes -->
+          <div tool hidden?="{{!smallScreen}}">
+            <core-icon-button id="menuIconButton" icon="menu">
+            </core-icon-button>
+          </div>
+
+          <!-- /Menu button for smaller screen sizes -->
+
+        </core-toolbar>
+      
+        <div class="">
+          <content select=".content"></content>
+          <site-footer></site-footer>
+        </div>
+      </core-header-panel>
+    </core-drawer-panel>
+    
+    <!-- Get the Nav Items -->
+    <nav-service id="navService" navItems="{{navItems}}"></nav-service>
+    <core-media-query query="{{screenQuery}}" queryMatches="{{smallScreen}}"></core-media-query>
+    
+  </template>
+  <script>
+    Polymer('sidebar-layout', {
+      screenQuery: 'max-width: 800px',
+      ready: function() {
+        var menuIconButton = this.$.menuIconButton;
+        var drawerPanel = this.$.drawerPanel
+        menuIconButton.addEventListener('click', function(){
+          drawerPanel.togglePanel();
+        });
+      }
+    });
+  </script>
+
+</polymer-element>

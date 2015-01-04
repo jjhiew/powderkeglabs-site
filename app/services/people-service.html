@@ -1,0 +1,52 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+<!-- 
+  
+  Provides a very simple API: `navItems` returns the list of people items.
+  
+  @element nav-service
+  @demo 
+  @homepage 
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  {
+    "name": "Wile E. Coyote", 
+    "title": "Genius", 
+    "image": "genius.jpg", 
+    "description": "An evil genius"
+  }
+  
+  @attribute peopleItems 
+  @type Array
+  @default []
+-->
+<polymer-element name="people-service" attributes="peopleItems">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="/api/people.json"
+      on-core-response="{{peopleItemsLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('people-service', {
+    created: function() {
+      this.peopleItems = [];
+    },
+    peopleItemsLoaded: function() {
+      // Make a copy of the loaded data
+      this.peopleItems = this.$.ajax.response.slice(0);
+      console.log(this.peopleItems);
+    }
+  });
+  </script>
+</polymer-element>

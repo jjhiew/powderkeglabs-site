@@ -1,0 +1,52 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+<!-- 
+  
+  Provides a very simple API: `navItems` returns the list of navigation items.
+  
+  @element nav-service
+  @demo 
+  @homepage 
+-->
+
+<!--
+  An array of post objects, with the following format:
+
+  {
+    "name": "Home", 
+    "hash": "one", 
+    "icon": "home", 
+    "url": "index.html"
+  }
+  
+  @attribute navItems 
+  @type Array
+  @default []
+-->
+<polymer-element name="nav-service" attributes="navItems">
+  <template>
+    <style>
+    :host {
+      display: none;
+    }
+    </style>
+    <core-ajax id="ajax"
+      auto
+      url="/api/nav-items.json"
+      on-core-response="{{navItemsLoaded}}"
+      handleAs="json">
+    </core-ajax>
+  </template>
+  <script>
+  Polymer('nav-service', {
+    created: function() {
+      this.navItems = [];
+    },
+    navItemsLoaded: function() {
+      // Make a copy of the loaded data
+      this.navItems = this.$.ajax.response.slice(0);
+      console.log(this.navItems);
+    }
+  });
+  </script>
+</polymer-element>

@@ -1,0 +1,55 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
+
+<polymer-element name="link-button" attributes="icon label href primary">
+  <template>
+    <style>
+    :host {
+      display: block;
+      width: 100%;
+      font-size:14px;
+      opacity: 0.87
+    }
+
+    :host /deep/ paper-button {
+      border-radius: 4px;
+    }
+
+    :host /deep/ paper-button[primary] {
+      background-color: #03a9f4;
+      color: #fff;
+    }
+
+    .icon {
+      margin-right:5px;
+    }
+
+    .label{
+      vertical-align: middle;
+    }
+ 
+    </style>  
+    
+    <paper-button raised on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
+      <div layout horizontal center>
+        <core-icon flex icon="{{icon}}" class="icon"></core-icon>
+        <span class="label">{{label}}</span>
+      </div>
+    </paper-button>
+
+  </template>
+
+  <script>
+    Polymer('link-button', {
+      buttonClick: function(e){
+        var url = this.href;
+        window.setTimeout(function(){
+          window.location.href=url;
+        }, 100);
+      }
+    });
+  </script>
+
+
+</polymer-element>
