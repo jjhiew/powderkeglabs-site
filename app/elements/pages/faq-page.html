@@ -14,9 +14,18 @@
         width: 100%;
       }
 
+      :host .faq {
+        padding-top: 30px;
+      }
+
+      :host .qa {        
+        padding-top: 20px;
+      }
+
       :host h6 {
         font-size: 18px;
         font-weight: 600;
+        margin-bottom: 5px
       }
     </style>
 
@@ -29,8 +38,10 @@
         <section class="faq">
           <div class="container">
             <template repeat="{{faq in faqItems}}"> 
-              <h6>{{faq.question}}</h6>
-              <p>{{faq.answer}}</p>
+              <div class="qa">
+                <h6>{{faq.question}}</h6>
+                <p>{{faq.answer}}</p>
+              </div>
             </template>
           </div>
         </section>

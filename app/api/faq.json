@@ -1,18 +1,38 @@
 [
       {
       	"question": "How long does the program run for?", 
-      	"answer": "3 to 6 months"
+      	"answer": "We typically run 3 month cohorts."
       },
       {
-      	"question": "Can we stay in the program for more than 3 months?", 
-      	"answer": "Yes, we use 3 months as a progress milestone. "
+      	"question": "Can we stay in the program for longer?", 
+      	"answer": "Yes, we use 3 months as a progress milestone, but can discuss a longer program."
       },
+      {
+            "question": "How will your program help our startup?",
+            "answer": "Our goal is to give your company a technical push, to reach the next level.  For new startups, we'll focus on speed, learning and iteration; the goal to build your MVP and get your first customers. For a later stage startup, we'll focus on scaling and growth. In any case, your company would benefit from the services of a full-time a CTO and a tech team for a period of time. Send in an application and let us know how we'd help your company."
+      },      
       {
       	"question": "What's your compensation model?", 
-      	"answer": "It depends on the startup and the services they'll need. Generally speaking, we'll ask for a small fee and an equity percentage equivalent to the time we're investing. Our compensation model is flexible, so startups at any stage and resource level will be able to join the program."
+      	"answer": "It depends on your startup and the services you'll need. Generally speaking, we'll ask for a small fee and an equity percentage equivalent to the time we're investing. Our compensation model is flexible, so startups at any stage and resource level will be able to join the program."
       },
       {
       	"question": "Do you only work with startups?", 
       	"answer": "Nope, we'll work with solo entreprenuers or large companies. Send us an application and we'll get back to you."
+      },
+      {
+            "question": "What tech stacks do develop in?", 
+            "answer": "Our team has been in the game long enough to be able to develop in any stack given enough time.  With that said, our current web specialties are the MEAN and LAMP stacks. For mobile, we prefer native iOS and Android development over JS frameworks." 
+      },
+      {
+            "question": "Do you only work with software startups?", 
+            "answer": "Our background is software development, but we'd love to try the hardware space.  Send us an application and we'll let you know if we can help." 
+      },      
+      {
+            "question": "Do you only work with startups in Toronto?", 
+            "answer": "Yes, at this time.  However, we are flexible. If you're ok working remotely, send in your application and we'll take a look." 
+      },
+      {
+            "question": "What's this site built in?",
+            "answer": "The Polymer framework and hosted on Github."
       }
 ]
