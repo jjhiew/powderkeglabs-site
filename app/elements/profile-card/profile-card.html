@@ -1,6 +1,10 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="/bower_components/core-collapse/core-collapse.html">
+<link rel="import" href="/bower_components/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="/bower_components/paper-button/paper-button.html">
 
-<polymer-element name="pkl-profile-card" noscript>
+<polymer-element name="pkl-profile-card" attributes="id">
   <template>      
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css">    
@@ -48,18 +52,62 @@
         color: #333;
         opacity: 0.87
       }
+
+
+      :host .person__collapse__description {
+        padding-top: 10px;
+        font-style: italic;
+
+      }
+
+      :host /deep/ .person__dialog {
+        position; fixed;
+        top: 20px;
+        right: 20px;
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <div class="person" layout horizontal center>
-      <div class="person__image"></div>
-      <!-- <content select="img"></content> -->
-      <div class="person__details" flex>
-        <content select="h4"></content>
-        <content select="h6"></content>
+    <div class="person">
+
+      <div class="person__snippet" layout horizontal center>
+        <div class="person__image"></div>
+        <!-- <content select="img"></content> -->
+        <div class="person__details" flex>
+          <content select="h4"></content>
+          <content select="h6"></content>
+        </div>
+
+        <div class="person__indicator">
+          <core-icon-button icon="chevron-right" id="collapse-button" on-click="{{toggle}}"></core-icon-button>
+        </div>
       </div>
-      <!-- <content select="p"></content> -->
-    </div>
+      
+    <!-- <div class="person__collapse">
+      <core-collapse id="collapse">
+        <div class="person__collapse__description"><content select="p"></content></div>
+      </core-collapse>
+    </div> -->
     
+      <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
+        <content select="p"></content>
+        <paper-button affirmative>Close</paper-button>
+      </paper-action-dialog>
+    </div>
+
   </template>
+
+  <script>
+    Polymer('pkl-profile-card', {
+      ready: function(){
+        // this.$.collapse.opened=true;
+      },
+      toggle: function(e){
+        // this.$.collapse.toggle();
+        this.$.dialog.toggle();
+      }
+    });
+  </script>
+
 </polymer-element>

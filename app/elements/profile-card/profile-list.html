@@ -1,0 +1,36 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/marked-element/marked-element.html">
+
+<link rel="import" href="/elements/profile-card/profile-card.html">
+<link rel="import" href="/elements/services/people-service.html">
+
+<polymer-element name="pkl-profile-list" noscript>
+  <template>      
+    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/styles/skeleton.css">    
+    <style>
+      :host {
+          
+      }
+
+      :host .person__container {
+        margin-bottom: 75px;
+        margin-top: 0px;
+      }
+
+    </style>
+    <link rel="stylesheet" href="/styles/main.css">
+
+    <div class="container person__container">
+      <template repeat="{{person in peopleItems}}">         
+        <pkl-profile-card id="{{person.id}}">
+          <h4>{{person.name}}</h4>
+          <h6>{{person.title}}</h6>
+          <p><marked-element>{{person.description}}</marked-element></p>
+        </pkl-profile-card>
+      </template>
+    </div>
+
+    <pkl-people-service id="peopleService" peopleItems="{{peopleItems}}"></pkl-people-service>
+  </template>
+</polymer-element>

@@ -1,8 +1,6 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/bower_components/marked-element/marked-element.html">
 <link rel="import" href="/elements/layouts/sidebar-layout.html">
-<link rel="import" href="/elements/profile-card/profile-card.html">
-<link rel="import" href="/elements/services/people-service.html">
+<link rel="import" href="/elements/profile-card/profile-list.html">
 
 <polymer-element name="pkl-team-page" attributes="selected" noscript>
 
@@ -50,21 +48,11 @@
         </section>
 
         <section class="profiles">
-          <div class="container person__container">
-            <template repeat="{{person in peopleItems}}"> 
-              <pkl-profile-card>
-                <h4>{{person.name}}</h4>
-                <h6>{{person.title}}</h6>
-                <!-- <img src="{{person.image}}" /> -->
-                <!-- <p><marked-element>{{person.description}}</marked-element></p> -->
-              </pkl-profile-card>
-            </template>
-          </div>
+          <pkl-profile-list></pkl-profile-list>
         </section>
       </div>
       <!-- End Container -->
     </pkl-sidebar-layout>
-    <pkl-people-service id="peopleService" peopleItems="{{peopleItems}}"></pkl-people-service>
   </template>
 
 </polymer-element>

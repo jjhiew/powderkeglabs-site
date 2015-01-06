@@ -2,6 +2,18 @@ html {
   height: 100%;
   margin: 0;  
 } 
+
+html /deep/ .person__dialog::shadow #scroller {
+  height: 60vh;
+  width: 90vw;
+}
+
+html /deep/ .person__dialog {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+}
+
 body {
   height: 100%;
   margin: 0;    
