@@ -1,38 +1,42 @@
 [
       {
-      	"question": "How long does the program run for?", 
-      	"answer": "We typically run 3 month cohorts."
-      },
-      {
-      	"question": "Can we stay in the program for longer?", 
-      	"answer": "Yes, we use 3 months as a progress milestone, but can discuss a longer program."
+            "question": "How are you different from other accelerators?",
+            "answer": "Traditional accelerators provide you with seed money, but leave it to you to find technical help. We cut right to the chase and provide you with a full-time CTO and technical team to achieve your business goals."
       },
       {
             "question": "How will your program help our startup?",
-            "answer": "Our goal is to give your company a technical push, to reach the next level.  For new startups, we'll focus on speed, learning and iteration; the goal to build your MVP and get your first customers. For a later stage startup, we'll focus on scaling and growth. In any case, your company would benefit from the services of a full-time a CTO and a tech team for a period of time. Send in an application and let us know how we'd help your company."
-      },      
+            "answer": "We're here to give your company a technical push. Maybe you're an early startup looking to get that initial round of investment. Maybe you're ready to build your [Minimum Viable Product](http://en.wikipedia.org/wiki/Minimum_viable_product) and get your first customers.  Or perhaps you're a later stage startup that needs help scaling and growing your product. Whatever the case, send us an [application](/#/contact) and let us know how we can help."
+      },
+      {
+      	"question": "How long does the program run for?", 
+      	"answer": "We typically run 3 to 6 month cohorts depending on the startups we take on."
+      },
+      {
+      	"question": "What happens after the program?", 
+      	"answer": "Our goal is to provide you with the momentum to grow and succeed on your own. We understand that some startups would benefit from a longer stay and are open to extending the program on a case-by-case basis. Alumni will have access to our technical advice and network of contacts."
+      },    
       {
       	"question": "What's your compensation model?", 
-      	"answer": "It depends on your startup and the services you'll need. Generally speaking, we'll ask for a small fee and an equity percentage equivalent to the time we're investing. Our compensation model is flexible, so startups at any stage and resource level will be able to join the program."
+      	"answer": "It depends on your startup and the services you'll need. Generally speaking, we'll ask for a small fee,  an equity percentage, and/or a revenue share. The amounts are equivalent to the time we're investing in you. Our compensation model is flexible, so startups at any stage and resource level will be able to join the program."
       },
       {
       	"question": "Do you only work with startups?", 
-      	"answer": "Nope, we'll work with solo entreprenuers or large companies. Send us an application and we'll get back to you."
+      	"answer": "Nope, we'll work with solo entreprenuers and larger companies. Send us an [application](/#/contact) and we'll get back to you."
       },
       {
             "question": "What tech stacks do develop in?", 
-            "answer": "Our team has been in the game long enough to be able to develop in any stack given enough time.  With that said, our current web specialties are the MEAN and LAMP stacks. For mobile, we prefer native iOS and Android development over JS frameworks." 
+            "answer": "Our team has been in the game long enough to be able to develop in any stack given if enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- Back-end: PHP, NodeJS, Java\n- Databases: MySQL, Mongo, Postgres, SQL Server, DB2\n- Front-end: HTML, CSS, JS Frameworks\n- Mobile: Native iOS and Android" 
       },
       {
             "question": "Do you only work with software startups?", 
-            "answer": "Our background is software development, but we'd love to try the hardware space.  Send us an application and we'll let you know if we can help." 
+            "answer": "Our background is software development, but we'd love to try the hardware space.  Send us an [application](/#/contact) and we'll let you know if we can help." 
       },      
       {
             "question": "Do you only work with startups in Toronto?", 
-            "answer": "Yes, at this time.  However, we are flexible. If you're ok working remotely, send in your application and we'll take a look." 
+            "answer": "Yes, at this time.  We are open to the idea of working remotely, so send in your [application](/#/contact) and we'll take a look." 
       },
       {
             "question": "What's this site built in?",
-            "answer": "The Polymer framework and hosted on Github."
+            "answer": "Web Components and the [Polymer](http://www.polymer-project.org) framework. You can find the code on our [Github page](/#/)."
       }
 ]

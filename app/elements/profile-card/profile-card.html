@@ -3,55 +3,63 @@
 <polymer-element name="pkl-profile-card" noscript>
   <template>      
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    
+    <link rel="stylesheet" href="/styles/skeleton.css">    
     <style>
-      .person {
+      :host .person {
           position: relative;
-          border-top: 1px solid #eee;
-          padding: 40px 0;
-          margin-bottom: 0;
+          border-bottom: 1px solid #ccc;
+          padding: 5px 5px 5px 5px;
+          /*margin-bottom: 0;*/
       }
 
-      polyfill-next-selector { content: '.person img'; }
+      :host .person__image{
+        /*display: inline-block;*/
+        border: 1px solid #999;        
+        border-radius: 50%;
+        background-color: #999;
+        height: 64px;
+        width: 64px;
+
+      }
+
+      .person__details {
+        margin-left: 15px;
+      }
+
+/*      polyfill-next-selector { content: '.person img'; }
       .person ::content img {
         width: 100%;
         position: relative;
-      }
+      }*/
 
       polyfill-next-selector { content: '.person h4'; }
       .person ::content h4{
-        position: absolute;
-        top: 50px;
-        left: 10px;
-        font-size: 30px;
-        color:#fff;
-        background-color: #333;
-        padding: 5px 5px 5px 5px;
-        opacity: 0.93;
+        font-size: 20px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        opacity: 0.87
       }
 
       polyfill-next-selector { content: '.person h6'; }
       .person ::content h6{
-        position: absolute;
-        top: 105px;
-        font-size: 18px;
-        left: 10px;
-        color:#fff;
-        background-color: #333;
-        padding: 5px 5px 5px 5px;
-        opacity: 0.93;
+        font-size: 14px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        color: #333;
+        opacity: 0.87
       }
-
     </style>
+    <link rel="stylesheet" href="/styles/main.css">
 
-   <div class="person">
-    <!-- <content select="img"></content> -->
-    <content select="h4"></content>
-    <content select="h6"></content>
-    <content select="p"></content>          
-  </div>
+    <div class="person" layout horizontal center>
+      <div class="person__image"></div>
+      <!-- <content select="img"></content> -->
+      <div class="person__details" flex>
+        <content select="h4"></content>
+        <content select="h6"></content>
+      </div>
+      <!-- <content select="p"></content> -->
+    </div>
     
   </template>
 </polymer-element>

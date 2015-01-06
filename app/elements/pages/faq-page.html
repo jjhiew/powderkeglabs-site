@@ -1,4 +1,5 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/marked-element/marked-element.html">
 <link rel="import" href="/elements/layouts/sidebar-layout.html">
 <link rel="import" href="/elements/services/faq-service.html">
 
@@ -40,7 +41,7 @@
             <template repeat="{{faq in faqItems}}"> 
               <div class="qa">
                 <h6>{{faq.question}}</h6>
-                <p>{{faq.answer}}</p>
+                <p><marked-element>{{faq.answer}}</marked-element></p>
               </div>
             </template>
           </div>

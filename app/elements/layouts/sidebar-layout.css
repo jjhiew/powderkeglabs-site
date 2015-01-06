@@ -51,7 +51,7 @@
   color: #555;
 }
 
-:host /deep/ a.nav-links{
+:host /deep/ a.large-screen-nav__links{
   text-decoration: none;
   color: #ddd;
   padding-left: 20px;
@@ -64,11 +64,11 @@
   transition: color 0.2s linear;        
 }
 
-:host /deep/ a.nav-links[active]{
+:host /deep/ a.large-screen-nav__links[active]{
   color: #fff;
   font-weight: 600
 }
 
-:host /deep/ a.nav-links:hover, a.nav-links:focus {
+:host /deep/ a.large-screen-nav__links:hover, a.large-screen-nav__links:focus {
   color: #1EAEDB;
 };

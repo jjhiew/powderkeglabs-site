@@ -4,7 +4,7 @@
         "name": "JJ Hiew", 
         "title": "Co-founder", 
         "image": "images/team/jj_w_700x1440.jpg", 
-        "description": "Formerly the CTO of Merscient Inc. Over 10+ years of experience in product development and strategy. JJ has also done mobile dev, db admin, business intelligence, sysadmin, and devops. He's a graduate of the University of Toronto, with a B.Sc in Computer Science."
+        "description": "Former CTO at [Merscient Inc](http://www.merscient.com). 10+ years as a web developer and architect. B.Sc in Computer Science from U of T."
     },
     {
         "id": "2",
@@ -15,13 +15,27 @@
     },
     {
         "id": "3",
-        "name": "Zurvan Robinson", 
-        "title": "Developer", 
-        "image": "images/team/jj_w_700x1440.jpg", 
-        "description": "Zurvan has over 15+ years of experience as a web developer. He's worked at numerous successful startups and large non-profits like the UHN in Toronto."
+        "name": "Disco Stu",
+        "title": "Chief Scientist",
+        "image":"images/team/disco_1_w.jpg",
+        "description": "Disco is the most diligent scientist we know, always testing the laws of gravity."
     },
     {
-        "id": "4",
+        "id": "1",
+        "name": "JJ Hiew", 
+        "title": "Co-founder", 
+        "image": "images/team/jj_w_700x1440.jpg", 
+        "description": "Former CTO at [Merscient Inc](http://www.merscient.com). 10+ years as a web developer and architect. B.Sc in Computer Science from U of T."
+    },
+    {
+        "id": "2",
+        "name": "Ben Zelikovitz", 
+        "title": "Co-founder, Advisor", 
+        "image": "images/team/jj_w_700x1440.jpg", 
+        "description": "Currently serves as Director at Sitescout. Ben has 10+ years of experience in Enterprise SaaS sales and recruitment. Ben is one of our advisors."
+    },
+    {
+        "id": "3",
         "name": "Disco Stu",
         "title": "Chief Scientist",
         "image":"images/team/disco_1_w.jpg",

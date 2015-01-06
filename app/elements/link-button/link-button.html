@@ -2,7 +2,7 @@
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/core-icons/core-icons.html">
 
-<polymer-element name="pkl-link-button" attributes="icon label href primary">
+<polymer-element name="pkl-link-button" attributes="icon label href primary raised">
   <template>
     <style>
     :host {
@@ -21,20 +21,20 @@
       color: #fff;
     }
 
-    .icon {
+    .button__content span {
+      margin-top: 2px;
+    }
+
+    .button__content core-icon {
       margin-right:5px;
     }
 
-    .label{
-      vertical-align: middle;
-    }
- 
     </style>  
     
-    <paper-button raised on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
-      <div layout horizontal center>
-        <core-icon flex icon="{{icon}}" class="icon"></core-icon>
-        <span class="label">{{label}}</span>
+    <paper-button raised?="{{raised}}" on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
+      <div class="button__content" layout horizontal center>
+        <core-icon flex icon="{{icon}}"></core-icon>
+        <span>{{label}}</span>
       </div>
     </paper-button>
 

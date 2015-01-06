@@ -5,29 +5,45 @@
   <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
-    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
     <style>
       :host {
         display: block;
         width: 100%;
       }
-      :host .container {
-        text-align: left;
+
+      :host .content__container--apply {
         padding-top: 50px;
         padding-bottom: 50px;
+        border-top: 1px solid #ccc;
+        margin-bottom: 0;
+        text-align: left;    
       }
-      :host #apply{
+
+      :host .content__container--apply h6 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      :host .content__container--first{
         border-top: 0px;
       }
+
+      :host ul {
+          margin-left: 0px;
+          padding-left: 20px;
+      }      
+
     </style>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>    
     <pkl-sidebar-layout selected="contact">
-      <div class="title">Contact Us</div>
+      <div class="title">Contact Us &amp; Apply</div>
 
       <!-- Start Content Container -->
       <div class="content">        
 
         <section class="contact">
-          <div class="section container" id="apply">
+          <div class="container content__container--apply content__container--first">
             <h6>Apply</h6>
             <p>Send us an email at <a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a> with ... </p>
             <ul>
@@ -41,7 +57,8 @@
             <p>We'll review your application and contact you with further details.</p>      
           </div>
 
-          <div class="section container" layout horizontal center>
+          <div class="container content__container--apply">
+            <h6>Contact Us</h6>
             <p>For all other inquiries, please send an email to <a href="mailto:contact@powderkeglabs.com">contact@powderkeglabs.com</a>.</p>
           </div>
         </section>

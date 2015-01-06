@@ -1,4 +1,5 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/marked-element/marked-element.html">
 <link rel="import" href="/elements/layouts/sidebar-layout.html">
 <link rel="import" href="/elements/profile-card/profile-card.html">
 <link rel="import" href="/elements/services/people-service.html">
@@ -8,27 +9,59 @@
   <template>    
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
-    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
     <style>
       :host {
         display: block;
         width: 100%;
-      }    
+      }
+
+      :host .content__container--team {
+        padding-top: 25px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        text-align: left;    
+      }
+
+      :host .content__container--team h6 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      :host .person__container {
+        /*width:100%;*/
+        margin-bottom: 75px;
+        margin-top: 0px;
+      }
+
     </style>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
 
     <pkl-sidebar-layout selected="team">
       <div class="title">The Team</div>
 
     <!--Content Container Start -->
       <div class="content">
-        <template repeat="{{person in peopleItems}}"> 
-          <profile-card>
-            <h4>{{person.name}}</h4>
-            <h6>{{person.title}}</h6>
-            <!-- <img src="{{person.image}}" /> -->
-            <p>{{person.description}}</p>
-          </profile-card>
-        </template>
+
+        <section class="team">
+          <div class="container content__container--team content__container--first">
+            <h6>The Team</h6>
+            <p>A Toronto based group of experienced web and mobile developer consultants. We invest our time and expertise to help cool startups achieve success.</p>
+          </div>
+        </section>
+
+        <section class="profiles">
+          <div class="container person__container">
+            <template repeat="{{person in peopleItems}}"> 
+              <pkl-profile-card>
+                <h4>{{person.name}}</h4>
+                <h6>{{person.title}}</h6>
+                <!-- <img src="{{person.image}}" /> -->
+                <!-- <p><marked-element>{{person.description}}</marked-element></p> -->
+              </pkl-profile-card>
+            </template>
+          </div>
+        </section>
       </div>
       <!-- End Container -->
     </pkl-sidebar-layout>

@@ -7,7 +7,6 @@
     
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
-    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
     <style>
 
       :host .header {
@@ -15,13 +14,43 @@
         height: 100vh;
       }
 
-      :host #header-wrapper{
+      :host .header__container{
         position: relative;
         top: -5%;
         margin-top:0px;
       }
 
+      :host .header__container__buttons{        
+        margin-top: 50px;
+      }
+
+      :host .header__container__button--left{
+        display: inline;
+        margin-right: 8px;
+      }
+
+      :host .header__container__button--right{
+        display: inline;
+        margin-left: 8px;
+      }      
+
+      :host .content__container {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        border-top: 1px solid #ccc;
+        margin-bottom: 0;
+        text-align: center;    
+      }
+
+      :host .content__container h6 {
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: uppercase;
+      }
+
     </style>
+    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
+        
     <pkl-sidebar-layout selected="home">
       <div class="title">Home</div>
 
@@ -29,45 +58,33 @@
       <div class="content">
 
         <section class="header" layout horizontal center center-justified>
-          <div id="header-wrapper" class="container">
+          <div class="container header__container">
             <h2>(logo graphic)</h2>
-            <h3>A Different Kind of Startup Accelerator</h3>
-            <pkl-link-button horizontal center-justified layout flex
-              label="Apply Now"
-              icon="mail"
-              href="/#/contact"
-              primary="true"></pkl-link-button>
+            <h3>A &quot;Tech for Equity&quot; Startup Accelerator Program</h3>
+            <div class="header__container__buttons">
+              <pkl-link-button class="header__container__button--left" label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
+              <pkl-link-button class="header__container__button--right" label="Apply Now" icon="mail" href="/#/contact" primary="false" raised="true"></pkl-link-button>
+            </div>
           </div>
         </section>
         
         <section class="middle" layout vertical center-justified>
-          <div class="section container">
+          <div class="container content__container">
             <h6>Who We Are</h6>
-            <p>A Toronto based group of experienced web and mobile developers. We invest our time and expertise to help cool startups achieve success. We write code and do other techy stuff.</p>
-            <pkl-link-button horizontal center-justified layout flex
-              label="Meet The Team"
-              icon="face-unlock"
-              href="/#/team"></pkl-link-button>
+            <p>A Toronto based group of experienced web and mobile developer consultants. We invest our time and expertise to help cool startups achieve success.</p>
+            <pkl-link-button label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
 
-          <div class="section container" id="howitworks">
+          <div class="container content__container" id="howitworks">
             <h6>How it works</h6>
             <p>Our program provides you with a full-time CTO &amp; technical team for 3 to 6 months. We'll work with you to achieve your business goals. A flexible equity compensation model allows startups at any stage to work with us.</p>
-            <pkl-link-button horizontal center-justified layout flex
-              label="Learn More"
-              icon="chevron-right"
-              href="/#/faq"></pkl-link-button>
+            <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
           </div>
 
-          <div class="section container">
+          <div class="container content__container">
             <h6>Your success is our success</h6>
-            <p>Our goal is to help you create the momentum to take your business to the next level. <b>We're invested in you.</b></p> 
-
-            <pkl-link-button horizontal center-justified layout flex
-              label="Apply Now"
-              icon="mail"
-              href="/#/contact"
-              primary="true"></pkl-link-button>
+            <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p> 
+            <pkl-link-button label="Apply Now" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>
           </div>
         </section>
 

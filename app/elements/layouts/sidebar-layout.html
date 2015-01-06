@@ -32,14 +32,14 @@
 
       <core-header-panel main id="mainPanel" mode="standard">
         <core-toolbar id="mainHeader">
-          <div flex tool class="header-title">
+          <div flex tool>
             <content select=".title"></content>
           </div>
 
           <!-- Show links for larger screen sizes -->
-          <div tool horizontal layout flex end-justified hidden?="{{smallScreen}}" class="large-nav">
+          <div tool horizontal layout flex end-justified hidden?="{{smallScreen}}" class="large-screen-nav">
             <template repeat="{{navItem in navItems}}">
-              <a active?="{{selected == navItem.hash}}" href="{{navItem.url}}" class="nav-links">
+              <a active?="{{selected == navItem.hash}}" href="{{navItem.url}}" class="large-screen-nav__links">
                 <core-item label="{{navItem.name}}"></core-item>
               </a>
             </template>
