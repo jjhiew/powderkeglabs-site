@@ -1,6 +1,5 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
-<link rel="import" href="/bower_components/core-collapse/core-collapse.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-action-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 
@@ -11,7 +10,7 @@
     <style>
       :host .person {
           position: relative;
-          border-bottom: 1px solid #ccc;
+          /*border-bottom: 1px solid #ccc;*/
           padding: 5px 5px 5px 5px;
           /*margin-bottom: 0;*/
       }
@@ -26,8 +25,14 @@
 
       }
 
+      :host .person__indicator{
+        opacity: 0.87;
+        color: #666
+      }
+
       .person__details {
         margin-left: 15px;
+
       }
 
 /*      polyfill-next-selector { content: '.person img'; }
@@ -53,42 +58,35 @@
         opacity: 0.87
       }
 
-
-      :host .person__collapse__description {
-        padding-top: 10px;
-        font-style: italic;
-
-      }
-
       :host /deep/ .person__dialog {
         position; fixed;
         top: 20px;
         right: 20px;
       }
 
+
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
     <div class="person">
 
-      <div class="person__snippet" layout horizontal center>
-        <div class="person__image"></div>
-        <!-- <content select="img"></content> -->
-        <div class="person__details" flex>
-          <content select="h4"></content>
-          <content select="h6"></content>
+      <div layout horizontal center>
+        <div class="person__image">
+          <!-- @TODO: Add Image -->
+        </div>
+        <div class="person__snippet" layout horizontal center flex>
+          <div class="person__details" flex>
+            <content select="h4"></content>
+            <content select="h6"></content>
+          </div>
+
+          <div class="person__indicator">
+            <core-icon-button icon="chevron-right" id="collapse-button" on-click="{{toggle}}"></core-icon-button>
+          </div>
         </div>
 
-        <div class="person__indicator">
-          <core-icon-button icon="chevron-right" id="collapse-button" on-click="{{toggle}}"></core-icon-button>
-        </div>
       </div>
-      
-    <!-- <div class="person__collapse">
-      <core-collapse id="collapse">
-        <div class="person__collapse__description"><content select="p"></content></div>
-      </core-collapse>
-    </div> -->
     
       <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
         <content select="p"></content>

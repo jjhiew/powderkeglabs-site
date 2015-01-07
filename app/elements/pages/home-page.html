@@ -37,7 +37,6 @@
       :host .content__container {
         padding-top: 200px;
         padding-bottom: 200px;
-        border-top: 1px solid #ccc;
         margin-bottom: 0;
         text-align: center;    
       }
@@ -58,7 +57,7 @@
       <div class="content">
 
         <section class="header" layout horizontal center center-justified>
-          <div class="container header__container">
+          <div class="header__container">
             <h2>(logo graphic)</h2>
             <h3>A &quot;Tech for Equity&quot; Startup Accelerator Program</h3>
             <div class="header__container__buttons">
@@ -68,20 +67,26 @@
           </div>
         </section>
         
+        <div class="seperator"></div>
+        
         <section class="middle" layout vertical center-justified>
-          <div class="container content__container">
+          <div class="content__container">
             <h6>Who We Are</h6>
             <p>A Toronto based group of experienced web and mobile developer consultants. We invest our time and expertise to help cool startups achieve success.</p>
             <pkl-link-button label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
 
-          <div class="container content__container" id="howitworks">
+          <div class="seperator"></div>
+
+          <div class="content__container" id="howitworks">
             <h6>How it works</h6>
             <p>Our program provides you with a full-time CTO &amp; technical team for 3 to 6 months. We'll work with you to achieve your business goals. A flexible equity compensation model allows startups at any stage to work with us.</p>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
           </div>
 
-          <div class="container content__container">
+          <div class="seperator"></div>
+
+          <div class="content__container">
             <h6>Your success is our success</h6>
             <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p> 
             <pkl-link-button label="Apply Now" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>

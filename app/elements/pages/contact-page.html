@@ -14,7 +14,6 @@
       :host .content__container--apply {
         padding-top: 50px;
         padding-bottom: 50px;
-        border-top: 1px solid #ccc;
         margin-bottom: 0;
         text-align: left;    
       }
@@ -27,6 +26,13 @@
 
       :host .content__container--first{
         border-top: 0px;
+      }
+
+      :host .seperator {
+        display: block;
+        width: 80%;
+        border-top: 1px solid #ccc;
+        margin: auto;
       }
 
       :host ul {
@@ -43,7 +49,7 @@
       <div class="content">        
 
         <section class="contact">
-          <div class="container content__container--apply content__container--first">
+          <div class="content__container--apply content__container--first">
             <h6>Apply</h6>
             <p>Send us an email at <a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a> with ... </p>
             <ul>
@@ -57,7 +63,9 @@
             <p>We'll review your application and contact you with further details.</p>      
           </div>
 
-          <div class="container content__container--apply">
+          
+
+          <div class="content__container--apply">
             <h6>Contact Us</h6>
             <p>For all other inquiries, please send an email to <a href="mailto:contact@powderkeglabs.com">contact@powderkeglabs.com</a>.</p>
           </div>

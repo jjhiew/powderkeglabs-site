@@ -19,7 +19,7 @@
         padding-top: 30px;
       }
 
-      :host .qa {        
+      :host .faq__item {        
         padding-top: 20px;
       }
 
@@ -37,9 +37,9 @@
       <div class="content">
 
         <section class="faq">
-          <div class="container">
+          <div>
             <template repeat="{{faq in faqItems}}"> 
-              <div class="qa">
+              <div class="faq__item">
                 <h6>{{faq.question}}</h6>
                 <p><marked-element>{{faq.answer}}</marked-element></p>
               </div>
