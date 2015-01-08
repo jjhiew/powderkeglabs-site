@@ -61,7 +61,7 @@
   -khtml-transition: color 0.2s linear;
   -webkit-transition: color 0.2s linear;
   -ms-transition: color 0.2s linear;
-  transition: color 0.2s linear;        
+  transition: color 0.2s linear;
 }
 
 :host /deep/ a.large-screen-nav__links[active]{
@@ -71,4 +71,4 @@
 
 :host /deep/ a.large-screen-nav__links:hover, a.large-screen-nav__links:focus {
   color: #1EAEDB;
-};
+}
