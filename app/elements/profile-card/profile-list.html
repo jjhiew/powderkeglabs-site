@@ -6,12 +6,12 @@
 <link rel="import" href="/elements/services/people-service.html">
 
 <polymer-element name="pkl-profile-list" attributes="smallScreen" noscript>
-  <template>      
+  <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css">    
+    <link rel="stylesheet" href="/styles/skeleton.css">
     <style>
       :host {
-          
+
       }
 
       :host .persons__container--list {
@@ -22,9 +22,9 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <div class="persons__container--list">
-      <template repeat="{{person in peopleItems}}">         
-        <pkl-profile-card id="{{person.id}" image="{{person.image}}">
+    <div class="persons__container--list" layout horizontal wrap center-justified>
+      <template repeat="{{person in peopleItems}}">
+        <pkl-profile-card id="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" title="{{person.title}}">
           <h4>{{person.name}}</h4>
           <h6>{{person.title}}</h6>
           <p><marked-element>{{person.description}}</marked-element></p>

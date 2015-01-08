@@ -3,8 +3,10 @@
 <link rel="import" href="/bower_components/paper-dialog/paper-action-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/core-image/core-image.html">
+<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
+<link rel="import" href="/bower_components/paper-ripple/paper-ripple.html">
 
-<polymer-element name="pkl-profile-card" attributes="id type image">
+<polymer-element name="pkl-profile-card" attributes="id type image name title">
   <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css">
@@ -12,59 +14,43 @@
 
       :host {
         display: inline-block;
-        border: 1px solid #000;
         width:300px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        margin-left: 10px;
       }
 
-      :host .person {
-          position: relative;
-          /*border-bottom: 1px solid #ccc;*/
-          padding: 5px 5px 5px 5px;
-          margin-top: 10px;
-          margin-bottom: 10px;
+      :host .person__card {
+        position:relative;
+        transition: color 0.2s linear, opacity 0.2s ease-in-out;
+        opacity: 1
       }
 
-      :host .person__image{
-        /*display: inline-block;*/
-        border: 1px solid #999;
-        border-radius: 50%;
-        background-color: #999;
-        height: 64px;
-        width: 64px;
-
+      :host .person__card:hover{
+        color: #1EAEDB;
+        opacity: 0.80;
       }
 
-      :host .person__indicator{
+      :host .person__card__content {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      :host .person__card__content h4 {
+        font-size: 18px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+
+      :host .person__card__content h6 {
+        font-size: 12px;
+        padding-top: 0px;
+        margin-top:0px;
+        margin-bottom: 5px;
         opacity: 0.87;
-        color: #666
       }
 
-      .person__details {
-        margin-left: 15px;
-
-      }
-
-/*      polyfill-next-selector { content: '.person img'; }
-      .person ::content img {
-        width: 100%;
-        position: relative;
-      }*/
-
-      polyfill-next-selector { content: '.person h4'; }
-      .person ::content h4{
-        font-size: 20px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        opacity: 0.87
-      }
-
-      polyfill-next-selector { content: '.person h6'; }
-      .person ::content h6{
-        font-size: 14px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        color: #333;
+      :host .person__card__content__icon {
+        padding-bottom: 12px;
         opacity: 0.87
       }
 
@@ -77,23 +63,24 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <!-- List type Template -->
-      <div class="person">
-        <div layout horizontal center on-tap="{{toggle}}">
-          <div class="person__image">
-            <!-- @TODO: Add Image -->
+    <template if="{{type == 'card'}}">
+      <paper-shadow z="1" on-tap="{{toggle}}">
+        <div class="person__card">
+          <div class="person__card__image">
+            <core-image src="{{image}}" style="width:300px; height:140px" sizing="cover"></core-image>
           </div>
-          <div class="person__snippet" layout horizontal center flex>
-            <div class="person__details" flex>
-              <content select="h4"></content>
-              <content select="h6"></content>
+          <div class="person__card__content" layout horizontal center>
+            <div class="person__card__content__details" flex>
+              <h4>{{name}}</h4>
+              <h6>{{title}}</h6>
             </div>
-            <div class="person__indicator">
-              <core-icon-button icon="chevron-right" id="collapse-button"></core-icon-button>
+            <div class="person__card__content__icon">
+              <core-icon icon="info-outline"></core-icon>
             </div>
           </div>
         </div>
-      </div>
+      </paper-shadow>
+    </template>
 
     <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
       <content select="p"></content>
