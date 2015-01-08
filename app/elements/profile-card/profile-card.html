@@ -1,10 +1,9 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="/bower_components/core-icons/core-icons.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-action-dialog.html">
+<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
 <link rel="import" href="/bower_components/core-image/core-image.html">
-<link rel="import" href="/bower_components/paper-shadow/paper-shadow.html">
-<link rel="import" href="/bower_components/paper-ripple/paper-ripple.html">
 
 <polymer-element name="pkl-profile-card" attributes="id type image name title">
   <template>
@@ -51,7 +50,7 @@
 
       :host .person__card__content__icon {
         padding-bottom: 12px;
-        opacity: 0.87
+        opacity: 0.67
       }
 
       :host /deep/ .person__dialog {
@@ -63,28 +62,26 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <template if="{{type == 'card'}}">
-      <paper-shadow z="1" on-tap="{{toggle}}">
-        <div class="person__card">
-          <div class="person__card__image">
-            <core-image src="{{image}}" style="width:300px; height:140px" sizing="cover"></core-image>
+    <paper-shadow z="1" on-tap="{{toggle}}">
+      <div class="person__card">
+        <div class="person__card__image">
+          <core-image src="{{image}}" style="width:300px; height:140px" sizing="cover"></core-image>
+        </div>
+        <div class="person__card__content" layout horizontal center>
+          <div class="person__card__content__details" flex>
+            <h4>{{name}}</h4>
+            <h6>{{title}}</h6>
           </div>
-          <div class="person__card__content" layout horizontal center>
-            <div class="person__card__content__details" flex>
-              <h4>{{name}}</h4>
-              <h6>{{title}}</h6>
-            </div>
-            <div class="person__card__content__icon">
-              <core-icon icon="info-outline"></core-icon>
-            </div>
+          <div class="person__card__content__icon">
+            <core-icon icon="info-outline"></core-icon>
           </div>
         </div>
-      </paper-shadow>
-    </template>
+      </div>
+    </paper-shadow>
 
     <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
       <content select="p"></content>
-      <paper-button affirmative>Close</paper-button>
+      <paper-button affirmative noink>Close</paper-button>
     </paper-action-dialog>
 
   </template>

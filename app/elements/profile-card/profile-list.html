@@ -25,8 +25,6 @@
     <div class="persons__container--list" layout horizontal wrap center-justified>
       <template repeat="{{person in peopleItems}}">
         <pkl-profile-card id="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" title="{{person.title}}">
-          <h4>{{person.name}}</h4>
-          <h6>{{person.title}}</h6>
           <p><marked-element>{{person.description}}</marked-element></p>
         </pkl-profile-card>
       </template>

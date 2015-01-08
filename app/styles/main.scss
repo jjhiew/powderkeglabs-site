@@ -1,7 +1,7 @@
-html { 
+html {
   height: 100%;
-  margin: 0;  
-} 
+  margin: 0;
+}
 
 html /deep/ .person__dialog::shadow #scroller {
   height: 60vh;
@@ -16,9 +16,9 @@ html /deep/ .person__dialog {
 
 body {
   height: 100%;
-  margin: 0;    
+  margin: 0;
   font-size: 16px;
-  color: #212121; 
+  color: #212121;
   background-color: #eee;
 }
 
@@ -53,7 +53,7 @@ core-toolbar {
   padding-top: 200px;
   padding-bottom: 200px;
   margin-bottom: 0;
-  text-align: center;    
+  text-align: center;
 }
 
 .content__container h6 {
@@ -70,6 +70,14 @@ ul {
 
 /* For mobile */
 @media screen and (max-width: 500px) {
+
+  html /deep/ .person__dialog {
+    top: 50px;
+  }
+
+  html /deep/ .person__dialog::shadow #scroller {
+    height: 80vh;
+  }
 
   nav-header::shadow span{
     font-size: 1.15em;

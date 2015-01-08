@@ -5,7 +5,7 @@
 
 <polymer-element name="pkl-faq-page" attributes="selected" noscript>
 
-  <template>    
+  <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
     <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
@@ -17,9 +17,10 @@
 
       :host .faq {
         padding-top: 30px;
+        padding-bottom: 50px;
       }
 
-      :host .faq__item {        
+      :host .faq__item {
         padding-top: 20px;
       }
 
@@ -38,7 +39,7 @@
 
         <section class="faq">
           <div>
-            <template repeat="{{faq in faqItems}}"> 
+            <template repeat="{{faq in faqItems}}">
               <div class="faq__item">
                 <h6>{{faq.question}}</h6>
                 <p><marked-element>{{faq.answer}}</marked-element></p>
