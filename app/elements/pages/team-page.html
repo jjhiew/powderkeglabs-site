@@ -2,7 +2,7 @@
 <link rel="import" href="/elements/layouts/sidebar-layout.html">
 <link rel="import" href="/elements/profile-card/profile-list.html">
 
-<polymer-element name="pkl-team-page" attributes="selected" noscript>
+<polymer-element name="pkl-team-page" attributes="selected smallScreen" noscript>
 
   <template>    
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
@@ -48,7 +48,7 @@
         </section>
 
         <section class="profiles">
-          <pkl-profile-list></pkl-profile-list>
+          <pkl-profile-list smallScreen="{{smallScreen}}"></pkl-profile-list>
         </section>
       </div>
       <!-- End Container -->

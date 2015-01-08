@@ -1,10 +1,11 @@
 <link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-media-query/core-media-query.html">
 <link rel="import" href="/bower_components/marked-element/marked-element.html">
 
 <link rel="import" href="/elements/profile-card/profile-card.html">
 <link rel="import" href="/elements/services/people-service.html">
 
-<polymer-element name="pkl-profile-list" noscript>
+<polymer-element name="pkl-profile-list" attributes="smallScreen" noscript>
   <template>      
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
     <link rel="stylesheet" href="/styles/skeleton.css">    
@@ -13,7 +14,7 @@
           
       }
 
-      :host .person__container {
+      :host .persons__container--list {
         margin-bottom: 75px;
         margin-top: 0px;
       }
@@ -21,9 +22,9 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <div class="person__container">
+    <div class="persons__container--list">
       <template repeat="{{person in peopleItems}}">         
-        <pkl-profile-card id="{{person.id}}">
+        <pkl-profile-card id="{{person.id}" image="{{person.image}}">
           <h4>{{person.name}}</h4>
           <h6>{{person.title}}</h6>
           <p><marked-element>{{person.description}}</marked-element></p>
@@ -31,6 +32,7 @@
       </template>
     </div>
 
+    <core-media-query query="max-width: 800px" queryMatches="{{smallScreen}}"></core-media-query>
     <pkl-people-service id="peopleService" peopleItems="{{peopleItems}}"></pkl-people-service>
   </template>
 </polymer-element>

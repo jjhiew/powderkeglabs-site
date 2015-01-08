@@ -2,22 +2,32 @@
 <link rel="import" href="/bower_components/core-icon-button/core-icon-button.html">
 <link rel="import" href="/bower_components/paper-dialog/paper-action-dialog.html">
 <link rel="import" href="/bower_components/paper-button/paper-button.html">
+<link rel="import" href="/bower_components/core-image/core-image.html">
 
-<polymer-element name="pkl-profile-card" attributes="id">
-  <template>      
+<polymer-element name="pkl-profile-card" attributes="id type image">
+  <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css">    
+    <link rel="stylesheet" href="/styles/skeleton.css">
     <style>
+
+      :host {
+        display: inline-block;
+        border: 1px solid #000;
+        width:300px;
+        margin-bottom: 20px;
+      }
+
       :host .person {
           position: relative;
           /*border-bottom: 1px solid #ccc;*/
           padding: 5px 5px 5px 5px;
-          /*margin-bottom: 0;*/
+          margin-top: 10px;
+          margin-bottom: 10px;
       }
 
       :host .person__image{
         /*display: inline-block;*/
-        border: 1px solid #999;        
+        border: 1px solid #999;
         border-radius: 50%;
         background-color: #999;
         height: 64px;
@@ -64,45 +74,37 @@
         right: 20px;
       }
 
-
-
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <div class="person">
-
-      <div layout horizontal center>
-        <div class="person__image">
-          <!-- @TODO: Add Image -->
-        </div>
-        <div class="person__snippet" layout horizontal center flex>
-          <div class="person__details" flex>
-            <content select="h4"></content>
-            <content select="h6"></content>
+    <!-- List type Template -->
+      <div class="person">
+        <div layout horizontal center on-tap="{{toggle}}">
+          <div class="person__image">
+            <!-- @TODO: Add Image -->
           </div>
-
-          <div class="person__indicator">
-            <core-icon-button icon="chevron-right" id="collapse-button" on-click="{{toggle}}"></core-icon-button>
+          <div class="person__snippet" layout horizontal center flex>
+            <div class="person__details" flex>
+              <content select="h4"></content>
+              <content select="h6"></content>
+            </div>
+            <div class="person__indicator">
+              <core-icon-button icon="chevron-right" id="collapse-button"></core-icon-button>
+            </div>
           </div>
         </div>
-
       </div>
-    
-      <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
-        <content select="p"></content>
-        <paper-button affirmative>Close</paper-button>
-      </paper-action-dialog>
-    </div>
+
+    <paper-action-dialog id="dialog" backdrop transition="core-transition-right" class="person__dialog">
+      <content select="p"></content>
+      <paper-button affirmative>Close</paper-button>
+    </paper-action-dialog>
 
   </template>
-
   <script>
     Polymer('pkl-profile-card', {
-      ready: function(){
-        // this.$.collapse.opened=true;
-      },
       toggle: function(e){
-        // this.$.collapse.toggle();
+        console.log("toggle");
         this.$.dialog.toggle();
       }
     });
