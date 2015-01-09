@@ -11,22 +11,27 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
   <!-- FONT -->
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>  
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" shim-shadowdom>
   <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
 
-  <!-- build:css styles/main.css -->  
+  <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
   <!-- build:js bower_components/webcomponentsjs/webcomponents.min.js -->
-  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
   <!-- endbuild -->
 
-  <!-- build:vulcanized elements/elements.vulcanized.html -->
+  <!-- build:vulcanized elements/app.vulcanized.html -->
   <link rel="import" href="/elements/app.html">
-  <!-- endbuild-->
+  <!-- endbuild -->
+
+  <!-- build:vulcanized elements/common_elements.vulcanized.html -->
+  <link rel="import" href="/elements/common_elements.html">
+  <!-- endbuild -->
+
 </head>
 
 <body unresolved fullbleed layout horizontal>

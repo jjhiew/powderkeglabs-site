@@ -1,9 +1,9 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
 
 <polymer-element name="pkl-site-footer">
-  <template>      
+  <template>
     <style>
-      :host {        
+      :host {
           font-size: 12px;
           color: #727272;
       }
@@ -14,7 +14,7 @@
           margin-bottom: 10px;
           padding-top: 0px;
           margin-top: 0px;
-          text-align: center; 
+          text-align: center;
       }
 
       .top-border {
@@ -30,11 +30,11 @@
         &copy; Powder Keg Labs <span id="year">2015</span>
       </div>
     </section>
-  
+
   </template>
 
-  <script>  
-    Polymer('pkl-site-footer',{     
+  <script>
+    Polymer('pkl-site-footer',{
       ready: function(){
         this.$.year.textContent = new Date().getFullYear();
       }
@@ -42,4 +42,3 @@
   </script>
 
 </polymer-element>
-

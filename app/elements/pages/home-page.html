@@ -1,12 +1,12 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/elements/layouts/sidebar-layout.html">
-<link rel="import" href="/elements/link-button/link-button.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../layouts/sidebar-layout.html">
+<link rel="import" href="../link-button/link-button.html">
 
 <polymer-element name="pkl-home-page" attributes="selected" noscript>
   <template>
-    
+
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/skeleton.css">
     <style>
 
       :host .header {
@@ -20,7 +20,7 @@
         margin-top:0px;
       }
 
-      :host .header__container__buttons{        
+      :host .header__container__buttons{
         margin-top: 50px;
       }
 
@@ -32,13 +32,13 @@
       :host .header__container__button--right{
         display: inline;
         margin-left: 8px;
-      }      
+      }
 
       :host .content__container {
         padding-top: 200px;
         padding-bottom: 200px;
         margin-bottom: 0;
-        text-align: center;    
+        text-align: center;
       }
 
       :host .content__container h6 {
@@ -48,8 +48,8 @@
       }
 
     </style>
-    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
-        
+    <link rel="stylesheet" href="/styles/main.css">
+
     <pkl-sidebar-layout selected="home">
       <div class="title">Home</div>
 
@@ -66,9 +66,9 @@
             </div>
           </div>
         </section>
-        
+
         <div class="seperator"></div>
-        
+
         <section class="middle" layout vertical center-justified>
           <div class="content__container">
             <h6>Who We Are</h6>
@@ -88,14 +88,14 @@
 
           <div class="content__container">
             <h6>Your success is our success</h6>
-            <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p> 
+            <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p>
             <pkl-link-button label="Apply Now" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>
           </div>
         </section>
 
       </div>
       <!-- End Content Container -->
-      
+
     </pkl-sidebar-layout>
   </template>
 </polymer-element>

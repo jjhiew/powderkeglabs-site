@@ -55,17 +55,17 @@
           <!-- /Menu button for smaller screen sizes -->
 
         </core-toolbar>
-      
+
         <content select=".content"></content>
         <pkl-site-footer></pkl-site-footer>
-        
+
       </core-header-panel>
     </core-drawer-panel>
-    
+
     <!-- Get the Nav Items -->
     <pkl-nav-service id="navService" navItems="{{navItems}}"></pkl-nav-service>
     <core-media-query query="{{screenQuery}}" queryMatches="{{smallScreen}}"></core-media-query>
-    
+
   </template>
   <script>
     Polymer('pkl-sidebar-layout', {

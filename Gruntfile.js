@@ -194,12 +194,20 @@ module.exports = function (grunt) {
     vulcanize: {
       default: {
         options: {
-          strip: true
+          strip: true,
+          csp: true,
+          inline: true,
+          excludes: {
+            imports:['polymer.html$']
+          }
         },
         files: {
-          '<%= yeoman.dist %>/elements/elements.vulcanized.html': [
-            '<%= yeoman.dist %>/elements/elements.html'
-          ]
+          '<%= yeoman.dist %>/elements/app.vulcanized.html': [
+            '<%= yeoman.dist %>/elements/app.html'
+          ],
+          '<%= yeoman.dist %>/elements/common_elements.vulcanized.html': [
+          '<%= yeoman.dist %>/elements/common_elements.html'
+          ],
         }
       }
     },

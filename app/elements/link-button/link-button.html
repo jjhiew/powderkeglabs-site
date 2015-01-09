@@ -1,6 +1,6 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/bower_components/paper-button/paper-button.html">
-<link rel="import" href="/bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/core-icons/core-icons.html">
 
 <polymer-element name="pkl-link-button" attributes="icon label href primary raised">
   <template>
@@ -29,8 +29,8 @@
       margin-right:5px;
     }
 
-    </style>  
-    
+    </style>
+
     <paper-button raised?="{{raised}}" on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
       <div class="button__content" layout horizontal center>
         <core-icon flex icon="{{icon}}"></core-icon>

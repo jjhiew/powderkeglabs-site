@@ -1,12 +1,12 @@
-<link rel="import" href="/bower_components/polymer/polymer.html">
-<link rel="import" href="/elements/layouts/sidebar-layout.html">
-<link rel="import" href="/elements/profile-card/profile-list.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../layouts/sidebar-layout.html">
+<link rel="import" href="../profile-card/profile-list.html">
 
-<polymer-element name="pkl-team-page" attributes="selected smallScreen" noscript>
+<polymer-element name="pkl-team-page" attributes="selected" noscript>
 
-  <template>    
+  <template>
     <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/skeleton.css">
     <style>
       :host {
         display: block;
@@ -17,7 +17,7 @@
         padding-top: 25px;
         padding-bottom: 0px;
         margin-bottom: 0px;
-        text-align: left;    
+        text-align: left;
       }
 
       :host .content__container--team h6 {
@@ -26,14 +26,8 @@
         text-transform: uppercase;
       }
 
-      :host .person__container {
-        /*width:100%;*/
-        margin-bottom: 75px;
-        margin-top: 0px;
-      }
-
     </style>
-    <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
+    <link rel="stylesheet" href="/styles/main.css">
 
     <pkl-sidebar-layout selected="team">
       <div class="title">The Team</div>
@@ -48,7 +42,7 @@
         </section>
 
         <section class="profiles">
-          <pkl-profile-list smallScreen="{{smallScreen}}"></pkl-profile-list>
+          <pkl-profile-list></pkl-profile-list>
         </section>
       </div>
       <!-- End Container -->
