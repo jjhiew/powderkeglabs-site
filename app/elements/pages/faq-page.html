@@ -6,9 +6,6 @@
 <polymer-element name="pkl-faq-page" attributes="selected" noscript>
 
   <template>
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/styles/skeleton.css">
-    <link rel="stylesheet" href="/styles/main.css">
     <style>
       :host {
         display: block;
@@ -24,12 +21,13 @@
         padding-top: 20px;
       }
 
-      :host h6 {
+      :host .faq__item h6 {
         font-size: 18px;
         font-weight: 600;
         margin-bottom: 5px
       }
     </style>
+    <link rel="stylesheet" href="/styles/main.css">
 
     <pkl-sidebar-layout selected="faq">
       <div class="title">FAQ</div>
