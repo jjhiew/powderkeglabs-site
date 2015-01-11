@@ -194,20 +194,12 @@ module.exports = function (grunt) {
     vulcanize: {
       default: {
         options: {
-          strip: true,
-          csp: true,
-          inline: true,
-          excludes: {
-            imports:['polymer.html$']
-          }
+          strip: true
         },
         files: {
           '<%= yeoman.dist %>/elements/app.vulcanized.html': [
             '<%= yeoman.dist %>/elements/app.html'
-          ],
-          '<%= yeoman.dist %>/elements/common_elements.vulcanized.html': [
-          '<%= yeoman.dist %>/elements/common_elements.html'
-          ],
+          ]
         }
       }
     },
@@ -249,7 +241,8 @@ module.exports = function (grunt) {
             'elements/**',
             '!elements/**/*.scss',
             'images/{,*/}*.{webp,gif}',
-            'bower_components/**'
+            'bower_components/**',
+            'api/**'
           ]
         }]
       },
