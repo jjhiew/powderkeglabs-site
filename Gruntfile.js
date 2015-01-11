@@ -196,6 +196,13 @@ module.exports = function (grunt) {
         options: {
           strip: true
         },
+        elements: {
+          options: {
+            excludes: {
+              imports: ["polymer.html$"]
+            }
+          }
+        },
         files: {
           '<%= yeoman.dist %>/elements/app.vulcanized.html': [
             '<%= yeoman.dist %>/elements/app.html'
