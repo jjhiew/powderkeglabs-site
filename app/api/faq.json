@@ -25,7 +25,7 @@
       },
       {
             "question": "What tech stacks do develop in?",
-            "answer": "Our team has been in the game long enough to be able to develop in any stack if given enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- Back-end: PHP, NodeJS, Java\n- Databases: MySQL, Mongo, Postgres, MSSQL, DB2\n- Front-end: HTML, CSS, JS\n- Mobile: Native iOS and Android" 
+            "answer": "Our team has been in the game long enough to be able to develop in any stack if given enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- **Back-end**: PHP, NodeJS, Java\n- **Databases**: MySQL, Mongo, Postgres, MSSQL, DB2\n- **Front-end**: HTML, CSS, JS\n- **Mobile**: Native iOS and Android" 
       },
       {
             "question": "Do you only work with software startups?",

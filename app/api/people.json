@@ -1,17 +1,17 @@
 [
     {
         "id": "1",
-        "name": "JJ Hiew", 
-        "title": "Co-founder", 
-        "image": "images/team/jj_w_700x1440.jpg", 
-        "description": "Former CTO at [Merscient Inc](http://www.merscient.com). 10+ years as a web developer and architect. B.Sc in Computer Science from U of T."
+        "name": "JJ Hiew",
+        "title": "Partner, Developer",
+        "image": "images/team/jj_w_700x1440.jpg",
+        "description": "JJ is formerly the CTO of [Merscient Inc](http://www.merscient.com) and has 10+ years of professional experience as a web dev and software architect, He graduated from U of T with a B.Sc in Computer Science.\n\nJJ's dream is to combine his love of technology and delicious baked goods into a gajillion dollar business."
     },
     {
         "id": "2",
-        "name": "Ben Zelikovitz", 
-        "title": "Co-founder, Advisor", 
-        "image": "images/team/jj_w_700x1440.jpg", 
-        "description": "Currently serves as Director at Sitescout. Ben has 10+ years of experience in Enterprise SaaS sales and recruitment. Ben is one of our advisors."
+        "name": "Ben Zelikovitz",
+        "title": "Co-founder, Advisor",
+        "image": "images/team/jj_w_700x1440.jpg",
+        "description": "Ben is a Director at [Sitescout](http://www.sitescout.com/) and has 10+ years of experience in Enterprise SaaS sales and recruitment.\n\nHis hero is Drake."
     },
     {
         "id": "3",
@@ -22,16 +22,16 @@
     },
     {
         "id": "4",
-        "name": "JJ Hiew", 
-        "title": "Co-founder", 
-        "image": "images/team/jj_w_700x1440.jpg", 
+        "name": "JJ Hiew",
+        "title": "Co-founder",
+        "image": "images/team/jj_w_700x1440.jpg",
         "description": "Former CTO at [Merscient Inc](http://www.merscient.com). 10+ years as a web developer and architect. B.Sc in Computer Science from U of T."
     },
     {
         "id": "5",
-        "name": "Ben Zelikovitz", 
-        "title": "Co-founder, Advisor", 
-        "image": "images/team/jj_w_700x1440.jpg", 
+        "name": "Ben Zelikovitz",
+        "title": "Co-founder, Advisor",
+        "image": "images/team/jj_w_700x1440.jpg",
         "description": "Currently serves as Director at Sitescout. Ben has 10+ years of experience in Enterprise SaaS sales and recruitment. Ben is one of our advisors."
     },
     {
