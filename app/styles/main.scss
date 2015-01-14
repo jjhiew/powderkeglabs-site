@@ -6,6 +6,15 @@ html {
   margin: 0;
 }
 
+html /deep/ paper-button {
+  background-color: #fff;
+}
+
+html /deep/ paper-button[primary] {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
 html /deep/ .person__dialog::shadow #scroller {
   height: 60vh;
   width: 90vw;
@@ -70,13 +79,6 @@ ul {
     padding-left: 20px;
 }
 
-html /deep/ paper-button {
-  background-color: #fff;
-}
-html /deep/ paper-button[primary] {
-  background-color: #03a9f4;
-  color: #fff;
-}
 
 /* For mobile */
 @media screen and (max-width: 500px) {
