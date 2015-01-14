@@ -24,8 +24,8 @@
       	"answer": "Nope, we'll work with solo entreprenuers and larger companies. Send us an [application](/#/contact) and we'll get back to you."
       },
       {
-            "question": "What tech stacks do develop in?",
-            "answer": "Our team has been in the game long enough to be able to develop in any stack if given enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- **Back-end**: PHP, NodeJS, Java\n- **Databases**: MySQL, Mongo, Postgres, MSSQL, DB2\n- **Front-end**: HTML, CSS, JS\n- **Mobile**: Native iOS and Android" 
+            "question": "What tech stacks do you develop in?",
+            "answer": "Our team has been in the game long enough to be able to develop in any stack if given enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- **Back-end**: PHP, NodeJS, Java\n- **Databases**: MySQL, Mongo, Postgres, MSSQL, DB2\n- **Front-end**: HTML, CSS, JS\n- **Mobile**: Native iOS and Android"
       },
       {
             "question": "Do you only work with software startups?",
@@ -37,6 +37,6 @@
       },
       {
             "question": "What's this site built in?",
-            "answer": "Web Components and the [Polymer](http://www.polymer-project.org) framework. You can find the code on our [Github page](/#/)."
+            "answer": "Web Components and the [Polymer](http://www.polymer-project.org) framework. You can find the code on our [Github page](https://github.com/powderkeglabs/powderkeglabs-site)."
       }
 ]
