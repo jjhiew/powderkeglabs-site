@@ -5,7 +5,7 @@
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/core-image/core-image.html">
 
-<polymer-element name="pkl-profile-card" attributes="id type image name title">
+<polymer-element name="pkl-profile-card" attributes="pid type image name ptitle">
   <template>
     <style>
       :host {
@@ -66,7 +66,7 @@
         <div class="person__card__content" layout horizontal center>
           <div class="person__card__content__details" flex>
             <h4>{{name}}</h4>
-            <h6>{{title}}</h6>
+            <h6>{{ptitle}}</h6>
           </div>
           <div class="person__card__content__icon">
             <core-icon icon="info-outline"></core-icon>

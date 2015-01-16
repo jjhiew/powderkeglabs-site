@@ -17,7 +17,7 @@
 
     <div class="persons__container--list" layout horizontal wrap center-justified>
       <template repeat="{{person in peopleItems}}">
-        <pkl-profile-card id="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" title="{{person.title}}">
+        <pkl-profile-card pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
           <p><marked-element>{{person.description}}</marked-element></p>
         </pkl-profile-card>
       </template>
