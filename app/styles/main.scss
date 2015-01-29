@@ -26,6 +26,10 @@ html /deep/ .person__dialog {
   right: 20px;
 }
 
+html /deep/ .header__container__image {
+    height: 250px;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -89,6 +93,10 @@ ul {
 
   html /deep/ .person__dialog::shadow #scroller {
     height: 80vh;
+  }
+
+  html /deep/ .header__container__image {
+      height: 200px;
   }
 
   nav-header::shadow span{
