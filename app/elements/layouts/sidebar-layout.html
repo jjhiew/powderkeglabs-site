@@ -21,7 +21,7 @@
 
     <core-drawer-panel rightDrawer disableSwipe="true" responsiveWidth="9999px" id="drawerPanel">
 
-      <core-header-panel drawer navigation flex mode="standard">
+      <core-header-panel drawer navigation flex mode="seamed">
         <core-toolbar>Powder Keg Labs</core-toolbar>
 
         <template repeat="{{navItem in navItems}}">
@@ -32,7 +32,7 @@
 
       </core-header-panel>
 
-      <core-header-panel main id="mainPanel" mode="standard">
+      <core-header-panel main id="mainPanel" mode="scroll">
         <core-toolbar id="mainHeader">
           <div flex tool>
             <content select=".title"></content>

@@ -4,7 +4,7 @@
 <link rel="import" href="profile-card.html">
 <link rel="import" href="../services/people-service.html">
 
-<polymer-element name="pkl-profile-list" noscript>
+<polymer-element name="pkl-profile-list" attributes="shadow" noscript>
   <template>
     <style>
       :host .persons__container--list {
@@ -17,7 +17,7 @@
 
     <div class="persons__container--list" layout horizontal wrap center-justified>
       <template repeat="{{person in peopleItems}}">
-        <pkl-profile-card pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
+        <pkl-profile-card shadow="{{shadow}}" pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
           <p><marked-element>{{person.description}}</marked-element></p>
         </pkl-profile-card>
       </template>

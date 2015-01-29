@@ -1,7 +1,7 @@
 [
       {
             "question": "How are you different from other accelerators?",
-            "answer": "Traditional accelerators provide you with seed money, but leave it to you to find technical help. We cut right to the chase and provide you with a full-time CTO and technical team to achieve your business goals."
+            "answer": "Traditional accelerators provide you with seed money, but leave it to you to find technical help. We cut right to the chase and provide you with a full-time CTO and technical team to help you immediately."
       },
       {
             "question": "How will your program help our startup?",
@@ -22,6 +22,10 @@
       {
       	"question": "Do you only work with startups?",
       	"answer": "Nope, we'll work with solo entreprenuers and larger companies. Send us an [application](/#/contact) and we'll get back to you."
+      },
+      {
+            "question": "We already have a CTO and tech team, can we still apply?",
+            "answer": "Of course. Send us an [application](/#/contact) and tell us how we can help."
       },
       {
             "question": "What tech stacks do you develop in?",

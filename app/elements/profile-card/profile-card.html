@@ -5,7 +5,7 @@
 <link rel="import" href="../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../bower_components/core-image/core-image.html">
 
-<polymer-element name="pkl-profile-card" attributes="pid type image name ptitle">
+<polymer-element name="pkl-profile-card" attributes="pid type image name ptitle shadow">
   <template>
     <style>
       :host {
@@ -58,7 +58,7 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <paper-shadow z="1" on-tap="{{toggle}}">
+    <paper-shadow z="{{shadow ? 1 : 0}}" on-tap="{{toggle}}">
       <div class="person__card">
         <div class="person__card__image">
           <core-image src="{{image}}" style="width:320px; height:140px" sizing="cover"></core-image>
