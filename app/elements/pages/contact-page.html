@@ -9,6 +9,10 @@
         width: 100%;
       }
 
+      :host .apply, .contact {
+        padding-top: 30px;
+      }
+
       :host .content__container--apply {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -46,8 +50,8 @@
       <!-- Start Content Container -->
       <div class="content">
 
-        <section class="contact">
-          <div class="content__container--apply content__container--first">
+        <section class="apply">
+          <div class="container content__container--apply content__container--first">
             <h6>Apply</h6>
             <p>Send us an email at <a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a> with ... </p>
             <ul>
@@ -60,10 +64,12 @@
 
             <p>We'll review your application and contact you with further details.</p>
           </div>
-          
+        </section>
+
           <div class="separator"></div>
 
-          <div class="content__container--apply">
+          <section class="contact">
+          <div class="container content__container--apply">
             <h6>Contact Us</h6>
             <p>For all other inquiries, please send an email to <a href="mailto:contact@powderkeglabs.com">contact@powderkeglabs.com</a>.</p>
           </div>

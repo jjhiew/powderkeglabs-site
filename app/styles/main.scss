@@ -42,7 +42,7 @@ body {
   padding-top: 20px;
 }
 
-.content {
+.container {
   margin: auto;
   padding-left: 24px;
   padding-right: 24px;
@@ -51,7 +51,7 @@ body {
 
 .separator {
   display: block;
-  width: 80%;
+  width: 40%;
   border-top: 1px solid #ccc;
   margin: auto;
 }
@@ -96,7 +96,8 @@ ul {
   }
 
   html /deep/ .header__container__image {
-      height: 200px;
+    height: 165px;
+    margin-top: -20px;
   }
 
   nav-header::shadow span{
@@ -109,9 +110,9 @@ ul {
     padding-bottom: 100px;
   }
 
-  .content {
-    // padding-left: 15px;
-    // margin-right: 15px;
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
 }

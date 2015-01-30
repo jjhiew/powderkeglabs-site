@@ -11,6 +11,10 @@
         width: 100%;
       }
 
+      :host .team {
+        padding-top: 30px;
+      }
+
       :host .content__container--team {
         padding-top: 25px;
         padding-bottom: 0px;
@@ -34,13 +38,15 @@
       <div class="content">
 
         <section class="team">
-          <div class="content__container--team content__container--first">
+          <div class="container content__container--team content__container--first">
             <p>A Toronto based group of experienced web and mobile developer / consultants. We invest our time and expertise to help cool startups achieve success.</p>
           </div>
         </section>
 
         <section class="profiles">
-          <pkl-profile-list shadow="true"></pkl-profile-list>
+          <div class="container">
+            <pkl-profile-list shadow="true"></pkl-profile-list>
+          </div>
         </section>
       </div>
       <!-- End Container -->
