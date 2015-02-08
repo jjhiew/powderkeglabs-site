@@ -7,11 +7,8 @@
           font-size: 12px;
           color: #727272;
       }
-      :host a:link, a:hover{
-        color: #999
-      }
+
       :host .footer {
-          max-width: 768px;
           margin-bottom: 10px;
           padding-top: 0px;
           margin-top: 0px;
@@ -21,14 +18,36 @@
           display: block;
       }
 
-      .top-border {
+      :host .top-border {
         width:80%;
         padding-top: 30px;
         padding-bottom: 30px;
-        border-top: 1px solid #ccc;
       }
+
+
+      :host .lower-nav {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+      }
+
+      :host .lower-nav__link {
+        display: block;
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
+
+    <section class="lower-nav">
+
+      <div class="container">
+        <div class="lower-nav__link">Home</div>
+        <div class="lower-nav__link">About</div>
+        <div class="lower-nav__link">Team</div>
+        <div class="lower-nav__link">FAQ</div>
+        <div class="lower-nav__link">Contact &amp; Apply</div>
+      </div>
+    </section>
 
     <section class="footer" layout horizontal center center-justified>
       <div class="top-border">

@@ -2,15 +2,17 @@
 <link rel="import" href="../layouts/sidebar-layout.html">
 <link rel="import" href="../link-button/link-button.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 
 
 <polymer-element name="pkl-home-page" attributes="selected" noscript>
   <template>
     <style>
 
-      :host .header {
+      :host .home__header {
         text-align: center;
-        height: 100vh;
+        height: 80vh;
+        color: #fff
       }
 
       :host .header__container{
@@ -50,6 +52,27 @@
           text-transform: uppercase;
       }
 
+      :host .home__uvp, .home__success {
+        background-color: #fff;
+      }
+
+      :host .home__middle {
+        background-color: #626B8A;
+        color: #fff;
+      }
+
+      :host .fab {
+        position: relative;
+        top: -28px;
+        background-color: #fff;
+        color: #212121;
+      }
+
+      :host .meet {
+        background-color: #626B8A;
+        color: #fff
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
@@ -59,37 +82,41 @@
       <!--Content Container Start -->
       <div class="content">
 
-        <section class="header" layout horizontal center center-justified>
+        <section class="home__header" layout horizontal center center-justified>
           <div class="container header__container">
-            <img class="header__container__image" src="/images/pkl-logo-transparent-v2.png" />
-            <h5>Technical Startup Accelerator Program</h5>
-            <p>We provide you with a full-time hands-on technical team to help you achieve your business goals</p>
-            <div class="header__container__buttons">
-              <pkl-link-button class="header__container__button--right" label="Apply Now" icon="mail" href="/#/contact" primary="false" raised="true"></pkl-link-button>
-            </div>
+            <img class="header__container__image" src="/images/pkl-logo-transparent-v2-invert.png" />
+            <h5>A <strong><em>Different</em></strong> Kind Of Startup Accelerator</h5>
           </div>
         </section>
 
-        <div class="separator"></div>
-
-        <section class="middle" layout vertical center-justified>
+        <section class="home__uvp">
+          <div layout horizontal center center-justified>
+            <paper-fab class="fab" icon="expand-more"></paper-fab>
+          </div>
 
           <div class="container content__container" id="howitworks">
+
             <h6>How it works</h6>
-            <p>You get a full-time CTO &amp; technical team for 3 to 6 months. We'll work together to achieve your business goals. A flexible equity compensation model allows startups at any stage to work with us.</p>
+            <p>You get a full-time CTO &amp; technical team for 3 to 6 months. We'll work together to achieve your business goals.</p>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
             <a name="howitworks"></a>
           </div>
+        </section>
 
-          <div class="separator"></div>
+        <section class="home__middle" layout vertical center-justified>
+
+          <!-- <div class="separator"></div> -->
 
           <div class="container content__container">
             <h6>Who We Are</h6>
             <p>A Toronto based group of web and mobile software engineers. We invest our time and expertise to help cool startups achieve success.</p>
-            <pkl-link-button label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
+            <pkl-link-button class="meet" label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
+        </section>
 
-          <div class="separator"></div>
+        <section class="home__success" layout vertical center-justified>
+
+          <!-- <div class="separator"></div> -->
 
           <div class="container content__container">
             <h6>Your success is our success</h6>

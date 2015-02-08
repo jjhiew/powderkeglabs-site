@@ -1,10 +1,12 @@
+$material-primary: #607d8b;
+
 /** sidebar */
 :host /deep/ core-header-panel[navigation] {
   background-color: #fff
 }
 
 :host /deep/ core-header-panel[navigation] core-toolbar{
-  background-color: #607d8b;
+  background-color: $material-primary;
   color: #fff;
 }
 
@@ -33,22 +35,9 @@
 :host /deep/ core-toolbar {
 }
 
-/** main content */
-:host /deep/ core-header-panel[main] {
-  background-color: #fff;
-}
-
 :host /deep/ core-header-panel[main] core-toolbar{
-  background-color: #607d8b;
+  background: rgba(0, 0, 0, 0.3);
   color: #fff;
-}
-
-.container {
-  padding: 20px;
-}
-
-:host /deep/ .dark {
-  color: #555;
 }
 
 :host /deep/ a.large-screen-nav__links{
