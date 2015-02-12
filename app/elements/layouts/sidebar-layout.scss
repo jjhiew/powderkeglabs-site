@@ -36,8 +36,12 @@ $material-primary: #607d8b;
 }
 
 :host /deep/ core-header-panel[main] core-toolbar{
-  background: rgba(0, 0, 0, 0.3);
+  background: $material-primary;
   color: #fff;
+}
+
+:host /deep/ core-header-panel[main] core-toolbar[transparent] {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 :host /deep/ a.large-screen-nav__links{

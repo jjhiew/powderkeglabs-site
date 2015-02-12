@@ -11,11 +11,19 @@ html {
   margin: 0;
 }
 
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  color: $text-primary-color;
+}
+
 html /deep/ paper-button[primary] {
   background-color: $accent-color;
   color: $text-secondary-color;
 }
 
+/* Profile Card List */
 html /deep/ .person__dialog::shadow #scroller {
   height: 60vh;
   width: 90vw;
@@ -27,15 +35,7 @@ html /deep/ .person__dialog {
   right: 20px;
 }
 
-
-body {
-  height: 100%;
-  margin: 0;
-  font-size: 16px;
-  color: $text-primary-color;
-}
-
-
+/** Main Panel Background **/
 html /deep/ core-header-panel[main] {
   background-image: url('/images/desktop-bt.jpg');
   background-size: cover;
