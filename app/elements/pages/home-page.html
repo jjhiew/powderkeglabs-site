@@ -5,7 +5,7 @@
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 
 
-<polymer-element name="pkl-home-page" attributes="selected" noscript>
+<polymer-element name="pkl-home-page" attributes="selected">
   <template>
     <style>
 
@@ -76,7 +76,7 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout selected="home">
+    <pkl-sidebar-layout id="layout" selected="home">
       <div class="title">Home</div>
 
       <!--Content Container Start -->
@@ -91,7 +91,7 @@
 
         <section class="home__uvp">
           <div layout horizontal center center-justified>
-            <paper-fab class="fab" icon="expand-more"></paper-fab>
+            <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div>
 
           <div class="container content__container" id="howitworks">
@@ -99,7 +99,7 @@
             <h6>How it works</h6>
             <p>You get a full-time CTO &amp; technical team for 3 to 6 months. We'll work together to achieve your business goals.</p>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
-            <a name="howitworks"></a>
+
           </div>
         </section>
 
@@ -130,4 +130,28 @@
 
     </pkl-sidebar-layout>
   </template>
+
+  <script>
+    Polymer('pkl-home-page', {
+
+      attached: function() {
+
+        //Make the scroll-down fab pulse
+        var elem = this.$.superfab;
+        var player = elem.animate([
+          {opacity: "1.0", transform: "scale(1)"},
+          {opacity: "1.0", transform: "scale(0.9)"}
+        ],
+        {
+          direction: "alternate", duration: 500, iterations: 6
+        });
+      },
+      fabClick: function(e){
+        var yPos = $(e.toElement).get(0).offsetTop + 28; //28px for top offset
+        this.fire('scroll-page-to', {msg: yPos});
+      }
+
+    });
+  </script>
+
 </polymer-element>

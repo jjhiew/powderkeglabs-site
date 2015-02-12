@@ -73,11 +73,27 @@
     Polymer('pkl-sidebar-layout', {
       screenQuery: 'max-width: 800px',
       ready: function() {
+
         var menuIconButton = this.$.menuIconButton;
-        var drawerPanel = this.$.drawerPanel
+        var drawerPanel = this.$.drawerPanel;
+        var mainPanel = this.$.mainPanel;
+        var mainHeader = this.$.mainHeader;
+        var mainHeaderHeight = 64; // Offsets for core-toolbar
+
+        //Listen for a drawer panel toggle event
         menuIconButton.addEventListener('click', function(){
           drawerPanel.togglePanel();
         });
+
+        //Listen for a 'scroll' event and scroll the screen to the specified y position.
+        //For Polymer, it's the core-header-panel's scroller object that needs to scroll, not the <body>
+        document.addEventListener('scroll-page-to', function(e){
+          //console.log(mainHeader.get(0).offsetLeft);
+          $(mainPanel.scroller).animate({
+            scrollTop: e.detail.msg + mainHeaderHeight
+          }, 1000);
+        });
+
       }
     });
   </script>
