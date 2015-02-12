@@ -113,6 +113,13 @@ html /deep/ .lower-nav {
   color: #fff
 }
 
+html /deep/ a.lower-nav__link{
+  color: #ddd;
+  text-decoration:none;
+  font-size: 16px;
+  line-height:2;
+}
+
 html /deep/ .footer{
   background-color: $panel-background-primary-color;
   margin-bottom: 0px;
@@ -142,12 +149,6 @@ html /deep/ .fab {
     height: 165px;
     margin-top: -20px;
   }
-
-  // html /deep/ core-header-panel[main] {
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  //   background-position: center center;
-  // }
 
   nav-header::shadow span{
     font-size: 1.15em;

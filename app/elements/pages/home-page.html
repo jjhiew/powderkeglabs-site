@@ -93,20 +93,14 @@
           <div layout horizontal center center-justified>
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div>
-
           <div class="container content__container" id="howitworks">
-
             <h6>How it works</h6>
             <p>You get a full-time CTO &amp; technical team for 3 to 6 months. We'll work together to achieve your business goals.</p>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
-
           </div>
         </section>
 
         <section class="home__middle" layout vertical center-justified>
-
-          <!-- <div class="separator"></div> -->
-
           <div class="container content__container">
             <h6>Who We Are</h6>
             <p>A Toronto based group of web and mobile software engineers. We invest our time and expertise to help cool startups achieve success.</p>
@@ -115,9 +109,6 @@
         </section>
 
         <section class="home__success" layout vertical center-justified>
-
-          <!-- <div class="separator"></div> -->
-
           <div class="container content__container">
             <h6>Your success is our success</h6>
             <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p>
@@ -147,7 +138,7 @@
         });
       },
       fabClick: function(e){
-        var yPos = $(e.toElement).get(0).offsetTop + 28; //28px for top offset
+        var yPos = $(e.toElement).get(0).offsetTop + 28; //28px for top offset @TODO: dynamic calculate this
         this.fire('scroll-page-to', {msg: yPos});
       }
 

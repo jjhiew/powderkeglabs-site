@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="pkl-site-footer">
+<polymer-element name="pkl-site-footer" attributes="navItems">
   <template>
     <style>
       :host {
@@ -39,13 +39,10 @@
     <link rel="stylesheet" href="/styles/main.css">
 
     <section class="lower-nav">
-
       <div class="container">
-        <div class="lower-nav__link">Home</div>
-        <div class="lower-nav__link">About</div>
-        <div class="lower-nav__link">Team</div>
-        <div class="lower-nav__link">FAQ</div>
-        <div class="lower-nav__link">Contact &amp; Apply</div>
+        <template repeat="{{navItem in navItems}}">
+          <a class="lower-nav__link" href="{{navItem.url}}">{{navItem.name}}</a>
+        </template>
       </div>
     </section>
 
