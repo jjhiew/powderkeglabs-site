@@ -17,7 +17,7 @@
       },
       {
       	"question": "What's your compensation model?",
-      	"answer": "It depends on your startup and the services you'll need. Generally speaking, we'll ask for a small fee,  an equity percentage, and/or a revenue share. The amounts are equivalent to the time we're investing in you. Our compensation model is flexible, so startups at any stage and resource level will be able to join the program."
+      	"answer": "It depends on your startup and the services you'll need. Generally speaking, we'll ask for a small consulting fee, an equity percentage in the form of a Convertible Note, and/or a revenue share. The amounts are equivalent to the services we're investing in you. Our compensation model is flexible, so startups at any stage and resource level will be able to benefit from the program."
       },
       {
       	"question": "Do you only work with startups?",
@@ -32,8 +32,8 @@
             "answer": "Our team has been in the game long enough to be able to develop in any stack if given enough time.  We give priority to open-source technologies. With that said, here are our current specialties: \n\n- **Back-end**: PHP, NodeJS, Java\n- **Databases**: MySQL, Mongo, Postgres, MSSQL, DB2\n- **Front-end**: HTML, CSS, JS\n- **Mobile**: Native iOS and Android"
       },
       {
-            "question": "Do you only work with software startups?",
-            "answer": "Our background is software development, but we'd love to try the hardware space.  Send us an [application](/#/contact) and we'll let you know if we can help."
+            "question": "Do you only work with web and mobile software startups?",
+            "answer": "Our background is in software, but we'd love to try the hardware space.  Send us an [application](/#/contact) and we'll let you know if we can help."
       },
       {
             "question": "Do you only work with startups in Toronto?",
