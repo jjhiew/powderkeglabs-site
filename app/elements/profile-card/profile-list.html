@@ -12,14 +12,58 @@
         margin-top: 0px;
       }
 
+      .person {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 1px solid black;
+        height: 320px;
+      }
+
+      .person__image{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: #ddd;
+      }
+
+      .person__bio {
+        /*padding-left:20px;
+        padding-right:20px;*/
+        border: 1px solid black;
+        height: 100%;
+      }
+
+      .description {
+        border: 1px solid black;
+        height: 100%
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <div class="persons__container--list" layout horizontal wrap center-justified>
+    <div class="persons__container--list" layout vertical wrap center-justified>
       <template repeat="{{person in peopleItems}}">
-        <pkl-profile-card shadow="{{shadow}}" pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
-          <p><marked-element>{{person.description}}</marked-element></p>
-        </pkl-profile-card>
+
+        <!-- <template if={{smallScreen}}>
+          <pkl-profile-card shadow="{{shadow}}" pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
+            <p><marked-element>{{person.description}}</marked-element></p>
+          </pkl-profile-card>
+        </template> -->
+
+        <div layout horizontal class="person">
+          <div class="person__image"></div>
+          <div flex class="person__bio">
+            <div style="height:100%" layout vertical>
+              <div>{{person.name}}</div>
+              <div >{{person.title}}</div>
+              <div class="description" layout horizontal center>
+                <div>{{person.description}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </template>
     </div>
 

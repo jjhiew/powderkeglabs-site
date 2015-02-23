@@ -1,6 +1,6 @@
 [
       {"name": "Home", "hash": "home", "icon": "home", "url": "/#/"},
-      {"name": "FAQ", "hash": "faq", "icon": "info", "url": "/#/faq"},      
+      {"name": "FAQ", "hash": "faq", "icon": "info", "url": "/#/faq"},
       {"name": "Team", "hash": "team", "icon": "social:people", "url": "/#/team"},
-      {"name": "Contact & Apply", "hash": "contact", "icon": "mail", "url":"/#/contact"}
+      {"name": "Contact", "hash": "contact", "icon": "mail", "url":"/#/contact"}
 ]

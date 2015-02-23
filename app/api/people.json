@@ -19,26 +19,5 @@
         "title": "Chief Scientist",
         "image":"images/team/disco_1_w.jpg",
         "description": "Disco is the most diligent scientist we know, always testing the laws of gravity."
-    },
-    {
-        "id": "4",
-        "name": "JJ Hiew",
-        "title": "Co-founder",
-        "image": "images/team/jj_w_700x1440.jpg",
-        "description": "Former CTO at [Merscient Inc](http://www.merscient.com). 10+ years as a web developer and architect. B.Sc in Computer Science from U of T."
-    },
-    {
-        "id": "5",
-        "name": "Ben Zelikovitz",
-        "title": "Co-founder, Advisor",
-        "image": "images/team/jj_w_700x1440.jpg",
-        "description": "Currently serves as Director at Sitescout. Ben has 10+ years of experience in Enterprise SaaS sales and recruitment. Ben is one of our advisors."
-    },
-    {
-        "id": "6",
-        "name": "Disco Stu",
-        "title": "Chief Scientist",
-        "image":"images/team/disco_1_w.jpg",
-        "description": "Disco is the most diligent scientist we know, always testing the laws of gravity."
     }
 ]

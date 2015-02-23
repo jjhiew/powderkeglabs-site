@@ -50,7 +50,7 @@ html /deep/ core-header-panel[main] {
   margin: auto;
   padding-left: 24px;
   padding-right: 24px;
-  max-width: 768px;
+  // max-width: 768px;
   width: 100%;
 }
 
@@ -96,15 +96,6 @@ html /deep/ .home__header {
 
 html /deep/ .header__container__image {
     height: 250px;
-}
-
-html /deep/ .home__uvp, .home__success {
-  background-color: $panel-background-primary-color;
-}
-
-html /deep/ .home__middle {
-  background-color: #626B8A;
-  color: #fff;
 }
 
 /** Site Footer **/

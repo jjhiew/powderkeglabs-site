@@ -52,13 +52,17 @@
           text-transform: uppercase;
       }
 
-      :host .home__uvp, .home__success {
+      :host .home__uvp {
+        background-color: #626B8A;
+        color: #fff;
+      }
+
+      :host .home__success {
         background-color: #fff;
       }
 
-      :host .home__middle {
-        background-color: #626B8A;
-        color: #fff;
+      :host .home__who {
+        background-color: #fff;
       }
 
       :host .fab {
@@ -85,34 +89,35 @@
         <section class="home__header" layout horizontal center center-justified>
           <div class="container header__container">
             <img class="header__container__image" src="/images/pkl-logo-transparent-v2-invert.png" />
-            <h5>A <strong><em>Different</em></strong> Kind Of Startup Accelerator</h5>
+            <h5>Technical Consultants and Startup Incubators</h5>
+          </div>
+        </section>
+
+        <section class="home__who">
+          <div layout horizontal center center-justified>
+            <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
+          </div>
+          <div class="container content__container">
+            <h6>Who We Are</h6>
+            <p>A Toronto based group of web and mobile software engineers. We invest our time and expertise to help cool startups build cool things.</p>
+            <pkl-link-button  label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
         </section>
 
         <section class="home__uvp">
-          <div layout horizontal center center-justified>
-            <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
-          </div>
           <div class="container content__container" id="howitworks">
-            <h6>How it works</h6>
-            <p>We provide startups with a full-time CTO &amp; technical development team for 3 months. We work together to achieve the startup's business goals.</p>
+            <h6>The Powderkeg Accelerator Program</h6>
+            <p>An intense 3-month program where we provide your startup with a CTO &amp; dev team. We'll work together to achieve the your business goals.</p>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
-          </div>
-        </section>
-
-        <section class="home__middle" layout vertical center-justified>
-          <div class="container content__container">
-            <h6>Who We Are</h6>
-            <p>A Toronto based group of experienced web and mobile software engineers. We invest our time and expertise to help cool startups build cool things.</p>
-            <pkl-link-button class="meet" label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
         </section>
 
         <section class="home__success" layout vertical center-justified>
           <div class="container content__container">
             <h6>Your success is our success</h6>
-            <p>Our goal is to help you create the momentum to take your business to the next level. <b>Tell us how we can help you.</b></p>
-            <pkl-link-button label="Apply Now" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>
+            <p>Our goal is to help you create the momentum to take your business to the next level.</p>
+            <p><b>Tell us how we can help you.</b></p>
+            <pkl-link-button label="Contact Us" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>
           </div>
         </section>
 
