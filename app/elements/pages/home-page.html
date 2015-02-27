@@ -2,10 +2,13 @@
 <link rel="import" href="../layouts/sidebar-layout.html">
 <link rel="import" href="../link-button/link-button.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/core-icons/av-icons.html">
+<link rel="import" href="../../bower_components/core-icons/hardware-icons.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
 
 
-<polymer-element name="pkl-home-page" attributes="selected">
+<polymer-element name="pkl-home-page" attributes="selected smallScreen">
   <template>
     <style>
 
@@ -77,6 +80,21 @@
         color: #fff
       }
 
+      :host .vert {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      :host .hor {
+        padding-left:10px;
+        padding-right:10px;
+      }
+
+      :host .feature-icon {
+        height: 100px;
+        width: 100px;
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
@@ -89,7 +107,7 @@
         <section class="home__header" layout horizontal center center-justified>
           <div class="container header__container">
             <img class="header__container__image" src="/images/pkl-logo-transparent-v2-invert.png" />
-            <h5>Technical Consultants and Startup Incubators</h5>
+            <h5>Taking your Startup From Idea to Explosive Growth</h5>
           </div>
         </section>
 
@@ -99,24 +117,37 @@
           </div>
           <div class="container content__container">
             <h6>Who We Are</h6>
-            <p>A Toronto based group of web and mobile software engineers. We invest our time and expertise to help cool startups build cool things.</p>
+            <p>We're a Toronto based group of software developers, technical experts and startup consultants. We provide technical guidance and development resources to help cool startups build their products and grow.</p>
             <pkl-link-button  label="Meet The Team" icon="face-unlock" href="/#/team"></pkl-link-button>
           </div>
         </section>
 
         <section class="home__uvp">
           <div class="container content__container" id="howitworks">
-            <h6>The Powderkeg Accelerator Program</h6>
-            <p>An intense 3-month program where we provide your startup with a CTO &amp; dev team. We'll work together to achieve the your business goals.</p>
+            <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
+              <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="av:fast-forward" class="feature-icon"></core-icon>
+                <h6>Acceleration</h6>
+                <p>Join our 3-month technical accelerator program.  Our hands-on team will work with you to turn your Idea into a Minimum Viable Product.</p>
+              </div>
+              <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="trending-up" class="feature-icon"></core-icon>
+                <h6>Guidance</h6>
+                <p>We'll act as your interim CTO and provide you with the guidance, direction, strategy and vision to ensure your startup's continued growth.</p>
+              </div>
+              <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
+                <h6>Execution</h6>
+                <p>We'll be your software development team. Let's work together to build your product and grow your startup explosively.</p>
+              </div>
+            </div>
             <pkl-link-button label="Learn More" icon="chevron-right" href="/#/faq"></pkl-link-button>
           </div>
         </section>
 
         <section class="home__success" layout vertical center-justified>
           <div class="container content__container">
-            <h6>Your success is our success</h6>
-            <p>Our goal is to help you create the momentum to take your business to the next level.</p>
-            <p><b>Tell us how we can help you.</b></p>
+            <h4>Let's Get Started. Tell Us How We Can Help.</h4>
             <pkl-link-button label="Contact Us" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button>
           </div>
         </section>
@@ -125,11 +156,14 @@
       <!-- End Content Container -->
 
     </pkl-sidebar-layout>
+
+    <core-media-query query="max-width:800px" queryMatches="{{smallScreen}}"></core-media-query>
   </template>
 
   <script>
     Polymer('pkl-home-page', {
-
+      smallFeatures: "width: 100%",
+      largeFeatures: "width: 100%",
       attached: function() {
 
         //Make the scroll-down fab pulse
