@@ -1,6 +1,6 @@
 [
-      {"name": "Home", "hash": "home", "icon": "home", "url": "/#/"},
-      {"name": "FAQ", "hash": "faq", "icon": "info", "url": "/#/faq"},
+      {"name": "Home", "hash": "home", "icon": "home", "url": "/#/", "bgImage":"/images/desktop-bt.jpg"},
+      {"name": "About", "hash": "about", "icon": "info", "url": "/#/about"},
       {"name": "Team", "hash": "team", "icon": "social:people", "url": "/#/team"},
-      {"name": "Contact", "hash": "contact", "icon": "mail", "url":"/#/contact"}
+      {"name": "Contact", "hash": "contact", "icon": "mail", "url":"/#/contact","bgImage":"/images/contact-bw.jpg"}
 ]

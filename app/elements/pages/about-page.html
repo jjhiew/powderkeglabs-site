@@ -3,7 +3,7 @@
 <link rel="import" href="../layouts/sidebar-layout.html">
 <link rel="import" href="../services/faq-service.html">
 
-<polymer-element name="pkl-faq-page" attributes="selected" noscript>
+<polymer-element name="pkl-about-page" attributes="selected" noscript>
 
   <template>
     <style>
@@ -30,11 +30,17 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout selected="faq">
-      <div class="title">FAQ</div>
+    <pkl-sidebar-layout selected="about" toolbarTransparent="true" id="layout">
+      <div class="title">About</div>
 
       <!--Content Container Start -->
       <div class="content">
+
+        <section class="page-header">
+          <div class="container header__container" layout horizontal center center-justified>
+            <h1>About</h1>
+          </div>
+        </section>
 
         <section class="faq">
           <div class="container">

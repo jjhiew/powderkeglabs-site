@@ -11,7 +11,7 @@
 <link rel="import" href="../services/nav-service.html">
 <link rel="import" href="../site-footer/site-footer.html">
 
-<polymer-element name="pkl-sidebar-layout" attributes="selected screenQuery toolbarTransparent">
+<polymer-element name="pkl-sidebar-layout" attributes="selected screenQuery toolbarTransparent bgImage">
 
   <template>
 
@@ -32,7 +32,7 @@
 
       </core-header-panel>
 
-      <core-header-panel main id="mainPanel" mode="scroll">
+      <core-header-panel main id="mainPanel" mode="scroll" style="background-image: url('{{bgImage}}')">
         <core-toolbar id="mainHeader" transparent?={{toolbarTransparent}}>
           <div flex tool>
             <!-- <content select=".title"></content> -->

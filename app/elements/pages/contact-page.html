@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../layouts/sidebar-layout.html">
+<link rel="import" href="../../bower_components/core-image/core-image.html">
 
 <polymer-element name="pkl-contact-page" attributes="selected" noscript>
   <template>
@@ -9,67 +10,38 @@
         width: 100%;
       }
 
-      :host .apply, .contact {
+      :host .contact {
         padding-top: 30px;
         background-color: #fff;
       }
 
-      :host .content__container--apply {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        margin-bottom: 0;
-        text-align: left;
-      }
-
-      :host .content__container--apply h6 {
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
-      }
-
-      :host .content__container--first{
-        border-top: 0px;
-      }
-
-      :host .seperator {
-        display: block;
-        width: 80%;
-        border-top: 1px solid #ccc;
-        margin: auto;
-      }
-
-      :host ul {
-          margin-left: 0px;
-          padding-left: 20px;
-      }
 
     </style>
     <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
-    <pkl-sidebar-layout selected="contact">
+    <pkl-sidebar-layout selected="contact" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg">
       <div class="title">Contact Us</div>
 
       <!-- Start Content Container -->
       <div class="content">
 
-        <section class="apply">
-          <div class="container content__container--apply content__container--first">
-
-            <h4><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a></h4>
-
-            <!-- <p>Send us an email at <a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a> with ... </p>
-            <ul>
-              <li>a brief description about your company and what you do;</li>
-              <li>what technical problems you're having; and</li>
-              <li>where you see us helping.</li>
-            </ul> -->
-
-
+        <section class="page-header">
+          <div class="container header__container" layout horizontal center center-justified>
+            <h1>Contact</h1>
           </div>
         </section>
 
         <section class="contact">
-          <div class="container content__container--apply">
+          <div class="container content__container">
+            <h4>We are located at the heart of Toronto, Canada.</h4>
+          </div>
 
+          <div>
+            <core-image src="/images/contact-bw.jpg" style="height:40vh; width:100vw" sizing="cover"/>
+          </div>
+
+          <div class="container content__container">
+            <h4>Let's Chat.</h4>
+            <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a></span>
           </div>
         </section>
       </div>

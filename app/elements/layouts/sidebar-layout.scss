@@ -1,5 +1,11 @@
 $material-primary: #607d8b;
 
+/** Main Panel Background **/
+:host /deep/ core-header-panel[main] {
+  background-size: cover;
+  background-position: center center;
+}
+
 /** sidebar */
 :host /deep/ core-header-panel[navigation] {
   background-color: #fff
