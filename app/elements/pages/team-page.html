@@ -11,45 +11,38 @@
         width: 100%;
       }
 
-      :host .team, .profiles {
-        background-color: #fff;
-      }
-
       :host .team {
+        background-color: #fff;
         padding-top: 30px;
       }
 
-      :host .content__container--team {
-        padding-top: 25px;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
-        text-align: left;
+      :host .profiles {
+        background-color: #efefef;
       }
 
-      :host .content__container--team h6 {
-        font-size: 20px;
-        font-weight: 600;
-        text-transform: uppercase;
+      :host .contact{
+        background-color: #fff;
       }
+
 
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout selected="team" toolbarTransparent="true" id="layout">
-      <div class="title">The Team</div>
+    <pkl-sidebar-layout selected="people" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg">
+      <div class="title">People</div>
 
     <!--Content Container Start -->
       <div class="content">
 
         <section class="page-header">
           <div class="container header__container" layout horizontal center center-justified>
-            <h1>The Team</h1>
+            <h1>People</h1>
           </div>
         </section>
 
         <section class="team">
-          <div class="container content__container--team content__container--first">
-            <p>A Toronto based group of experienced web and mobile developer / consultants. We invest our time and expertise to help cool startups achieve success.</p>
+          <div class="container content__container">
+            <h4>It's the people that make startups successful</h4>
           </div>
         </section>
 
@@ -58,6 +51,14 @@
             <pkl-profile-list shadow="true"></pkl-profile-list>
           </div>
         </section>
+
+        <section class="contact" layout vertical center-justified>
+          <div class="container content__container">
+            <h4>Let's Chat.</h4>
+            <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a>
+          </div>
+        </section>
+
       </div>
       <!-- End Container -->
     </pkl-sidebar-layout>

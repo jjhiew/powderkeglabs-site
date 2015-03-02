@@ -4,38 +4,64 @@
 <link rel="import" href="profile-card.html">
 <link rel="import" href="../services/people-service.html">
 
-<polymer-element name="pkl-profile-list" attributes="shadow" noscript>
+<polymer-element name="pkl-profile-list" attributes="shadow">
   <template>
     <style>
       :host .persons__container--list {
-        margin-bottom: 75px;
-        margin-top: 0px;
+        position:relative;
       }
 
-      .person {
+      :host .person {
         margin-top: 50px;
         margin-bottom: 50px;
-        border: 1px solid black;
         height: 320px;
       }
 
-      .person__image{
-        height: 300px;
-        width: 300px;
+      :host .person-separator-left{
+        width: 30%;
+        border-top: 1px solid #cdcdcd;
+        /*margin:auto;*/
+      }
+
+      :host .person-separator-right:not(:first-of-type){
+        width: 30%;
+        border-top: 1px solid #b6b6b6;
+        position: absolute;
+        right: 0px;
+      }
+
+      :host .person__image{
+        height: 280px;
+        width: 280px;
         border-radius: 50%;
         background-color: #ddd;
       }
 
-      .person__bio {
-        /*padding-left:20px;
-        padding-right:20px;*/
-        border: 1px solid black;
+      :host .person__bio {
         height: 100%;
+        position: relative;
+        padding-left:20px;
+        padding-right:20px;
       }
 
-      .description {
-        border: 1px solid black;
-        height: 100%
+      :host .person__bio__container {
+        padding-top: 20px
+      }
+
+      :host .person__bio--name{
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+      :host .person__bio--title{
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #727272;
+        margin-top: -10px;
+      }
+
+      :host .person__bio--description {
+        padding-top: 20px;
       }
 
     </style>
@@ -50,23 +76,43 @@
           </pkl-profile-card>
         </template> -->
 
-        <div layout horizontal class="person">
-          <div class="person__image"></div>
-          <div flex class="person__bio">
-            <div style="height:100%" layout vertical>
-              <div>{{person.name}}</div>
-              <div >{{person.title}}</div>
-              <div class="description" layout horizontal center>
-                <div>{{person.description}}</div>
+
+
+        <template if="{{person.id % 2}}">
+          <div class="person-separator-right"></div>
+          <div layout horizontal center class="person">
+            <div class="person__image"></div>
+            <div flex class="person__bio">
+              <div class="person__bio__container" layout vertical>
+                <span class="person__bio--name">{{person.name}}</span>
+                <span class="person__bio--title">{{person.title}}</span>
+                <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
               </div>
             </div>
           </div>
-        </div>
+        </template>
 
+        <template if="{{!(person.id % 2)}}">
+          <div class="person-separator-left"></div>
+          <div layout horizontal center class="person">
+            <div flex class="person__bio">
+              <div class="person__bio__container" layout vertical>
+                <span class="person__bio--name">{{person.name}}</span>
+                <span class="person__bio--title">{{person.title}}</span>
+                <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
+              </div>
+            </div>
+            <div class="person__image"></div>
+          </div>
+        </template>
 
       </template>
     </div>
 
     <pkl-people-service id="peopleService" peopleItems="{{peopleItems}}"></pkl-people-service>
   </template>
+  <script>
+    Polymer('pkl-profile-list', {
+    });
+  </script>
 </polymer-element>
