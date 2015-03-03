@@ -4,7 +4,7 @@
 <link rel="import" href="profile-card.html">
 <link rel="import" href="../services/people-service.html">
 
-<polymer-element name="pkl-profile-list" attributes="shadow">
+<polymer-element name="pkl-profile-list" attributes="shadow smallScreen">
   <template>
     <style>
       :host .persons__container--list {
@@ -14,16 +14,19 @@
       :host .person {
         margin-top: 50px;
         margin-bottom: 50px;
-        height: 320px;
       }
 
-      :host .person-separator-left{
+      :host .person-section--alternate {
+        background-color:#dfdfdf;
+      }
+
+      :host .person-separator--left:not(:first-of-type){
         width: 30%;
-        border-top: 1px solid #cdcdcd;
+        border-top: 1px solid #b6b6b6;
         /*margin:auto;*/
       }
 
-      :host .person-separator-right:not(:first-of-type){
+      :host .person-separator--right:not(:first-of-type){
         width: 30%;
         border-top: 1px solid #b6b6b6;
         position: absolute;
@@ -34,7 +37,7 @@
         height: 280px;
         width: 280px;
         border-radius: 50%;
-        background-color: #ddd;
+        background-color: #555;
       }
 
       :host .person__bio {
@@ -64,47 +67,56 @@
         padding-top: 20px;
       }
 
+
+      @media screen and (max-width: 500px) {
+
+        :host .person__image{
+          height: 200px;
+          width: 200px;
+        }
+
+        :host .person__bio__container {
+          text-align: center;
+        }
+
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
-
     <div class="persons__container--list" layout vertical wrap center-justified>
       <template repeat="{{person in peopleItems}}">
 
-        <!-- <template if={{smallScreen}}>
-          <pkl-profile-card shadow="{{shadow}}" pid="{{person.id}" type='card' image="{{person.image}}" name="{{person.name}}" ptitle="{{person.title}}">
-            <p><marked-element>{{person.description}}</marked-element></p>
-          </pkl-profile-card>
-        </template> -->
+        <section class="{{!(person.id % 2) ? 'person-section--alternate' : 'person-section'}}">
+          <div class="container">
+            <div layout vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}" class="person">
 
+              <!-- Fullscreen: image on left.  Smallscreen: everything centre-->
+              <template if="{{(person.id % 2) || smallScreen}}">
+                <div auto-vertical center?="{{smallScreen}}" class="person__image"></div>
+                <div auto-vertical center?="{{smallScreen}}" flex class="person__bio">
+                  <div class="person__bio__container" layout vertical>
+                    <span class="person__bio--name">{{person.name}}</span>
+                    <span class="person__bio--title">{{person.title}}</span>
+                    <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
+                  </div>
+                </div>
+              </template>
 
+              <!-- Alternating Fullscreen: image on right. Smallscreen: hidden -->
+              <template if="{{!(person.id % 2) && !smallScreen}}">
+                <div auto-vertical center?="{{smallScreen}}" flex class="person__bio">
+                  <div class="person__bio__container" layout vertical>
+                    <span class="person__bio--name">{{person.name}}</span>
+                    <span class="person__bio--title">{{person.title}}</span>
+                    <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
+                  </div>
+                </div>
+                <div auto-vertical center?="{{smallScreen}}" class="person__image"></div>
+              </template>
 
-        <template if="{{person.id % 2}}">
-          <div class="person-separator-right"></div>
-          <div layout horizontal center class="person">
-            <div class="person__image"></div>
-            <div flex class="person__bio">
-              <div class="person__bio__container" layout vertical>
-                <span class="person__bio--name">{{person.name}}</span>
-                <span class="person__bio--title">{{person.title}}</span>
-                <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
-              </div>
             </div>
           </div>
-        </template>
-
-        <template if="{{!(person.id % 2)}}">
-          <div class="person-separator-left"></div>
-          <div layout horizontal center class="person">
-            <div flex class="person__bio">
-              <div class="person__bio__container" layout vertical>
-                <span class="person__bio--name">{{person.name}}</span>
-                <span class="person__bio--title">{{person.title}}</span>
-                <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
-              </div>
-            </div>
-            <div class="person__image"></div>
-          </div>
-        </template>
+        </section>
 
       </template>
     </div>

@@ -12,6 +12,8 @@
         width: 100%;
       }
 
+
+
       :host .faq {
         padding-top: 30px;
         padding-bottom: 50px;
@@ -30,7 +32,7 @@
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout selected="about" toolbarTransparent="true" id="layout">
+    <pkl-sidebar-layout selected="about" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg">
       <div class="title">About</div>
 
       <!--Content Container Start -->
@@ -39,6 +41,15 @@
         <section class="page-header">
           <div class="container header__container" layout horizontal center center-justified>
             <h1>About</h1>
+          </div>
+        </section>
+
+        <section class="page-quote">
+          <div class="container content__container">
+            <h4>&quot;Making the world a better place... through constructing elegant hierarchies for maximum code reuse and extensibility.&quot;</h4>
+          </div>
+          <div>
+            <core-image src="/images/contact-bw.jpg" style="height:40vh; width:100vw" sizing="cover" position="bottom"/>
           </div>
         </section>
 

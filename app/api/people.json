@@ -2,22 +2,22 @@
     {
         "id": "1",
         "name": "JJ Hiew",
-        "title": "Partner, Developer",
+        "title": "Co-Founder, Tech & Dev",
         "image": "images/team/jj_w_700x1440.jpg",
-        "description": "Formerly the CTO of [Merscient Inc](http://www.merscient.com), JJ has 10+ years of professional experience as a software developer & architect. He graduated from U of T with a B.Sc in Computer Science. JJ's dream is to combine his love of technology and delicious baked goods into a gajillion dollar business."
+        "description": "Formerly the CTO of Merscient Inc., JJ has launched global online platforms for numerous clients including IBM, GE, and Castrol Wakefield. He has 10 years of experience as a software developer & solutions architect. JJ graduated from UofT with a B.Sc in Computer Science."
     },
     {
         "id": "2",
         "name": "Ben Zelikovitz",
-        "title": "Co-founder, Advisor",
+        "title": "Co-founder, Sales & Operations",
         "image": "images/team/jj_w_700x1440.jpg",
-        "description": "Ben is a Director at [Sitescout](http://www.sitescout.com/) and has 10+ years of experience in Enterprise SaaS sales and operations.  Prioer to that, Ben was a Recruiting Manager for Randstad Canada's technology division.\n\nHis hero is Drake."
+        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations.  Prior to that, Ben was a Recruiting Manager for Randstad Canada's technology division.\n\nHis hero is Drake."
     },
     {
         "id": "3",
-        "name": "Disco Stu",
-        "title": "Chief Scientist",
+        "name": "Trevor Zeyl",
+        "title": "Co-founder, Legal",
         "image":"images/team/disco_1_w.jpg",
-        "description": "Disco is the most diligent scientist we know, always testing the laws of gravity."
+        "description": "Trevor is an Corporate lawyer for the prestigious Norton Rose Fulbright LLP."
     }
 ]

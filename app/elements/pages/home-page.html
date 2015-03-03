@@ -117,6 +117,7 @@
         <section class="home__uvp">
           <div class="container content__container" id="howitworks">
             <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
+
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="trending-up" class="feature-icon"></core-icon>
                 <h6>Consulting</h6>
@@ -125,15 +126,19 @@
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
                 <h6>Development</h6>
-                <p>Our Toronto-based team of web and mobile developers work with our partners to build and scale their products.</p>
+                <p>Our developers work with existing tech teams, or become the entire dev team. We work with our partners to build and scale their products.</p>
               </div>
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="av:fast-forward" class="feature-icon"></core-icon>
                 <h6>Acceleration</h6>
                 <!-- <p>We partner with startups for 3-months to accelerate their product development.</p> -->
                 <p>We begin our partnerships with a three month hands-on program to accelerate product development.</p>
-                <pkl-link-button raised="raised" label="Learn More"  href="/#/faq"></pkl-link-button>
               </div>
+
+            </div>
+
+            <div>
+              <pkl-link-button raised="raised" label="Learn More"  href="/#/about"></pkl-link-button>
             </div>
 
           </div>

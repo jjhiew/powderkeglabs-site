@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
 <link rel="import" href="../layouts/sidebar-layout.html">
 <link rel="import" href="../profile-card/profile-list.html">
 
@@ -9,11 +10,6 @@
       :host {
         display: block;
         width: 100%;
-      }
-
-      :host .team {
-        background-color: #fff;
-        padding-top: 30px;
       }
 
       :host .profiles {
@@ -40,16 +36,16 @@
           </div>
         </section>
 
-        <section class="team">
+        <section class="page-quote">
           <div class="container content__container">
             <h4>It's the people that make startups successful</h4>
           </div>
         </section>
 
         <section class="profiles">
-          <div class="container">
-            <pkl-profile-list shadow="true"></pkl-profile-list>
-          </div>
+
+          <pkl-profile-list shadow="true" smallScreen="{{smallScreen}}"></pkl-profile-list>
+
         </section>
 
         <section class="contact" layout vertical center-justified>
@@ -62,6 +58,8 @@
       </div>
       <!-- End Container -->
     </pkl-sidebar-layout>
+
+    <core-media-query query="max-width:800px" queryMatches="{{smallScreen}}"></core-media-query>
   </template>
 
 </polymer-element>
