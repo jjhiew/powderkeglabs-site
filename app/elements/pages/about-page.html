@@ -1,7 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../bower_components/marked-element/marked-element.html">
 <link rel="import" href="../layouts/sidebar-layout.html">
-<link rel="import" href="../services/faq-service.html">
+<!-- <link rel="import" href="../services/faq-service.html"> -->
 
 <polymer-element name="pkl-about-page" attributes="selected" noscript>
 
@@ -12,20 +12,22 @@
         width: 100%;
       }
 
-
-
-      :host .faq {
+      :host .page-content {
         padding-top: 30px;
         padding-bottom: 50px;
+        background-color: #efefef;
+      }
+
+      :host .contact{
         background-color: #fff;
       }
 
-      :host .faq__item {
-        padding-top: 20px;
+      :host .item {
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
 
-      :host .faq__item h6 {
-        font-size: 18px;
+      :host .item h4 {
         font-weight: 600;
         margin-bottom: 5px
       }
@@ -49,24 +51,61 @@
             <h4>&quot;Making the world a better place... through constructing elegant hierarchies for maximum code reuse and extensibility.&quot;</h4>
           </div>
           <div>
-            <core-image src="/images/contact-bw.jpg" style="height:40vh; width:100vw" sizing="cover" position="bottom"/>
+            <core-image src="/images/contact-bw.jpg" style="height:300px; width:100vw" sizing="cover" position="bottom"/>
           </div>
         </section>
 
-        <section class="faq">
+
+        <section class="page-content">
+          <div class="container">
+
+            <div class="item">
+              <h4>What We Do</h4>
+              <p>
+                We form long-term partnerhips with innovative startups and enterprises, we help them bring impactful products into the real-world.
+                We develop web and mobile platforms with NodeJS, Javascript, PHP, iOS, Android and various other modern scalable technologies.
+                We invest our development resources into startups and products that we believe will make the world a better place.
+              </p>
+            </div>
+
+            <div class="item">
+              <h4>Partner With Us</h4>
+              <p>
+                We have partners, not clients.
+                Partners believe in each other and care about their future success.
+                Partnerships are forward-thinking and long-term.
+                As partners, it is important that our interests are aligned.
+                We achieve this by providing our services at a reduced cost in exchange for equity, profit sharing agreement, performance bonuses, or other flexible incentive structures.
+                Ready to get started?
+              </p>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="contact" layout vertical center-justified>
+          <div class="container content__container">
+            <h4>Let's Chat.</h4>
+            <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a>
+          </div>
+        </section>
+
+        <!-- <section class="faq">
           <div class="container">
             <template repeat="{{faq in faqItems}}">
               <div class="faq__item">
-                <h6>{{faq.question}}</h6>
+                <h5>{{faq.question}}</h5>
                 <p><marked-element>{{faq.answer}}</marked-element></p>
               </div>
             </template>
           </div>
-        </section>
+        </section> -->
+
+
       </div>
       <!-- End Container -->
     </pkl-sidebar-layout>
-    <pkl-faq-service id="faqService" faqItems="{{faqItems}}"></pkl-faq-service>
+    <!-- <pkl-faq-service id="faqService" faqItems="{{faqItems}}"></pkl-faq-service> -->
   </template>
 
 </polymer-element>
