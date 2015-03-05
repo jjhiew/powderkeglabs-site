@@ -18,6 +18,15 @@
         background-color: #efefef;
       }
 
+      :host .page-image__container {
+        margin-bottom: -10px;
+      }
+
+      :host .page-image {
+        height:400px;
+        width:100vw;
+      }
+
       :host .contact{
         background-color: #fff;
       }
@@ -31,6 +40,13 @@
         font-weight: 600;
         margin-bottom: 5px
       }
+
+      @media screen and (max-width: 500px) {
+        :host .page-image {
+          height:240px;
+        }
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
@@ -50,8 +66,8 @@
           <div class="container content__container">
             <h4>&quot;Making the world a better place... through constructing elegant hierarchies for maximum code reuse and extensibility.&quot;</h4>
           </div>
-          <div>
-            <core-image src="/images/contact-bw.jpg" style="height:300px; width:100vw" sizing="cover" position="bottom"/>
+          <div class="page-image__container">
+            <core-image src="/images/about-bw.jpg"  class="page-image" sizing="cover" position="center"/>
           </div>
         </section>
 
@@ -75,7 +91,7 @@
                 Partners believe in each other and care about their future success.
                 Partnerships are forward-thinking and long-term.
                 As partners, it is important that our interests are aligned.
-                We achieve this by providing our services at a reduced cost in exchange for equity, profit sharing agreement, performance bonuses, or other flexible incentive structures.
+                We achieve this by providing our services at a reduced cost in exchange for equity, profit sharing agreements, performance bonuses, or other flexible incentive structures.
                 Ready to get started?
               </p>
             </div>
