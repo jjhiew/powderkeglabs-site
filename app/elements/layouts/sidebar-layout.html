@@ -22,7 +22,7 @@
     <core-drawer-panel rightDrawer disableSwipe="true" responsiveWidth="9999px" id="drawerPanel">
 
       <core-header-panel drawer navigation flex mode="seamed">
-        <core-toolbar>Powder Keg Labs</core-toolbar>
+        <core-toolbar>Powderkeg Labs</core-toolbar>
 
         <template repeat="{{navItem in navItems}}">
           <a active?="{{selected == navItem.hash}}" href="{{navItem.url}}">
@@ -36,7 +36,8 @@
         <core-toolbar id="mainHeader" transparent?={{toolbarTransparent}}>
           <div flex tool>
             <!-- <content select=".title"></content> -->
-            PKL
+            <!-- PKL -->
+            <a href="/#/"><core-icon style="height:48px; width:48px;"src="/images/pkl-logo-small.png"></core-icon></a>
           </div>
 
           <!-- Show links for larger screen sizes -->
