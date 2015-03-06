@@ -37,7 +37,6 @@
         height: 280px;
         width: 280px;
         border-radius: 50%;
-        background-color: #555;
       }
 
       :host .person__bio {
@@ -92,7 +91,9 @@
 
               <!-- Fullscreen: image on left.  Smallscreen: everything centre-->
               <template if="{{(person.id % 2) || smallScreen}}">
-                <div auto-vertical center?="{{smallScreen}}" class="person__image"></div>
+                <div auto-vertical center?="{{smallScreen}}" >
+                  <core-image src="{{person.image}}" class="person__image" sizing="cover"></core-image>
+                </div>
                 <div auto-vertical center?="{{smallScreen}}" flex class="person__bio">
                   <div class="person__bio__container" layout vertical>
                     <span class="person__bio--name">{{person.name}}</span>
@@ -111,7 +112,9 @@
                     <span class="person__bio--description"><marked-element>{{person.description}}</marked-element></span>
                   </div>
                 </div>
-                <div auto-vertical center?="{{smallScreen}}" class="person__image"></div>
+                <div auto-vertical center?="{{smallScreen}}">
+                  <core-image src="{{person.image}}" class="person__image" sizing="cover"></core-image>
+                </div>
               </template>
 
             </div>

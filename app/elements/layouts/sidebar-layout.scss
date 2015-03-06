@@ -74,3 +74,8 @@ $material-primary: #607d8b;
 :host /deep/ a.large-screen-nav__links:hover, a.large-screen-nav__links:focus {
   color: #1EAEDB;
 }
+
+:host .top-logo {
+  height:48px;
+  width:48px;
+}
