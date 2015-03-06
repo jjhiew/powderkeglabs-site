@@ -39,6 +39,8 @@ $material-primary: #607d8b;
 
 /** toolbar */
 :host /deep/ core-toolbar {
+  background-color: #eee;
+  color: #666;
 }
 
 :host /deep/ core-header-panel[main] core-toolbar{

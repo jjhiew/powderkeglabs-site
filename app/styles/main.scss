@@ -23,44 +23,13 @@ html /deep/ paper-button[primary] {
   color: $text-secondary-color;
 }
 
-/* Profile Card List */
-html /deep/ .person__dialog::shadow #scroller {
-  height: 60vh;
-  width: 90vw;
-}
 
-html /deep/ .person__dialog {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-}
-
-.content-title {
-  padding-top: 20px;
-}
-
+/* Generic Page Elements */
 .container {
   margin: auto;
   padding-left: 24px;
   padding-right: 24px;
-  // max-width: 768px;
   width: 100%;
-}
-
-.separator {
-  display: block;
-  width: 40%;
-  border-top: 1px solid #ccc;
-  margin: auto;
-}
-
-core-header-panel {
-  background: #fff;
-}
-
-core-toolbar {
-  background-color: #eee;
-  color: #666;
 }
 
 .content__container {
@@ -76,13 +45,8 @@ core-toolbar {
     text-transform: uppercase;
 }
 
-ul {
-    margin-left: 0px;
-    padding-left: 20px;
-}
 
-/******* Generic Page Header Elements ***********/
-/*******/
+/* Generic Page Header Elements */
 html /deep/ .page-header {
   text-align: center;
   height: 30vh;
@@ -104,45 +68,14 @@ html /deep/ .header__container h1,h2,h3 {
   text-transform: uppercase;
 }
 
-/** Home page Header **/
-html /deep/ .home__header {
-  color: $text-secondary-color;
-}
 
-
-
-/******** Generic Contact Email Style ***********/
-/********/
+/* Generic Contact Email Style */
 html /deep/ .contact-email {
   font-size: 20px
 }
 
-
-
-/** Site Footer **/
-html /deep/ .lower-nav {
-  background-color: transparent;
-  color: #fff
-}
-
-html /deep/ a.lower-nav__link{
-  color: #ddd;
-  text-decoration:none;
-  font-size: 16px;
-  line-height:2;
-}
-
-html /deep/ .footer{
-  background-color: $panel-background-primary-color;
-  margin-bottom: 0px;
-}
-
-/** Floating Action Button */
-html /deep/ .fab {
-  position: relative;
-  top: -28px;
-  background-color: $panel-background-primary-color;
-  color: $text-primary-color;
+html /deep/ .contact{
+  background-color: #fff;
 }
 
 
@@ -151,19 +84,6 @@ html /deep/ .fab {
 
   body {
     font-size: 16px;
-  }
-
-  html /deep/ .person__dialog {
-    top: 50px;
-  }
-
-  html /deep/ .person__dialog::shadow #scroller {
-    height: 80vh;
-  }
-
-  nav-header::shadow span{
-    font-size: 1.15em;
-    padding-left: 0px;
   }
 
   .content__container {

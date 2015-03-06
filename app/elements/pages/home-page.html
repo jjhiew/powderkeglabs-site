@@ -3,7 +3,7 @@
 <link rel="import" href="../link-button/link-button.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../../bower_components/core-icons/av-icons.html">
-<link rel="import" href="../../bower_components/core-icons/hardware-icons.html">
+<link rel="import" href="../../bower_components/core-icons/social-icons.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
 
@@ -98,7 +98,7 @@
           <div class="container header__container" layout horizontal center center-justified>
             <div class="header__container__content" layout vertical center>
               <img class="header__container__content__image" src="/images/pkl-logo-transparent-v2-invert.png"/>
-              <h4>Developing Impactful Startups</h4>
+              <!-- <h4>Developing Impactful Startups</h4> -->
             </div>
           </div>
         </section>
@@ -108,8 +108,9 @@
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div>
           <div class="container content__container content__container--who">
-            <!-- <h4>Who We Are</h4> -->
-            <h5>We are startup consultants and developers. We partner with cool people to develop, launch and grow innovative digital services.</h5>
+            <!-- <h4>We are a digital product development and venture firm. We design, build, operate, and invest in transformational software products.</h4> -->
+            <h4 style="margin-top:-40px;">We partner with startups to design, develop, and launch innovative digital products.</h4>
+            <!-- <h4>We are startup consultants and developers. We partner with companies we believe in to develop, launch and grow innovative digital services.</h4> -->
             <pkl-link-button  raised="raised" label="About Powderkeg" href="/#/about"></pkl-link-button>
           </div>
         </section>
@@ -121,18 +122,18 @@
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="trending-up" class="feature-icon"></core-icon>
                 <h6>Consulting</h6>
-                <p>We help our partners solve real-world business problems and provide them with CTO-level guidance, strategy, and vision to ensure their long-term growth.</p>
+                <p>We help our partners solve real world business problems. We provide CTO-level guidance, strategy, and vision to ensure their long-term growth.</p>
               </div>
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
                 <h6>Development</h6>
-                <p>Our developers work with existing tech teams, or we can become the entire dev team. We help our partners build and scale their products and services.</p>
+                <p>Our developers work with existing dev teams or we become the entire dev team. We help our partners build and scale their products and services.</p>
               </div>
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="av:fast-forward" class="feature-icon"></core-icon>
-                <h6>Acceleration</h6>
-                <p>We begin our partnerships with a 3-months program to accelerate the startup's product development.</p>
-                <!-- <p>We invest in our partnerships early-on by providing our services for three-months at a reduced cost. This program is designed to accelerate a startup's product development.</p> -->
+                <core-icon icon="social:poll" class="feature-icon"></core-icon>
+                <h6>Investment</h6>
+                <!-- <p>We invest in our partnerships by providing services at a reduced cost in exchange for equity, profit sharing, or other flexible incentive structure.</p> -->
+                <p>We invest development resources in impactful startups. Our services are at a reduced cost in exchange for a flexible incentive structure.</p>
               </div>
 
             </div>
@@ -141,14 +142,6 @@
               <pkl-link-button raised="raised" label="Learn More"  href="/#/about"></pkl-link-button>
             </div>
 
-          </div>
-        </section>
-
-        <section class="home__success" layout vertical center-justified>
-          <div class="container content__container">
-            <h4>Let's Chat.</h4>
-            <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a>
-            <!-- <pkl-link-button label="Contact Us" icon="mail" href="/#/contact" primary="true" raised="true"></pkl-link-button> -->
           </div>
         </section>
 

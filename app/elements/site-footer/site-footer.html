@@ -4,24 +4,26 @@
   <template>
     <style>
       :host {
-          font-size: 12px;
-          color: #727272;
+
       }
 
       :host .footer {
-          margin-bottom: 10px;
           padding-top: 0px;
           margin-top: 0px;
           text-align: center;
           margin-left: auto;
           margin-right: auto;
           display: block;
+          background-color: #fff;
+          margin-bottom: 0px;
       }
 
-      :host .top-border {
+      :host .copyright {
         width:80%;
         padding-top: 30px;
         padding-bottom: 30px;
+        font-size: 14px;
+        color: #727272;
       }
 
 
@@ -29,25 +31,49 @@
         padding-top: 50px;
         padding-bottom: 50px;
         text-align: center;
+        background-color: transparent;
+        color: #fff
       }
 
-      :host .lower-nav__link {
-        display: block;
+      :host .lower-nav__block {
+        padding-left: 20px;
+        padding-right: 20px;
       }
+
+      :host a.lower-nav__link{
+        color: #ddd;
+        text-decoration:none;
+        font-size: 16px;
+        line-height:2;
+        -o-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        -khtml-transition: color 0.2s linear;
+        -webkit-transition: color 0.2s linear;
+        -ms-transition: color 0.2s linear;
+        transition: color 0.2s linear;        
+      }
+
 
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
+    <section class="contact" layout vertical center-justified>
+      <div class="container content__container">
+        <h4>Let's Chat.</h4>
+        <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a>
+      </div>
+    </section>
+
     <section class="lower-nav">
-      <div class="container">
+      <div class="container lower-nav__container" layout horizontal center center-justified>
         <template repeat="{{navItem in navItems}}">
-          <a class="lower-nav__link" href="{{navItem.url}}">{{navItem.name}}</a>
+          <div class="lower-nav__block"><a class="lower-nav__link" href="{{navItem.url}}">{{navItem.name}}</a></div>
         </template>
       </div>
     </section>
 
     <section class="footer" layout horizontal center center-justified>
-      <div class="top-border">
+      <div class="copyright">
         &copy; Powderkeg Labs <span id="year">2015</span>
       </div>
     </section>
