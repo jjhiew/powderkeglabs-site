@@ -2,22 +2,22 @@
     {
         "id": "1",
         "name": "JJ Hiew",
-        "title": "Co-Founder, Tech & Dev",
+        "title": "Co-Founder",
         "image": "/images/team/jj_portrait-bw.jpg",
-        "description": "Formerly the CTO of Merscient Inc., JJ has launched global online platforms for numerous clients including IBM, GE, and Castrol Wakefield. He has 10 years of experience as a software developer & solutions architect. JJ graduated from UofT with a B.Sc in Computer Science."
+        "description": "JJ is a software developer that's been building web and mobile applications for over 10 years.  As CTO of Merscient Inc, he launched numerous global online platforms for clients such as IBM, GE, and Castrol Wakefield. JJ graduated from UofT with a B.Sc in Computer Science. He likes cats."
     },
     {
         "id": "2",
         "name": "Ben Zelikovitz",
-        "title": "Co-founder, Sales & Operations",
-        "image": "/images/team/jj_portrait-bw.jpg",
+        "title": "Co-founder",
+        "image": "/images/team/disco_1_w.jpg",
         "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations.  Prior to that, Ben was a Recruiting Manager for Randstad Canada's technology division.\n\nHis hero is Drake."
     },
     {
         "id": "3",
         "name": "Trevor Zeyl",
-        "title": "Co-founder, Legal",
-        "image":"images/team/disco_1_w.jpg",
-        "description": "Trevor is an Corporate lawyer for the prestigious Norton Rose Fulbright LLP. He is currently trapped inside his firm's boardroom."
+        "title": "Co-founder",
+        "image":"/images/team/disco_1_w.jpg",
+        "description": "Trevor is a Corporate lawyer for the prestigious Norton Rose Fulbright LLP. He is currently trapped inside his firm's boardroom."
     }
 ]

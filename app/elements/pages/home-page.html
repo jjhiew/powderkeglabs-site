@@ -27,40 +27,24 @@
         margin-bottom: 30px;
       }
 
-      :host .content__container h6 {
-          font-size: 20px;
-          font-weight: 600;
-          text-transform: uppercase;
+      :host .quote {
+        background-color: #fff;
       }
 
-      :host .home__uvp {
+      :host .quote h4 {
+        /*shim it up slightly so it centres, stupid fab */
+        margin-top:-40px;
+        width: 80%
+      }
+
+      :host .features {
         background-color: #626B8A;
         color: #fff;
       }
 
-      :host .home__success {
-        background-color: #fff;
-      }
-
-      :host .home__who {
-        background-color: #fff;
-      }
-
-      :host .content__container--who {
-        padding-top: 400px;
-        padding-bottom: 400px;
-      }
-
-      :host .fab {
-        position: relative;
-        top: -28px;
-        background-color: #fff;
-        color: #212121;
-      }
-
-      :host .meet {
-        background-color: #626B8A;
-        color: #fff
+      :host .feature-icon {
+        height: 100px;
+        width: 100px;
       }
 
       :host .vert {
@@ -73,14 +57,19 @@
         padding-right:10px;
       }
 
-      :host .feature-icon {
-        height: 100px;
-        width: 100px;
+      :host .fab {
+        position: relative;
+        top: -28px;
+        background-color: #fff;
+        color: #212121;
       }
 
       @media screen and (max-width: 500px) {
         :host .header__container__content__image {
           height: 220px;
+        }
+        :host .quote__section__quote {
+          width: 100%
         }
       }
 
@@ -103,39 +92,35 @@
           </div>
         </section>
 
-        <section class="home__who">
+        <section class="quote">
           <div layout horizontal center center-justified>
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div>
-          <div class="container content__container content__container--who">
-            <!-- <h4>We are a digital product development and venture firm. We design, build, operate, and invest in transformational software products.</h4> -->
-            <h4 style="margin-top:-40px;">We partner with startups to design, develop, and launch innovative digital products.</h4>
-            <!-- <h4>We are startup consultants and developers. We partner with companies we believe in to develop, launch and grow innovative digital services.</h4> -->
+          <div class="container content__container" layout vertical center center-justified>
+            <h4>We partner with startups to design, develop and launch cool digital products.</h4>
             <pkl-link-button  raised="raised" label="About Powderkeg" href="/#/about"></pkl-link-button>
           </div>
         </section>
 
-        <section class="home__uvp">
+        <section class="features">
           <div class="container content__container" id="howitworks">
-            <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
 
-              <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="trending-up" class="feature-icon"></core-icon>
-                <h6>Consulting</h6>
-                <p>We help our partners solve real world business problems. We provide CTO-level guidance, strategy, and vision to ensure their long-term growth.</p>
-              </div>
+            <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
                 <h6>Development</h6>
-                <p>Our developers work with existing dev teams or we become the entire dev team. We help our partners build and scale their products and services.</p>
+                <p>We are web and mobile developers. We work with our partner's existing tech teams, or we become the entire tech team.</p>
+              </div>
+              <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="trending-up" class="feature-icon"></core-icon>
+                <h6>Consulting</h6>
+                <p>We are CTOs. We help our partners solve problems and achieve growth with guidance, strategy, and long term vision.</p>
               </div>
               <div auto-vertical style="{{smallScreen ? largeFeatures : smallFeatures}}" class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="social:poll" class="feature-icon"></core-icon>
-                <h6>Investment</h6>
-                <!-- <p>We invest in our partnerships by providing services at a reduced cost in exchange for equity, profit sharing, or other flexible incentive structure.</p> -->
-                <p>We invest development resources in impactful startups. Our services are at a reduced cost in exchange for a flexible incentive structure.</p>
+                <h6>Startup Friendly</h6>
+                <p>We invest development resources in startups we believe in, our service costs are reduced in exchange for a flexible incentive structure.</p>
               </div>
-
             </div>
 
             <div>
