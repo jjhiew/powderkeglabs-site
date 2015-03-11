@@ -10,14 +10,14 @@
         "id": "2",
         "name": "Ben Zelikovitz",
         "title": "Co-founder",
-        "image": "/images/team/disco_1_w.jpg",
-        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations.  Prior to that, Ben was a Recruiting Manager for Randstad Canada's technology division.\n\nHis hero is Drake."
+        "image": "/images/team/BenPic.jpg",
+        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations.  Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science."
     },
     {
         "id": "3",
         "name": "Trevor Zeyl",
         "title": "Co-founder",
-        "image":"/images/team/disco_1_w.jpg",
-        "description": "Trevor is a Corporate lawyer for the prestigious Norton Rose Fulbright LLP. He is currently trapped inside his firm's boardroom."
+        "image":"/images/team/trevor.png",
+        "description": "Trevor is a business lawyer at the prestigious Norton Rose Fulbright LLP and specializes in M&A. He attended the University of Windsor and the London School of Economics where he attained his JD and LLM respectively."
     }
 ]
