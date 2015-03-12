@@ -48,11 +48,13 @@
       :host .vert {
         margin-top: 30px;
         margin-bottom: 30px;
+        max-width: 80%
       }
 
       :host .hor {
         padding-left:10px;
         padding-right:10px;
+        min-width: 33%
       }
 
       :host .fab {
@@ -68,6 +70,11 @@
         }
         :host .quote__section__quote {
           width: 100%
+        }
+        :host .vert {
+          margin-top: 30px;
+          margin-bottom: 30px;
+          max-width: 100%
         }
       }
 
@@ -106,18 +113,18 @@
             <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="apps" class="feature-icon"></core-icon>
-                <h6>Design</h6>
-                <p>We help our partners turn their ideas into a product. We architect a solution and design a plan of action to go from concept to prototype.</p>
+                <h6>Plan</h6>
+                <p>We are consultants. We provide product strategy, design, and technical guidance. We architect a solution and a plan of action to go from idea to market.</p>
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
                 <h6>Execute</h6>
-                <p>Our development team works closely with our partners to quickly build and launch a successful Minimum Viable Product.</p>
+                <p>We are software developers. Our team works closely with partners to quickly build and launch a successful Minimum Viable Product.</p>
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="trending-up" class="feature-icon"></core-icon>
                 <h6>Scale</h6>
-                <p>We continually work with our partners to improve their product by adding new features and providing support as they grow and scale.</p>
+                <p>We work with partners to improve their product - adding new features and providing support as they continue to grow and scale.</p>
               </div>
             </div>
 
