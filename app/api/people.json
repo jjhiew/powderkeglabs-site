@@ -3,7 +3,7 @@
         "id": "1",
         "name": "JJ Hiew",
         "title": "Co-Founder",
-        "image": "/images/team/jj_portrait-bw.jpg",
+        "image": "/images/team/jj.jpg",
         "description": "JJ is a software engineer that's been developing web and mobile applications for over 10 years.  As CTO of Merscient Inc, he has helped launched numerous global online marketing platforms for clients such as IBM, GE, and Castrol Wakefield. JJ graduated from UofT with a B.Sc in Computer Science."
     },
     {
@@ -17,7 +17,7 @@
         "id": "3",
         "name": "Trevor Zeyl",
         "title": "Co-founder",
-        "image":"/images/team/trevor.png",
+        "image":"/images/team/trevor.jpg",
         "description": "Trevor is a business lawyer at the prestigious Norton Rose Fulbright LLP and specializes in M&A. He attended the University of Windsor and the London School of Economics where he attained his JD and LLM respectively."
     }
 ]
