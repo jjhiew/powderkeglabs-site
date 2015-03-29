@@ -10,10 +10,18 @@
   <template>
     <style>
 
+      :host h2, h3, h4, h5, h6 {
+        font-family: "Montserrat", sans-serif;
+      }
+
       :host .home__header {
+        height: 500px;
+        color: #fff;
         text-align: center;
-        height: 82vh;
-        color: #fff
+      }
+
+      :host .home_header p{
+        color: #fff;
       }
 
       :host .header__container__content {
@@ -27,17 +35,26 @@
 
       :host .quote {
         background-color: #fff;
+        border-bottom: 1px solid #eeeeee;
       }
 
-      :host .quote h4 {
-        /*shim it up slightly so it centres, stupid fab */
-        margin-top:-40px;
+      /*:host .quote h4 {
         width: 80%
+      }*/
+
+      :host .quote p{
+        color: #727272;
       }
 
       :host .features {
-        background-color: #626B8A;
-        color: #fff;
+        background-color: #fff;
+        color: #607d8b;
+        border-bottom: 1px solid #eeeeee;
+      }
+
+      :host .features p{
+        color: #727272;
+        font-size: 14px;
       }
 
       :host .feature-icon {
@@ -57,32 +74,38 @@
         min-width: 33%
       }
 
-      :host .fab {
-        position: relative;
-        top: -28px;
-        background-color: #fff;
-        color: #212121;
-      }
-
       @media screen and (max-width: 500px) {
+        :host .home__header {
+          height: 450px;
+          color: #fff;
+          background: rgba(0,0,0,0.5)
+        }
+
         :host .header__container__content__image {
           height: 220px;
         }
         :host .quote__section__quote {
           width: 100%
         }
+
+        :host .quote h4{
+          font-size: 24px;
+          width: 100%;
+        }
+
         :host .vert {
           margin-top: 30px;
           margin-bottom: 30px;
           max-width: 100%
         }
+
       }
 
 
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout id="layout" selected="home" toolbarTransparent="true" bgImage="/images/desktop-bt.jpg">
+    <pkl-sidebar-layout id="layout" selected="home" toolbarTransparent="true" bgImage="/images/desktop-bt.jpg" bgRgba="0,0,0,0.5">
       <div class="title">Home</div>
 
       <!--Content Container Start -->
@@ -91,20 +114,23 @@
         <section class="home__header">
           <div class="container header__container" layout horizontal center center-justified>
             <div class="header__container__content" layout vertical center>
-              <img class="header__container__content__image" src="/images/pkl-logo-transparent-v2-invert.png"/>
-              <h4>Ignite Your Startup</h4>
+              <!-- <img class="header__container__content__image" src="/images/pkl-logo-transparent-v2-invert.png"/> -->
+              <h2>We are your startup's technical team</h2>
+              <p>Build and launch your Minimum Viable Product within months with our veteran startup CTOs &amp; software developers.</p>
+              <pkl-link-button  raised="raised" label="I want to build my startup" href="/#/about" primary="true"></pkl-link-button>
             </div>
           </div>
         </section>
 
         <section class="quote">
-          <div layout horizontal center center-justified>
+          <!-- <div layout horizontal center center-justified>
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
-          </div>
+          </div> -->
           <div class="container content__container" layout vertical center center-justified>
-            <h4>We partner with startups to design, develop and launch innovative digital products.</h4>
-            <pkl-link-button  raised="raised" label="About Powderkeg" href="/#/about"></pkl-link-button>
+            <h4>Our mission is to help people build things that really matter</h4>
+            <p>Add some more descriptive content here to describe your product or service. What your offer is and how you can improve your potential customers daily experience. This could also be an explanation of the details of your offer if you are running a specific promotion.</p>
           </div>
+
         </section>
 
         <section class="features">
@@ -112,24 +138,20 @@
 
             <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="apps" class="feature-icon"></core-icon>
-                <h6>Plan</h6>
-                <p>We are consultants. We provide product strategy, design, and technical guidance. We architect a solution and a plan of action to go from idea to market.</p>
+                <core-icon icon="trending-up" class="feature-icon"></core-icon>
+                <h6>Startup Friendly Pricing</h6>
+                <p>We provide all sorts of startup friendly pricing structures by allowing cash + equity, profit sharing, or other flexible incentive structure. Build your startup with minimal resource spend.</p>
+              </div>
+              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="social:group" class="feature-icon"></core-icon>
+                <h6>Technical Guidance</h6>
+                <p>CTOs and consultants with 10 years of successful startup experience will help you make the right decisions. Get technical guidance, product vision, product design, and development planning help.</p>
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
-                <h6>Execute</h6>
-                <p>We are software developers. Our team works closely with partners to quickly build and launch a successful Minimum Viable Product.</p>
+                <h6>Development Team</h6>
+                <p>Web and mobile developers that are passionate, experienced, and local. We'll work with you to quickly build and launch your Minimum Viable Product.</p>
               </div>
-              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="trending-up" class="feature-icon"></core-icon>
-                <h6>Scale</h6>
-                <p>We work with partners to improve their product - adding new features and providing support as they continue to grow and scale.</p>
-              </div>
-            </div>
-
-            <div>
-              <pkl-link-button raised="raised" label="Learn More"  href="/#/about"></pkl-link-button>
             </div>
 
           </div>
@@ -145,22 +167,22 @@
 
   <script>
     Polymer('pkl-home-page', {
-      attached: function() {
-
-        //Make the scroll-down fab pulse
-        var elem = this.$.superfab;
-        var player = elem.animate([
-          {opacity: "1.0", transform: "scale(1)"},
-          {opacity: "1.0", transform: "scale(0.80)"}
-        ],
-        {
-          direction: "alternate", duration: 500, iterations: 8
-        });
-      },
-      fabClick: function(e){
-        var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
-        this.fire('scroll-page-to', {msg: yPos});
-      }
+      // attached: function() {
+      //
+      //   //Make the scroll-down fab pulse
+      //   var elem = this.$.superfab;
+      //   var player = elem.animate([
+      //     {opacity: "1.0", transform: "scale(1)"},
+      //     {opacity: "1.0", transform: "scale(0.80)"}
+      //   ],
+      //   {
+      //     direction: "alternate", duration: 500, iterations: 8
+      //   });
+      // },
+      // fabClick: function(e){
+      //   var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
+      //   this.fire('scroll-page-to', {msg: yPos});
+      // }
 
     });
   </script>
