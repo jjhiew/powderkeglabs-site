@@ -52,8 +52,9 @@ h2, h3, h4, h5, h6 {
 /* Generic Page Header Elements */
 html /deep/ .page-header {
   text-align: center;
-  height: 30vh;
+  height: 40vh;
   color: #fff;
+  background: rgba(0,0,0,0.5);
 }
 
 html /deep/ .page-quote {
@@ -89,6 +90,9 @@ html /deep/ .contact{
     font-size: 16px;
   }
 
+  html /deep/ .page-header {
+    // height: 275px;
+  }
   .content__container {
     padding-top: 100px;
     padding-bottom: 100px;

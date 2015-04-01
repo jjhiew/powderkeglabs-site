@@ -22,13 +22,17 @@
       }
 
       :host .home__header pkl-link-button{
-        width:150px;
+        width:200px;
         margin-left: 10px;
         margin-right: 10px;
+        font-weight: 600;
+        font-size: 16px;
       }
 
-      :host .home_header p{
+      :host .subhead{
         color: #fff;
+        font-size: 18px;
+        width: 80%;
       }
 
       :host .header__container__content {
@@ -49,7 +53,7 @@
         width: 80%
       }*/
 
-      :host .quote p{
+      :host .quote p, .features p{
         color: #727272;
       }
 
@@ -57,11 +61,6 @@
         background-color: #fff;
         color: #212121;
 
-      }
-
-      :host .features p{
-        color: #727272;
-        font-size: 14px;
       }
 
       :host .feature-icon {
@@ -91,7 +90,11 @@
         :host .home__header {
           height: 450px;
           color: #fff;
-          background: rgba(0,0,0,0.5)
+        }
+
+        :host .subhead{
+          font-size: 16px;
+          width: 100%;
         }
 
         :host .header__container__content__image {
@@ -99,11 +102,6 @@
         }
         :host .quote__section__quote {
           width: 100%
-        }
-
-        :host .quote h4{
-          font-size: 24px;
-          width: 100%;
         }
 
         :host .vert {
@@ -127,11 +125,10 @@
         <section class="home__header">
           <div class="container header__container" layout horizontal center center-justified>
             <div class="header__container__content" layout vertical center>
-              <!-- <img class="header__container__content__image" src="/images/pkl-logo-transparent-v2-invert.png"/> -->
               <h2>We'll jump start your startup</h2>
-              <p>A statement here that encapsulates what we do and sells them on choosing our service</p>
+              <p class="subhead">Give your startup the best chance at success. Join our startup builder program and our team will bring your ideas to market in months. </p>
               <div layout horizontal>
-                <pkl-link-button noink="true" label="Learn More" href="/#/about"></pkl-link-button>
+                <!-- <pkl-link-button noink="true" label="Learn More" href="/#/about"></pkl-link-button> -->
                 <pkl-link-button noink="true" label="Contact Us" href="/#/contact" primary="true"></pkl-link-button>
               </div>
             </div>
@@ -143,7 +140,7 @@
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div> -->
           <div class="container content__container" layout vertical center center-justified>
-            <h4>We make ideas happen</h4>
+            <h3>We make ideas happen</h3>
             <p>Nothing gets us going more than an idea that has the potential to be great. We are a highly experienced team of consultants and developers who will love your ideas, nurture them and give you the tools and support you need to watch them grow and flourish.</p>
           </div>
 

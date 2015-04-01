@@ -59,9 +59,19 @@
         text-align: center;
       }
 
+      :host .callout h4{
+        width: 80%;
+      }
+
+      @media screen and (max-width: 500px) {
+        :host .callout h4{
+          width: 100%;
+        }
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
-    
+
     <template if="{{!simpleFooter}}">
       <section class="callout">
         <div class="container content__container" layout vertical center center-justified>

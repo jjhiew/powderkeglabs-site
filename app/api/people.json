@@ -4,20 +4,20 @@
         "name": "JJ Hiew",
         "title": "Co-founder",
         "image": "/images/team/jj.jpg",
-        "description": "JJ is a software engineer that's been developing web and mobile applications for over 10 years.  As CTO of Merscient Inc, he has helped launched numerous global platforms for clients such as IBM, GE, and Castrol Wakefield. JJ graduated from UofT with a B.Sc in Computer Science."
+        "description": "JJ is a software engineer who’s been developing web and mobile applications for over 10 years. As CTO of Merscient Inc, he has helped launch numerous global platforms for clients such as IBM, GE and Castrol Wakefield. JJ graduated from UofT with a B.Sc in Computer Science. He’s obsessed with turning his love of delicious baked goods and technology into a billion dollar business."
     },
     {
         "id": "2",
         "name": "Ben Zelikovitz",
         "title": "Co-founder",
         "image": "/images/team/BenPic.jpg",
-        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations.  Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science."
+        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations. Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science. His heroes are Justin Bieber and Drake, in that order."
     },
     {
         "id": "3",
         "name": "Trevor Zeyl",
         "title": "Co-founder",
         "image":"/images/team/trevor.jpg",
-        "description": "Trevor is a business lawyer with the global law firm Norton Rose Fulbright Canada LLP, where he specializes in corporate finance and M&A. Trevor attended the University of Windsor and the London School of Economics where he attained his JD and LLM, respectively."
+        "description": "Trevor is a business lawyer with the global law firm Norton Rose Fulbright Canada LLP, where he specializes in corporate finance and M&A. Trevor attended the University of Windsor and the London School of Economics where he attained his JD and LLM, respectively. When he’s not closing multi-million dollar deals, he can be found sobbing at the latest Toronto Raptors’ loss."
     }
 ]

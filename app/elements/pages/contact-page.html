@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../layouts/sidebar-layout.html">
-<link rel="import" href="../../bower_components/core-image/core-image.html">
+<!-- <link rel="import" href="../../bower_components/core-image/core-image.html"> -->
 
 <polymer-element name="pkl-contact-page" attributes="selected" noscript>
   <template>
@@ -17,11 +17,23 @@
 
       :host .location {
         color: #fff;
+        background-color: #fff;
+        background-image: url("/images/contact-bw.jpg");
+        background-size: cover;
+        background-position: bottom center;
+        height: 325px;
+      }
+
+      :host .location .overlay-container {
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+        text-align: center;
       }
 
     </style>
     <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
-    <pkl-sidebar-layout selected="contact" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg" simpleFooter="true">
+    <pkl-sidebar-layout selected="contact" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg" bgRgba="0,0,0,0.5" simpleFooter="true">
       <div class="title">Contact Us</div>
 
       <!-- Start Content Container -->
@@ -29,7 +41,7 @@
 
         <section class="page-header">
           <div class="container header__container" layout horizontal center center-justified>
-            <h3>Contact Us</h3>
+            <h3>Let's Chat</h3>
           </div>
         </section>
 
@@ -41,9 +53,10 @@
         </section>
 
         <section class="location">
-          <core-image src="/images/contact-bw.jpg" style="height:300px; width:100vw" sizing="cover" position="bottom"/>
-          <div class="container content__container">
-            <h4>We are located in the heart of Toronto.</h4>
+          <div class="overlay-container" layout horizontal center center-justified>
+            <div class="container">
+              <h4>We are located in the heart of Toronto, Canada.</h4>
+            </div>
           </div>
         </section>
       </div>
