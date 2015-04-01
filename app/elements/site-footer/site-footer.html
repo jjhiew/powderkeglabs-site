@@ -1,6 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 
-<polymer-element name="pkl-site-footer" attributes="navItems">
+<polymer-element name="pkl-site-footer" attributes="navItems simpleFooter">
   <template>
     <style>
       :host {
@@ -58,16 +58,18 @@
         color:#fff;
         text-align: center;
       }
-      
+
     </style>
     <link rel="stylesheet" href="/styles/main.css">
-
-    <section class="callout">
-      <div class="container content__container" layout vertical center center-justified>
-        <h4>Ideas wanted. The bigger, the better. Contact us to ignite your startup. </h4>
-        <pkl-link-button  raised="raised" label="Contact Us Now" href="/#/contact" primary="true"></pkl-link-button>
-      </div>
-    </section>
+    
+    <template if="{{!simpleFooter}}">
+      <section class="callout">
+        <div class="container content__container" layout vertical center center-justified>
+          <h4>Ideas wanted. The bigger, the better. Contact us to ignite your startup. </h4>
+          <pkl-link-button  raised="raised" label="Contact Us Now" href="/#/contact" primary="true"></pkl-link-button>
+        </div>
+      </section>
+    </template>
 
     <!--
     <section class="lower-nav">

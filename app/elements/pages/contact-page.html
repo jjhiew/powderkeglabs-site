@@ -9,9 +9,19 @@
         display: block;
         width: 100%;
       }
+
+      :host .contact {
+        background-color: #fff;
+        text-align: center;
+      }
+
+      :host .location {
+        color: #fff;
+      }
+
     </style>
     <link rel="stylesheet" href="/styles/main.css" shim-shadowdom>
-    <pkl-sidebar-layout selected="contact" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg">
+    <pkl-sidebar-layout selected="contact" toolbarTransparent="true" id="layout" bgImage="/images/desktop-bt.jpg" simpleFooter="true">
       <div class="title">Contact Us</div>
 
       <!-- Start Content Container -->
@@ -19,17 +29,21 @@
 
         <section class="page-header">
           <div class="container header__container" layout horizontal center center-justified>
-            <h1>Contact</h1>
+            <h3>Contact Us</h3>
           </div>
         </section>
 
-        <section class="page-quote">
+        <section class="contact">
+          <div class="container content__container" layout vertical center center-justified>
+            <h4><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a></h4>
+            <p>Drop us a line and tell us about your startup. We'll get back to you quickly.</p>
+          </div>
+        </section>
+
+        <section class="location">
+          <core-image src="/images/contact-bw.jpg" style="height:300px; width:100vw" sizing="cover" position="bottom"/>
           <div class="container content__container">
             <h4>We are located in the heart of Toronto.</h4>
-          </div>
-
-          <div>
-            <core-image src="/images/contact-bw.jpg" style="height:300px; width:100vw" sizing="cover" position="bottom"/>
           </div>
         </section>
       </div>

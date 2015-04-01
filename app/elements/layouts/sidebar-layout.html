@@ -11,7 +11,7 @@
 <link rel="import" href="../services/nav-service.html">
 <link rel="import" href="../site-footer/site-footer.html">
 
-<polymer-element name="pkl-sidebar-layout" attributes="selected screenQuery toolbarTransparent bgImage bgRgba">
+<polymer-element name="pkl-sidebar-layout" attributes="selected screenQuery toolbarTransparent bgImage bgRgba simpleFooter">
 
   <template>
 
@@ -61,7 +61,7 @@
         </core-toolbar>
 
         <content select=".content"></content>
-        <pkl-site-footer navItems={{navItems}}></pkl-site-footer>
+        <pkl-site-footer simpleFooter="{{simpleFooter}}" navItems={{navItems}}></pkl-site-footer>
 
       </core-header-panel>
     </core-drawer-panel>
