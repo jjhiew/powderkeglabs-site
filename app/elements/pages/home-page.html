@@ -15,9 +15,16 @@
       }
 
       :host .home__header {
+        background: rgba(0,0,0,0.5);
         height: 500px;
         color: #fff;
         text-align: center;
+      }
+
+      :host .home__header pkl-link-button{
+        width:150px;
+        margin-left: 10px;
+        margin-right: 10px;
       }
 
       :host .home_header p{
@@ -35,7 +42,7 @@
 
       :host .quote {
         background-color: #fff;
-        border-bottom: 1px solid #eeeeee;
+        border-bottom: 1px solid #dddddd;
       }
 
       /*:host .quote h4 {
@@ -48,8 +55,8 @@
 
       :host .features {
         background-color: #fff;
-        color: #607d8b;
-        border-bottom: 1px solid #eeeeee;
+        color: #212121;
+
       }
 
       :host .features p{
@@ -60,6 +67,12 @@
       :host .feature-icon {
         height: 100px;
         width: 100px;
+      }
+
+      :host .callout {
+        background: rgba(0,0,0,0.5);
+        color:#fff;
+        text-align: center;
       }
 
       :host .vert {
@@ -115,9 +128,12 @@
           <div class="container header__container" layout horizontal center center-justified>
             <div class="header__container__content" layout vertical center>
               <!-- <img class="header__container__content__image" src="/images/pkl-logo-transparent-v2-invert.png"/> -->
-              <h2>We are your startup's technical team</h2>
-              <p>Build and launch your Minimum Viable Product within months with our veteran startup CTOs &amp; software developers.</p>
-              <pkl-link-button  raised="raised" label="I want to build my startup" href="/#/about" primary="true"></pkl-link-button>
+              <h2>We'll jump start your startup</h2>
+              <p>A statement here that encapsulates what we do and sells them on choosing our service</p>
+              <div layout horizontal>
+                <pkl-link-button noink="true" label="Learn More" href="/#/about"></pkl-link-button>
+                <pkl-link-button noink="true" label="Contact Us" href="/#/contact" primary="true"></pkl-link-button>
+              </div>
             </div>
           </div>
         </section>
@@ -127,8 +143,8 @@
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
           </div> -->
           <div class="container content__container" layout vertical center center-justified>
-            <h4>Our mission is to help people build things that really matter</h4>
-            <p>Add some more descriptive content here to describe your product or service. What your offer is and how you can improve your potential customers daily experience. This could also be an explanation of the details of your offer if you are running a specific promotion.</p>
+            <h4>We make ideas happen</h4>
+            <p>Nothing gets us going more than an idea that has the potential to be great. We are a highly experienced team of consultants and developers who will love your ideas, nurture them and give you the tools and support you need to watch them grow and flourish.</p>
           </div>
 
         </section>
@@ -138,19 +154,19 @@
 
             <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="trending-up" class="feature-icon"></core-icon>
-                <h6>Startup Friendly Pricing</h6>
-                <p>We provide all sorts of startup friendly pricing structures by allowing cash + equity, profit sharing, or other flexible incentive structure. Build your startup with minimal resource spend.</p>
-              </div>
-              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="social:group" class="feature-icon"></core-icon>
-                <h6>Technical Guidance</h6>
-                <p>CTOs and consultants with 10 years of successful startup experience will help you make the right decisions. Get technical guidance, product vision, product design, and development planning help.</p>
+                <h6>We Are Consultants</h6>
+                <p>We have over 10 years of experience with successful tech startups. We offer technical guidance and valuable advice regarding strategic planning, product vision, development and design.</p>
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
-                <h6>Development Team</h6>
-                <p>Web and mobile developers that are passionate, experienced, and local. We'll work with you to quickly build and launch your Minimum Viable Product.</p>
+                <h6>We are Developers</h6>
+                <p>We are well-seasoned web and mobile app developers who work locally and will help you build your Minimum Viable Product in a matter of months.</p>
+              </div>
+              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
+                <core-icon icon="loyalty" class="feature-icon"></core-icon>
+                <h6>Startup Friendly Pricing</h6>
+                <p>We offer pricing solutions to match your unique business needs. Options include equity stakes, profit shares, performance bonuses and other flexible incentive structures.</p>
               </div>
             </div>
 

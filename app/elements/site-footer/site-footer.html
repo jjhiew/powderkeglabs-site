@@ -8,14 +8,14 @@
       }
 
       :host .footer {
-          padding-top: 0px;
-          margin-top: 0px;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-          background-color: #fff;
-          margin-bottom: 0px;
+        padding-top: 0px;
+        margin-top: 0px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: #fff;
+        margin-bottom: 0px;
       }
 
       :host .copyright {
@@ -53,24 +53,30 @@
         transition: color 0.2s linear;
       }
 
-
+      :host .callout {
+        background: rgba(0,0,0,0.5);
+        color:#fff;
+        text-align: center;
+      }
+      
     </style>
     <link rel="stylesheet" href="/styles/main.css">
 
-    <section class="contact" layout vertical center-justified>
-      <div class="container content__container">
-        <h4>Let's Chat.</h4>
-        <span class="contact-email"><a href="mailto:kaboom@powderkeglabs.com">kaboom@powderkeglabs.com</a>
+    <section class="callout">
+      <div class="container content__container" layout vertical center center-justified>
+        <h4>Ideas wanted. The bigger, the better. Contact us to ignite your startup. </h4>
+        <pkl-link-button  raised="raised" label="Contact Us Now" href="/#/contact" primary="true"></pkl-link-button>
       </div>
     </section>
 
+    <!--
     <section class="lower-nav">
       <div class="container lower-nav__container" layout horizontal center center-justified>
         <template repeat="{{navItem in navItems}}">
           <div class="lower-nav__block"><a class="lower-nav__link" href="{{navItem.url}}">{{navItem.name}}</a></div>
         </template>
       </div>
-    </section>
+    </section> -->
 
     <section class="footer" layout horizontal center center-justified>
       <div class="copyright">

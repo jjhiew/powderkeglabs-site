@@ -3,25 +3,25 @@
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
 <link rel="import" href="../../bower_components/core-icons/hardware-icons.html">
 
-<polymer-element name="pkl-link-button" attributes="icon label href primary raised">
+<polymer-element name="pkl-link-button" attributes="icon label href primary raised noink">
   <template>
     <style>
     :host {
       display: block;
-      width: 100%;
       font-size:14px;
-      opacity: 0.87;
-
     }
 
     :host /deep/ paper-button {
       border-radius: 4px;
       background-color: transparent;
+      border: 1px solid #fff;
+      width: 100%;
     }
 
     :host /deep/ paper-button[primary] {
       background-color: #03a9f4;
       color: #fff;
+      border: 1px solid #03a9f4;
     }
 
     .button__content span {
@@ -34,7 +34,7 @@
 
     </style>
 
-    <paper-button raised?="{{raised}}" on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
+    <paper-button raised?="{{raised}}" noink?="{{noink}}" on-click="{{buttonClick}}" href="{{href}}" primary?="{{primary}}">
       <div class="button__content" layout horizontal center>
         <template if="{{icon}}">
           <core-icon flex icon="{{icon}}"></core-icon>
