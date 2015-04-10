@@ -86,6 +86,13 @@
         min-width: 33%
       }
 
+      :host .fab {
+        position: relative;
+        top: -28px;
+        background-color: #fff;
+        color: #212121;
+      }
+
       @media screen and (max-width: 500px) {
         :host .home__header {
           height: 450px;
@@ -136,9 +143,9 @@
         </section>
 
         <section class="quote">
-          <!-- <div layout horizontal center center-justified>
+          <div layout horizontal center center-justified>
             <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
-          </div> -->
+          </div>
           <div class="container content__container" layout vertical center center-justified>
             <h3>We make ideas happen</h3>
             <p>Nothing gets us going more than an idea that has the potential to be great. We are a highly experienced team of consultants and developers who will love your ideas, nurture them and give you the tools and support you need to watch them grow and flourish.</p>
@@ -182,22 +189,22 @@
 
   <script>
     Polymer('pkl-home-page', {
-      // attached: function() {
-      //
-      //   //Make the scroll-down fab pulse
-      //   var elem = this.$.superfab;
-      //   var player = elem.animate([
-      //     {opacity: "1.0", transform: "scale(1)"},
-      //     {opacity: "1.0", transform: "scale(0.80)"}
-      //   ],
-      //   {
-      //     direction: "alternate", duration: 500, iterations: 8
-      //   });
-      // },
-      // fabClick: function(e){
-      //   var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
-      //   this.fire('scroll-page-to', {msg: yPos});
-      // }
+      attached: function() {
+      
+        //Make the scroll-down fab pulse
+        var elem = this.$.superfab;
+        var player = elem.animate([
+          {opacity: "1.0", transform: "scale(1)"},
+          {opacity: "1.0", transform: "scale(0.80)"}
+        ],
+        {
+          direction: "alternate", duration: 500, iterations: 8
+        });
+      },
+      fabClick: function(e){
+        var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
+        this.fire('scroll-page-to', {msg: yPos});
+      }
 
     });
   </script>
