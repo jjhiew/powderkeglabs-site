@@ -8,16 +8,17 @@
     },
     {
         "id": "2",
-        "name": "Ben Zelikovitz",
-        "title": "Co-founder",
-        "image": "/images/team/BenPic.jpg",
-        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations. Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science. His heroes are Justin Bieber and Drake, in that order."
+        "name": "Trevor Zeyl",
+        "title": "Co-founder, Legal Advisor",
+        "image":"/images/team/trevor.jpg",
+        "description": "Trevor is a business lawyer with the global law firm Norton Rose Fulbright Canada LLP, where he specializes in corporate finance and M&A. Trevor attended the University of Windsor and the London School of Economics where he attained his JD and LLM, respectively. When he’s not closing multi-million dollar deals, he can be found sobbing at the latest Toronto Raptors’ loss."
     },
     {
         "id": "3",
-        "name": "Trevor Zeyl",
-        "title": "Co-founder",
-        "image":"/images/team/trevor.jpg",
-        "description": "Trevor is a business lawyer with the global law firm Norton Rose Fulbright Canada LLP, where he specializes in corporate finance and M&A. Trevor attended the University of Windsor and the London School of Economics where he attained his JD and LLM, respectively. When he’s not closing multi-million dollar deals, he can be found sobbing at the latest Toronto Raptors’ loss."
+        "name": "Ben Zelikovitz",
+        "title": "Partner, Business Advisor",
+        "image": "/images/team/BenPic.jpg",
+        "description": "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations. Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science. His heroes are Justin Bieber and Drake, in that order."
     }
+
 ]
