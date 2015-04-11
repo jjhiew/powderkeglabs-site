@@ -47,7 +47,7 @@
         margin-bottom: 30px;
       }
 
-      :host .quote {
+      :host .quote, .howitworks {
         background-color: #fff;
         border-bottom: 1px solid #dddddd;
       }
@@ -56,8 +56,8 @@
         color: #727272;
       }
 
-      :host .features, .howitworks {
-        background-color: #fff;
+      :host .features  {
+        background-color: #fdfdfd;
         color: #212121;
         border-bottom: 1px solid #dddddd;
       }
@@ -95,6 +95,7 @@
       :host .step {
         margin-top: 30px;
         margin-bottom: 30px;
+        max-width: 768px;
       }
 
       :host .step__icon{
@@ -103,7 +104,7 @@
       }
 
       :host .step__desc{
-        font-size: 15px;
+        font-size: 16px;
         color: #727272;
       }
 
@@ -178,7 +179,7 @@
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
                 <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
-                <h6>Development Services</h6>
+                <h6>Development Team</h6>
                 <p>We are well-seasoned web and mobile app developers based in Toronto, Canada. We'll work alongside your existing dev teams or we can be your entire dev team.</p>
               </div>
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
@@ -192,9 +193,9 @@
         </section>
 
         <section class="howitworks">
-          <div class="container content__container" layout vertical>
+          <div class="container content__container" layout vertical center>
 
-            <h3>How It Works</h3>
+            <h3>Let's get started</h3>
 
             <div layout vertical class="step">
               <div class="step__image"><core-icon icon="communication:forum" style="color: #70d5de" class="step__icon"></core-icon></div>
@@ -205,7 +206,7 @@
             <div layout vertical class="step">
               <div class="step__image"><core-icon icon="dashboard" style="color: #98e03c" class="step__icon"></core-icon></div>
               <div class="step__title"><h6>Step 2: Plan</h6></div>
-              <div class="step__desc"><p>Using Lean and Agile methodologies, we'll develop a plan for the Minimum Viable Product. It's important to get the MVP out quickly and cost effectively. We'll help you identify <i>only</i> the key features required for launch.</p></div>
+              <div class="step__desc"><p>Using Lean and Agile methodologies, we'll identify the key launch features and develop a plan for the Minimum Viable Product. It's important to get the MVP out quickly (1 - 3 months) and cost effectively.</p></div>
             </div>
 
             <div layout vertical class="step">
