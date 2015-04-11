@@ -2,6 +2,9 @@
 <link rel="import" href="../layouts/sidebar-layout.html">
 <link rel="import" href="../link-button/link-button.html">
 <link rel="import" href="../../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../../bower_components/core-icons/av-icons.html">
+<link rel="import" href="../../bower_components/core-icons/image-icons.html">
+<link rel="import" href="../../bower_components/core-icons/communication-icons.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
 
@@ -53,10 +56,10 @@
         color: #727272;
       }
 
-      :host .features {
+      :host .features, .howitworks {
         background-color: #fff;
         color: #212121;
-
+        border-bottom: 1px solid #dddddd;
       }
 
       :host .feature-icon {
@@ -88,6 +91,22 @@
         background-color: #fff;
         color: #212121;
       }
+
+      :host .step {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      :host .step__icon{
+        height: 75px;
+        width: 75px;
+      }
+
+      :host .step__desc{
+        font-size: 15px;
+        color: #727272;
+      }
+
 
       @media screen and (max-width: 500px) {
         :host .home__header {
@@ -149,7 +168,7 @@
         </section>
 
         <section class="features">
-          <div class="container content__container" id="howitworks">
+          <div class="container content__container">
 
             <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
               <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
@@ -168,6 +187,38 @@
                 <p>We offer pricing solutions to match your unique business needs. Options include equity stakes, profit shares, performance bonuses and other flexible incentive structures.</p>
               </div>
             </div>
+
+          </div>
+        </section>
+
+        <section class="howitworks">
+          <div class="container content__container" layout vertical>
+
+            <h3>How It Works</h3>
+
+            <div layout vertical class="step">
+              <div class="step__image"><core-icon icon="communication:forum" style="color: #70d5de" class="step__icon"></core-icon></div>
+              <div class="step__title"><h6>Step 1: Let's chat</h6></div>
+              <div class="step__desc"><p>Send us an email and we'll set up a meeting. Around the GTA? Let's meet for coffee.</p></div>
+            </div>
+
+            <div layout vertical class="step">
+              <div class="step__image"><core-icon icon="dashboard" style="color: #98e03c" class="step__icon"></core-icon></div>
+              <div class="step__title"><h6>Step 2: Plan</h6></div>
+              <div class="step__desc"><p>Using Lean and Agile methodologies, we'll develop a plan for the Minimum Viable Product. It's important to get the MVP out quickly and cost effectively. We'll help you identify <i>only</i> the key features required for launch.</p></div>
+            </div>
+
+            <div layout vertical class="step">
+              <div class="step__image"><core-icon icon="settings" style="color: #f89a22" class="step__icon"></core-icon></div>
+              <div class="step__title"><h6>Step 3: Build</h6></div>
+              <div class="step__desc"><p>We'll build the MVP.</p></div>
+            </div>
+
+            <div layout vertical class="step">
+              <div class="step__image"><core-icon icon="av:loop" style="color: #dd6b6b" class="step__icon"></core-icon></div>
+              <div class="step__title"><h6>Step 4: Launch, Support and Iterate</h6></div>
+              <div class="step__desc"><p>Launching the MVP is just the beginning. We're here to support and grow the product into a successful startup.</p></div>
+            </div>            
 
           </div>
         </section>
