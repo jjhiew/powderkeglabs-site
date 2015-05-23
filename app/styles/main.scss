@@ -44,6 +44,7 @@ body {
 }
 
 html /deep/ paper-button[primary] {
+  border-color: $accent-color;
   background-color: $accent-color;
   color: $text-secondary-color;
 }
@@ -78,6 +79,11 @@ section.header{
 
 section.page {
   background-color: $panel-background-primary-color;
+}
+
+section.callout{
+  background-color: $text-secondary-color;
+  color: $text-secondary-color;
 }
 
 /* Generic Page Elements */

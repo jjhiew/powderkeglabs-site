@@ -6,8 +6,6 @@
 <link rel="import" href="../../bower_components/core-icons/image-icons.html">
 <link rel="import" href="../../bower_components/core-icons/communication-icons.html">
 <link rel="import" href="../../bower_components/paper-fab/paper-fab.html">
-<link rel="import" href="../../bower_components/core-media-query/core-media-query.html">
-
 
 <polymer-element name="pkl-home-page" attributes="selected smallScreen">
   <template>
@@ -49,6 +47,23 @@
 
     :host div.logo {
       flex: 0 1 auto;
+    }
+
+    :host section#learn-more{
+      padding: 0px 0px;
+      background-image: url('/images/backgrounds/learn-more-2.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    :host section#learn-more .overlay {
+      padding: 105px 0px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    :host .callout h4 {
+      text-transform: none;
     }
 
     @media screen and (max-width: 500px) {
@@ -197,6 +212,19 @@
         <!-- ./container -->
       </section>
 
+
+      <section id="learn-more" class="page callout">
+        <div class="overlay">
+          <div class="container">
+            <div class="row">
+              <div layout vertical center center-justified>
+                <h4>Ideas wanted. The bigger, the better.</h4>
+                <pkl-link-button  raised="raised" label="Learn More" href="/#/about" primary="true"></pkl-link-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       </div>
