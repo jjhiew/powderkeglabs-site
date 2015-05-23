@@ -1,10 +1,34 @@
 @import '../bower_components/skeleton-css/css/normalize.css';
 @import '../bower_components/skeleton-css/css/skeleton.css';
 
+// $text-primary-color: #212121;
+// $text-secondary-color: #ffffff;
+// $panel-background-primary-color: #ffffff;
+// $accent-color: #03a9f4;
+// $accent-secondary-color: #fec503;
+// $fill-color: #494E54;
+// $fill-overlay: rgba(73,78,84,0.65);
+
+
 $text-primary-color: #212121;
 $text-secondary-color: #ffffff;
+$text-muted-color: #777;
 $panel-background-primary-color: #ffffff;
-$accent-color: #03a9f4;
+$panel-background-secondary-color: #f9f9f9;
+$panel-background-secondary-color-mobile: #f5f5f5;
+
+$accent-color: #FF3B2F;
+$accent-secondary-color: $accent-color;
+
+$fill-color: #222;
+$fill-secondary-color: $fill-color;
+$fill-overlay: rgba(0,0,0,0.65);
+
+$button-highlight-color: #fec503;
+$error-text-color: #fff;
+
+$heading-font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$normal-font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
 
 html {
   height: 100%;
@@ -16,6 +40,7 @@ body {
   margin: 0;
   font-size: 16px;
   color: $text-primary-color;
+  font-family: $normal-font-family;
 }
 
 html /deep/ paper-button[primary] {
@@ -24,7 +49,35 @@ html /deep/ paper-button[primary] {
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: $heading-font-family;
+  text-transform: uppercase;
+  line-height: 1.15;
+  font-weight: 600;
+
+}
+
+.alternate-background {
+  background-color: $panel-background-secondary-color;
+}
+
+@media screen and (max-width: 768px){
+  //Darker on moblie so it's more prominent
+  .alternate-background {
+    background-color: $panel-background-secondary-color-mobile;
+  }
+}
+
+.text-muted {
+    color: $text-muted-color;
+}
+
+section.header{
+  color: $text-secondary-color;
+  padding: 50px 0px;
+}
+
+section.page {
+  background-color: $panel-background-primary-color;
 }
 
 /* Generic Page Elements */
@@ -35,19 +88,83 @@ h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.content__container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 0;
-  text-align: center;
+.row {
+  width: 100%;
 }
 
-.content__container h6 {
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: uppercase;
+
+/* Flexbox Alternating Content */
+.flex-row {
+	display: flex;
+	flex-flow: row nowrap;
+	align-self: center;
+	align-items: center;
+	justify-content: space-around;
+	padding: 50px 0px;
+	// margin-left: 0px;
+	// margin-right: 0px;
 }
 
+.flex-row div.hero {
+  flex: 0 1 40%;
+  color: $accent-color;
+}
+
+.flex-row div.text {
+  flex: 0 1 60%;
+  text-align: left;
+}
+
+.flex-row .hero .hero-img {
+  font-size: 1.35em;
+  height: 250px;
+	margin: auto;
+	padding-bottom: 40px;
+	display: flex;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+}
+
+// Alternate the ordering for every second element. Image left/right
+.flex-row.flex-row-alternate{
+  div.text {
+    order: 1;
+  }
+  div.hero {
+    order: 2;
+  }
+}
+
+
+
+@media screen and (max-width:768px){
+
+  .flex-row {
+    flex-flow: column nowrap;
+  }
+
+  .flex-row div.text, .flex-row div.hero {
+    	flex: 0 1 50%;
+    	text-align: center;
+    }
+
+  // Alternate the ordering for every second element. Image left/right
+  .flex-row.flex-row-alternate{
+    div.text {
+      order: 2;
+    }
+    div.hero {
+      order: 1;
+    }
+  }
+
+  .flex-row .hero .hero-img {
+    font-size: 1em;
+    padding: 0px 0px;
+  }
+
+}
 
 /* Generic Page Header Elements */
 html /deep/ .page-header {
@@ -57,38 +174,12 @@ html /deep/ .page-header {
   background: rgba(0,0,0,0.5);
 }
 
-html /deep/ .page-quote {
-  background-color: #fff;
-  padding-top: 30px;
-}
-
-
-html /deep/ .header__container{
-  height: 100%;
-}
-
-html /deep/ .header__container h1,h2,h3 {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-
-/* Generic Contact Email Style */
-html /deep/ .contact-email {
-  font-size: 20px
-}
-
-html /deep/ .contact{
-  background-color: #fff;
-}
-
-
 /* For mobile */
 @media screen and (max-width: 500px) {
 
-  body {
-    font-size: 16px;
-  }
+  // body {
+  //   font-size: 16px;
+  // }
 
   .content__container {
     padding-top: 50px;

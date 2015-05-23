@@ -11,218 +11,191 @@
 
 <polymer-element name="pkl-home-page" attributes="selected smallScreen">
   <template>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="../../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <style>
 
-      :host h2, h3, h4, h5, h6 {
-        font-family: "Montserrat", sans-serif;
-      }
+    :host section.header {
+      height: 65vh;
+    }
 
+    :host section.header .intro-text{
+      font-size: 18px;
+    }
+
+    :host section.header .intro-logo{
+      margin-top: 30px;
+    }
+
+    :host section#clients {
+      padding: 50px 0px;
+    }
+
+    :host #superfab {
+      margin-top: -28px;
+      background-color: #fff;
+      color: #212121;
+    }
+
+    :host .logo-row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-self: center;
+    	align-items: center;
+    	justify-content: center;
+      width: 100%;
+    }
+
+    :host div.logo {
+      flex: 0 1 auto;
+    }
+
+    @media screen and (max-width: 500px) {
       :host .home__header {
-        background: rgba(0,0,0,0.5);
-        height: 500px;
+        height: 400px;
         color: #fff;
-        text-align: center;
       }
 
-      :host .home__header pkl-link-button{
-        width:200px;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-weight: 600;
-        font-size: 16px;
+      :host .logo-row {
+        flex-flow: column nowrap;
       }
 
-      :host .subhead{
-        color: #fff;
-        font-size: 18px;
-        width: 80%;
-      }
-
-      :host .header__container__content {
-        /*shim it up slightly because of nav toolbar*/
-        margin-top: -20px;
-      }
-
-      :host .header__container__content__image{
-        margin-bottom: 30px;
-      }
-
-      :host .quote, .howitworks {
-        background-color: #fff;
-        border-bottom: 1px solid #dddddd;
-      }
-
-      :host .quote p, .features p{
-        color: #727272;
-      }
-
-      :host .features  {
-        background-color: #fdfdfd;
-        color: #212121;
-        border-bottom: 1px solid #dddddd;
-      }
-
-      :host .feature-icon {
-        height: 100px;
-        width: 100px;
-      }
-
-      :host .callout {
-        background: rgba(0,0,0,0.5);
-        color:#fff;
-        text-align: center;
-      }
-
-      :host .vert {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        max-width: 80%
-      }
-
-      :host .hor {
-        padding-left:10px;
-        padding-right:10px;
-        min-width: 33%
-      }
-
-      :host .fab {
-        position: relative;
-        top: -28px;
-        background-color: #fff;
-        color: #212121;
-      }
-
-      :host .step {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        max-width: 768px;
-      }
-
-      :host .step__icon{
-        height: 75px;
-        width: 75px;
-      }
-
-      :host .step__desc{
-        font-size: 16px;
-        color: #727272;
-      }
-
-
-      @media screen and (max-width: 500px) {
-        :host .home__header {
-          height: 400px;
-          color: #fff;
-        }
-
-        :host .subhead{
-          font-size: 16px;
-          width: 100%;
-        }
-
-        :host .header__container__content__image {
-          height: 220px;
-        }
-        :host .quote__section__quote {
-          width: 100%
-        }
-
-        :host .vert {
-          margin-top: 30px;
-          margin-bottom: 30px;
-          max-width: 100%
-        }
-
-      }
+    }
 
 
     </style>
-    <link rel="stylesheet" href="/styles/main.css">
 
-    <pkl-sidebar-layout id="layout" selected="home" bgImage="/images/desktop-bt.jpg" bgRgba="0,0,0,0.5">
+    <pkl-sidebar-layout id="layout" selected="home" bgImage="/images/backgrounds/desktop-bt-1200.jpg" bgRgba="0,0,0,0.5">
       <div class="title">Home</div>
 
       <!--Content Container Start -->
       <div class="content">
 
-        <section class="home__header">
-          <div class="container header__container" layout horizontal center center-justified>
-            <div class="header__container__content" layout vertical center>
-              <h2>Jump start your startup</h2>
-              <p class="subhead">Get a technical dream team to help you build your startup.  Our expert developers will bring your Minimum Viable Product to market in months.</p>
-              <div layout horizontal>
-                <pkl-link-button noink="true" label="Contact Us" href="/#/contact" primary="true"></pkl-link-button>
-              </div>
+        <section class="header">
+          <div class="container" layout vertical center center-justified>
+            <div class="intro-logo">
+              <img src="/images/pkl-logo-transparent-v2-invert.png" />
+            </div>
+            <div class="intro-text">
+              <div class="intro-lead-in">We build digital products, create startups, and make ideas happen.</div>
             </div>
           </div>
         </section>
 
-        <section class="quote">
-          <div layout horizontal center center-justified>
-            <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{fabClick}}" slide-up></paper-fab>
-          </div>
-          <div class="container content__container" layout vertical center center-justified>
-            <h3>We make ideas happen</h3>
-            <p>Nothing gets us going more than an idea that has the potential to be great. We are a highly experienced team of consultants and developers who will love your ideas, nurture them and give you the tools and support you need to watch them grow and flourish.</p>
-          </div>
+        <div style="background-color: #fff" layout horizontal center center-justified>
+          <paper-fab id="superfab" class="fab" icon="expand-more" on-click="{{ fabClick }}" slide-up="" role="button" tabindex="0" aria-label="expand-more"></paper-fab>
+        </div>
 
-        </section>
+        <!-- Benefits -->
+        <section id="benefits" class="page">
 
-        <section class="features">
-          <div class="container content__container">
-
-            <div layout center-justified vertical?="{{smallScreen}}" horizontal?="{{!smallScreen}}" center?="{{smallScreen}}">
-              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="social:group" class="feature-icon"></core-icon>
-                <h6>Consulting</h6>
-                <p>We have over 10 years of experience with successful tech startups. We offer technical guidance and valuable advice regarding strategic planning, product vision, development and design.</p>
+          <!-- Item-->
+          <div class="container">
+            <div class="row flex-row">
+              <div class="hero">
+                <div class="hero-img">
+                  <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
               </div>
-              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="hardware:laptop-mac" class="feature-icon"></core-icon>
-                <h6>Development Team</h6>
-                <p>We are well-seasoned web and mobile app developers based in Toronto, Canada. We'll work alongside your existing dev teams or we can be your entire dev team.</p>
-              </div>
-              <div auto-vertical class="{{smallScreen ? 'vert' : 'hor'}}">
-                <core-icon icon="loyalty" class="feature-icon"></core-icon>
-                <h6>Startup Friendly Pricing</h6>
-                <p>We offer pricing solutions to match your unique business needs. Options include equity stakes, profit shares, performance bonuses and other flexible incentive structures.</p>
+              <div class="text">
+                <h5>We Jump Start Your Startup</h5>
+                <p class="text-muted">We are an experienced team of developers and consultants. We provide the technical guidance, development resources, and tools to jump start your startup. We build your Minimum Viable Product and put the proper infrastructure in place to carry your startup towards success.</p>
               </div>
             </div>
-
+            <!-- ./row -->
           </div>
-        </section>
+          <!-- ./container ./item-->
 
-        <section class="howitworks">
-          <div class="container content__container" layout vertical center>
-
-            <h3>Let's get started</h3>
-
-            <div layout vertical class="step">
-              <div class="step__image"><core-icon icon="communication:forum" style="color: #70d5de" class="step__icon"></core-icon></div>
-              <div class="step__title"><h6>Step 1: Let's chat</h6></div>
-              <div class="step__desc"><p>Send us an email and we'll set up a meeting. Around the GTA? Let's meet for coffee.</p></div>
-            </div>
-
-            <div layout vertical class="step">
-              <div class="step__image"><core-icon icon="dashboard" style="color: #98e03c" class="step__icon"></core-icon></div>
-              <div class="step__title"><h6>Step 2: Plan</h6></div>
-              <div class="step__desc"><p>Using Lean and Agile methodologies, we'll identify the key launch features and develop a plan for the Minimum Viable Product. It's important to get the MVP out quickly  and cost effectively.</p></div>
-            </div>
-
-            <div layout vertical class="step">
-              <div class="step__image"><core-icon icon="settings" style="color: #f89a22" class="step__icon"></core-icon></div>
-              <div class="step__title"><h6>Step 3: Build</h6></div>
-              <div class="step__desc"><p>We'll build the MVP.</p></div>
-            </div>
-
-            <div layout vertical class="step">
-              <div class="step__image"><core-icon icon="av:loop" style="color: #dd6b6b" class="step__icon"></core-icon></div>
-              <div class="step__title"><h6>Step 4: Launch, Support and Iterate</h6></div>
-              <div class="step__desc"><p>Launching the MVP is just the beginning. We're here to support and grow the product into a successful startup.</p></div>
-            </div>            
-
+          <!-- Item -->
+          <div class="alternate-background">
+            <div class="container">
+              <div class="row flex-row flex-row-alternate">
+                <div class="hero">
+                  <div class="hero-img">
+                    <span class="fa-stack fa-5x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h5>We are your technical experts</h5>
+                  <p class="text-muted">It’s like having a <i>really</i> experienced Chief Technology Officer on your team. We analyze your idea and determine the best technology solution for your startup's needs. We provide guidance, education, and valuable advice on all things tech.</p>
+                </div>
+              </div><!-- ./row -->
+            </div><!-- ./container -->
           </div>
+          <!-- /Item -->
+
+          <!-- Item -->
+          <div class="container">
+            <div class="row flex-row">
+              <div class="hero">
+                <div class="hero-img">
+                  <span class="fa-stack fa-5x">
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="text">
+                <h5>We are your development team</h5>
+                <p class="text-muted">Our developers have over a decade of professional experience building and launching web &amp; mobile applications. You will get quality code built on common language frameworks that adhere to software engineering best practices.</p>
+              </div>
+            </div><!-- ./row -->
+          </div><!-- ./container -->
+          <!-- /Item -->
+
+          <!-- Item -->
+          <div class="alternate-background">
+            <div class="container">
+              <div class="row flex-row flex-row-alternate">
+                <div class="hero">
+                  <div class="hero-img">
+                    <span class="fa-stack fa-5x">
+                      <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                      <i class="fa fa-group fa-stack-1x fa-inverse"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h5>We are your partners</h5>
+                  <p class="text-muted">We form partnerships with startups and entrepreneurs that are passionate, dedicated and driven to bring their ideas to life. As partners, we are invested in your success.</p>
+                </div>
+              </div>
+              <!-- ./row -->
+            </div>
+            <!-- ./container -->
+          </div>
+          <!-- /Item -->
         </section>
+        <!-- /Benefits -->
+
+
+        <section id="clients" class="page">
+          <div class="container">
+            <div class="row flex-row">
+              <div class="logo-row">
+                <div class="logo">
+                  <a href="http://www.cloverawards.com" target="_blank" alt="www.cloverawards.com">
+                    <img src="/images/logos/cloverawards.png" alt="CloverAwards Logo">
+                  </a>
+                </div>
+                <div class="logo">
+                  <a href="http://www.merscient.com" target="_blank" alt="www.merscient.com">
+                    <img src="/images/logos/merscient.png" alt="Merscient Logo">
+                  </a>
+                </div>
+              </div>
+          </div>
+          <!-- ./row -->
+        </div>
+        <!-- ./container -->
+      </section>
 
 
 
@@ -231,29 +204,28 @@
 
     </pkl-sidebar-layout>
 
-    <core-media-query query="max-width:800px" queryMatches="{{smallScreen}}"></core-media-query>
   </template>
 
   <script>
-    Polymer('pkl-home-page', {
-      attached: function() {
-      
-        //Make the scroll-down fab pulse
-        var elem = this.$.superfab;
-        var player = elem.animate([
-          {opacity: "1.0", transform: "scale(1)"},
-          {opacity: "1.0", transform: "scale(0.80)"}
-        ],
-        {
-          direction: "alternate", duration: 500, iterations: 8
-        });
-      },
-      fabClick: function(e){
-        var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
-        this.fire('scroll-page-to', {msg: yPos});
-      }
+  Polymer('pkl-home-page', {
+    attached: function() {
 
-    });
+      //Make the scroll-down fab pulse
+      var elem = this.$.superfab;
+      var player = elem.animate([
+        {opacity: "1.0", transform: "scale(1)"},
+        {opacity: "1.0", transform: "scale(0.80)"}
+      ],
+      {
+        direction: "alternate", duration: 500, iterations: 8
+      });
+    },
+    fabClick: function(e){
+      var yPos = $(e.toElement).get(0).offsetTop; //28px for top offset @TODO: dynamic calculate this
+      this.fire('scroll-page-to', {msg: yPos});
+    }
+
+  });
   </script>
 
 </polymer-element>
