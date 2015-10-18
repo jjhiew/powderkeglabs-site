@@ -1,0 +1,103 @@
+html {
+  font-size: 16px;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/// Page Header
+header {
+  height: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  color: #fff;
+}
+
+header img {
+  width: 300px;
+}
+
+////// Alternating Flex Layout Elements
+.flex {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.flex-text {
+  text-align: center;
+}
+
+.hero-img {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.hero-img img {
+  flex: 0 1 auto;
+}
+@media (min-width: 768px) {
+  .flex.row {
+    flex-flow: row nowrap;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .flex-hero {
+    flex: 0 1 35%;
+  }
+
+  .flex-text {
+    flex: 0 1 65%;
+    text-align: left;
+  }
+
+  //Alternating
+  .alt .flex-hero {
+    order: 2;
+  }
+
+  .alt .flex-text {
+    order: 1;
+  }
+}
+////// END Alternating Flex Layout Elements
+
+
+
+.quote {
+  margin-left: 40px;
+}
+
+.quote li {
+  // font-size: 16px;
+  font-style: italic;
+  list-style: disc;
+}
+
+.section-title {
+  padding-bottom: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.contact-collection li {
+  list-style: circle;
+  margin-left: 28px;
+}

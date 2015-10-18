@@ -1,0 +1,17 @@
+header.article {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+section.article {
+  padding-top: 0px;
+}
+
+.article {
+
+  img {
+    @extend .responsive-img;
+  }
+
+}

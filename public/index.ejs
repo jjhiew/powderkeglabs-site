@@ -1,0 +1,52 @@
+<header class="index-header">
+  <div class="flex fill-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <h3 class="uvp">Making ideas happen, in JavaScript.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <p class="lead-in">We plan, design, and build responsive HTML5 web and mobile applications.</p>
+          <p class="lead-in">We specialize in rapid Minimum Viable Product development.</p>
+          <p class="lead-in">We provide CTO consulting services.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="projects grey lighten-4">
+    <div class="container">
+      <%- partial('_shared_partials/project', {
+          name: "Visory (beta)",
+          url: "",
+          image: "/assets/images/work/visory.png",
+          description: "Find a tech advisor. We connect you with the best developers, technical founders, and technology experts in Toronto to help your organization solve it's challenges.",
+          alt: 'alt'
+        }) %>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="projects">
+    <div class="container">
+      <%- partial('_shared_partials/project', {
+          name: "Clover Awards",
+          url: "/blog/cloverawards.html",
+          image: "/assets/images/work/clover/clover_home_mentor_mbp.jpg",
+          description: "A crowd-powered social enterprise platform that rewards the commitment, effort and talent of everyday heroes through recognition and financial support for their individual causes.",
+          alt: null
+        }) %>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <%- partial("_shared_partials/testimonials/testimonials", {}) %>
+
+</main>

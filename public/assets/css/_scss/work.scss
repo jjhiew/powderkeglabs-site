@@ -1,0 +1,40 @@
+section.projects {
+
+  .project:not(:last-child) {
+    padding-bottom: 25px;
+  }
+
+  .project:not(:first-child) {
+    padding-top: 25px;
+  }
+
+  .name {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .flex-hero {
+    flex: 0 1 50%;
+  }
+  .flex-text {
+    flex: 0 1 50%;
+    text-align: left;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .flex-hero img {
+    max-height: 300px;
+  }
+
+  .categories, .technologies {
+    display: block;
+    // font-size: 18px;
+  }
+
+
+}

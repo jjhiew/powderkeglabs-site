@@ -1,0 +1,37 @@
+<header class="dark-color">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 center-align flex">
+        <h3>Our Work</h3>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <%- partial('_shared_partials/project', {
+          name: "Clover Awards",
+          url: "/blog/cloverawards.html",
+          image: "/assets/images/work/clover/clover_home_mentor_mbp.jpg",
+          description: "Clover Awards is a crowd-powered social enterprise platform that rewards the commitment, effort and talent of everyday heroes through recognition and financial support for their individual causes. It' i's a responsive web app built using NodeJS and AngularJS with PayPal and Stripe payment processor integration.",
+          alt: null
+        }) %>
+
+        <!--<div class="divider"></div>-->
+
+        <!--% partial('_project', {
+            name: "SnapMed",
+            url: "/blog/snapmed",
+            image: "/images/work/snapmed/snapmed_iphone.jpg",
+            description: "SnapMed is a web and mobile platform that helps clinicians capture, store and communicate images of medical findings using their mobile device. Built using native iOS, NodeJS, and responsive web components.",
+            alt: "alt"
+          }) %-->
+
+    </div>
+  </section>
+
+</main>

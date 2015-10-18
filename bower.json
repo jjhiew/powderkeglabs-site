@@ -1,0 +1,21 @@
+{
+  "name": "_harp",
+  "version": "0.1.0",
+  "homepage": "https://github.com/powderkeglabs/powderkeglabs.github.io",
+  "authors": [
+    "JJ Hiew <jj@powderkeglabs.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#~0.97.1",
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,25 @@
+section.team {
+
+  .member:not(:last-child) {
+    padding-bottom: 40px;
+  }
+
+  .name {
+    display: block;
+    font-size: 24px;
+  }
+
+  .role {
+    display: block;
+    font-size: 18px;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .hero-img img {
+    height: 225px;
+    width: 225px;
+  }
+}
