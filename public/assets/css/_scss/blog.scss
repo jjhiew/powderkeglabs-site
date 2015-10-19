@@ -25,6 +25,10 @@
   font-weight: 600;
 }
 
+.card-title-link {
+  color: color("grey","darken-3");
+}
+
 .blog-card .flex {
   flex-flow: row nowrap;
   justify-content: flex-start;
