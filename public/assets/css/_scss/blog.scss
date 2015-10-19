@@ -1,3 +1,44 @@
+/// *********************************************************************
+/// BLOG LIST VIEW
+/// *********************************************************************
+.blog-list {
+  background-color: $background-shade-color;
+}
+
+.blog-list .flex.row {
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  flex: 0 1 50%;
+}
+
+.blog-card .card-title{
+  color: black;
+}
+
+.blog-card .flex {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.date {
+  margin-bottom: 10px;
+  color: color("grey", "darken-2");
+}
+
+.date-text {
+  margin-left: 5px;
+}
+
+.read-more {
+  margin-top: 10px;
+  align-items: center;
+}
+
+/// *********************************************************************
+/// ARTICLE VIEW
+/// *********************************************************************
 header.article {
   background-position: center;
   background-size: cover;
@@ -9,9 +50,7 @@ section.article {
 }
 
 .article {
-
   img {
     @extend .responsive-img;
   }
-
 }
