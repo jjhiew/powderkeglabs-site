@@ -34,3 +34,7 @@ $: git push origin gh-pages
 ```
 
 **Note**: The `/www` directory is a submodule pointing the `gh-pages` orphan branch. This is just an easy way to handle deployment without having to constantly switch branches.  See [this blog post](http://blog.revathskumar.com/2014/07/publish-github-pages-using-git-submodules.html) for more details.
+
+License
+-------
+MIT
