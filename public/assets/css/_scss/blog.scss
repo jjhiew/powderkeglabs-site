@@ -1,6 +1,12 @@
 /// *********************************************************************
 /// BLOG LIST VIEW
 /// *********************************************************************
+.blog-header {
+  background-image: url('/assets/images/backgrounds/blog3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 .blog-list {
   background-color: $background-shade-color;
 }
@@ -14,7 +20,7 @@
 }
 
 .card.blog-card .card-title {
-  color: black;
+  color: color("grey","darken-3");
   line-height: 1.0;
   font-weight: 600;
 }
