@@ -1,14 +1,18 @@
 {
   "cloverawards": {
     "title": "Clover Awards -- A case study on awesomeness.",
-    "date": "2015-07-05",
+    "snippet": "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.",
+    "date": "July 05, 2015",
     "image": "//res.cloudinary.com/dvqnohq4c/image/upload/v1436117541/blog/sparkler.jpg",
-    "author": "JJ Hiew"
+    "author": "JJ Hiew",
+    "tags": "Case Study"
   },
   "snapmed": {
     "title": "Snapmed -- Improving patient care, one snap at a time.",
-    "date": "2013-08-12",
+    "snippet": "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.",
+    "date": "September 12, 2014",
     "image": "",
-    "author": "JJ Hiew"
+    "author": "JJ Hiew",
+    "tags": "Case Study"
   }
 }

@@ -14,13 +14,14 @@
     <div class="container">
       <div class="row flex">
 
-        <%- partial('_item', {title: "Lorem Ipsum Dolor", snippet: "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.", date: "2015-01-11"}) %>
-        <%- partial('_item', {title: "Lorem Ipsum Dolor", snippet: "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.", date: "2015-01-11"}) %>
-        <%- partial('_item', {title: "Lorem Ipsum Dolor", snippet: "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.", date: "2015-01-11"}) %>
-        <%- partial('_item', {title: "Lorem Ipsum Dolor", snippet: "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.", date: "2015-01-11"}) %>
-        <%- partial('_item', {title: "Lorem Ipsum Dolor", snippet: "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.", date: "2015-01-11"}) %>
-
-
+        <% for (var slug in public.blog._data) { %>
+          <%- partial('_item', {
+            title: public.blog._data[slug].title,
+            date: public.blog._data[slug].date,
+            snippet: public.blog._data[slug].snippet,
+            tags: public.blog._data[slug].tags,
+          }) %>
+        <% }; %>
 
       </div>
     </div>

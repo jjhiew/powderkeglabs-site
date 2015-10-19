@@ -1,12 +1,17 @@
 <div class="card blog-card">
   <div class="card-content black-text">
-    <span class="card-title"><a><%= title %><a/></span>
+    <span class="card-title"><%= title %></span>
 
-    <div class="date flex">
-      <i class="material-icons tiny">today</i> <span class="date-text"><%= date %></span>
+    <div class="info flex">
+      <span class="date flex">
+        <i class="material-icons tiny">today</i> <span class="date-text"><%= date %></span>
+      </span>
+      <span class="tags flex">
+        <i class="material-icons tiny">label</i> <span class="tags-text"><%= tags %></span>
+      </span>
     </div>
 
-    <p><%= snippet %></p>
+    <p class="snippet"><%= snippet %></p>
 
     <div class="read-more flex"><a href="#">Read More</a></div>
   </div>
