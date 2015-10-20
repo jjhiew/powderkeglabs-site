@@ -75,47 +75,71 @@
       <div class="col s12">
         <article>
           <h3>A better way to deploy HarpJS compiled sites to Github Pages</h3>
-          <div class="article-meta">
-              <time class="time">October 21, 2015</time>
+          <div class="article-meta info flex">
+            <div class="date flex">
+              <i class="material-icons">today</i>
+              <time class="date-text">October 21, 2015</time>
+            </div>
+            <div class="tags flex">
+              <i class="material-icons">label</i>
+              <span class="tags-text">Code, Tutorial</span>
+            </div>
+            <div class="author flex">
+              <i class="material-icons">person</i>
+              <span class="author-text">by JJ Hiew</span>
+            </div>
           </div>
-          <p>If you&#39;re publishing your HarpJS sites to Github pages, then you&#39;ve probably seen the Github deployment instructions in <a href="http://harpjs.com/docs/deployment/github-pages">the official HarpJS docs</a>.</p>
-<p>If you&#39;re the kind of person that prefers using dependency managers (like Bower) to take care of your external assets, then you&#39;d have run into a hot mess using the &quot;official&quot; Github deployment approach.</p>
-<h4>What mess?</h4><p>The Harp docs suggest putting your source files in a <code>_harp</code> folder under the project root.  Then to compile to static files, you&#39;d run...</p>
-<pre><code class="language-bash">harp compile _harp ./
+          <p>If you&#39;re publishing your HarpJS sites to Github pages, then you&#39;ve probably seen the Github deployment instructions in <a href="http://harpjs.com/docs/deployment/github-pages">the official HarpJS docs</a>.  And if you&#39;re the kind of person that prefers using dependency managers (like Bower) to take care of your external assets, then you&#39;d have run into a hot mess with the &quot;official&quot; Github deployment approach.</p>
+<h4>What mess?</h4><p>The Harp docs suggest putting your site&#39;s source files in a <code>_harp</code> folder just under the project root.  If you&#39;re following the docs <em>and</em> using Bower, you&#39;d have a project directory looking like so...</p>
+<pre><code class="language-markup">myapp/
+  |- .bowerrc
+  |- bower.json  
+  +- _harp/
+    |- bower_components/  
+    +- blog/
+      |- post1.md    
+    |- index.ejs
+    |- harp.json
 </code></pre>
-<p>...which places the built files into root.  The problem is that <code>harp compile _harp ./</code> cleans out <em>everything</em> in the root directory save for the <code>_harp</code> folder and your <code>.git*</code> files (<code>bower.json</code>, <code>package.json</code>, and/or other config files).</p>
-<h4>Solutions</h4><p>You can get around this in a few ways:</p>
+<p>Then according to the docs, you&#39;d compile your source to static files by running</p>
+<pre><code class="language-bash">$: harp compile _harp ./
+</code></pre>
+<p>This places generated files into the project root directory, which now ends up looking like...</p>
+<pre><code class="language-markup">myapp/
+  |- _harp/
+  |- index.html      &lt;--- compiled from _harp/index.ejs
+  +- blog/           &lt;--- compiled from _harp/blog/
+    +- post1.html    &lt;--- compiled from _harp/blog/post1.md
+</code></pre>
+<p>The problem is that <code>harp compile _harp ./</code> cleans out <em>everything</em> in the root directory save for the <code>_harp</code> folder and your <code>.git*</code> files.  This also means your <code>bower.json</code>, <code>package.json</code>, and/or other config files get purged.  =(</p>
+<h4>Workaround</h4><p>You can get around this in a few ways:</p>
 <ol>
-<li>utilize an orphaned <code>gh-pages</code> branch in the project repository; or</li>
-<li>create two repositories - one for the source, one to publish the compiled site;</li>
+<li>utilize an orphaned <code>gh-pages</code> branch; or</li>
+<li>create two separate repositories - one for source, one to publish the compiled site</li>
 </ol>
-<p>Either way, you&#39;re doing the &quot;<code>cp -r</code> shuffle&quot; with files going back and forth between temp directories.  This is a major annoyance.</p>
+<p>Either way, you&#39;re doing the &quot;<code>cp -r</code> shuffle&quot;, with files flying back and forth between temp directories.  This is a major annoyance.</p>
 <h4>The Better Way - Git Submodules</h4><p>Whoa, whoa, whoa!  Git Submodules, are you crazy?!  </p>
-<p>Yes, I know <a href="http://slopjong.de/2013/06/04/git-why-submodules-are-evil/">how evil submodules</a> can be, but in this case they&#39;re a perfect solution. This post is actually inspired by <a href="http://blog.revathskumar.com/2014/07/publish-github-pages-using-git-submodules.html">Revath Kumar&#39;s post</a> on publishing to an orphan <code>gh-pages</code> branch on Github.  </p>
+<p>Yes, I know <a href="http://slopjong.de/2013/06/04/git-why-submodules-are-evil/">how evil submodules</a> can be, but in this case they&#39;re a great solution. This blog post is actually inspired by <a href="http://blog.revathskumar.com/2014/07/publish-github-pages-using-git-submodules.html">Revath Kumar&#39;s post</a> on publishing a project site to an orphaned <code>gh-pages</code> branch on Github using submodules.  </p>
 <h5>Let&#39;s Start</h5><p>For the sake of this tutorial, let&#39;s assume your git repo hasn&#39;t been initialized yet.</p>
 <ol>
-<li><p>Setup your repo at github initialize <code>master</code> on the remote branch</p>
+<li><p>Setup your repo at github and initialize the <code>master</code> branch on <code>remote</code></p>
 </li>
-<li><p>Create an orphan <code>gh-pages</code> branch</p>
+<li><p>While still in <code>master</code>, create an orphaned <code>gh-pages</code> branch</p>
 <pre><code class="language-bash">$: git checkout --orphan gh-pages
 </code></pre>
 </li>
-<li><p>If you run a <code>git status</code> you&#39;ll see all your files automatically staged for commit.  You <strong>don&#39;t</strong> want to commit these, so delete all the files save for the <code>.git*</code> ones.</p>
+<li><p>If you run a <code>git status</code> you&#39;ll see git has staged all your files for commit.  You <strong>don&#39;t</strong> really want to commit these, so delete all the files save for the <code>.git*</code> ones.</p>
 </li>
-<li><p>Initialize the upstream <code>gh-pages</code> branch by pushing up an empty file.  This can be a <code>README</code> or whatever.  You might also need to run</p>
-<pre><code class="language-bash">$: git push --set-upstream origin gh-pages
-</code></pre>
+<li><p>Initialize the upstream <code>gh-pages</code> branch by pushing up an empty file.  This can be a <code>README</code> or whatever.  You might also need to run <code>git push --set-upstream origin gh-pages</code> if you run into errors.</p>
 </li>
-<li><p>Switch back to your <code>master</code> branch</p>
-<pre><code class="language-bash">$: git checkout master
-</code></pre>
+<li><p>Switch back to your <code>master</code> branch with a <code>git checkout master</code></p>
 </li>
 <li><p>Attach the <code>gh-pages</code> branch as a submodule to the Harp compile directory</p>
 <pre><code class="language-bash">$: git submodule add -b gh-pages git@github.com:username/reponame.git www
 </code></pre>
-<p>We use <code>www</code> for the target directory for the compiled files because that&#39;s what <code>harp compile</code> defaults to. You can set <code>www</code> to whatever directory you want.</p>
+<p>I&#39;m using <code>www</code> for the target directory for the compiled files because that&#39;s what <code>harp compile</code> defaults to. You can set <code>www</code> to whatever directory you want.</p>
 </li>
-<li><p>Now when you&#39;re in the <code>www</code> directory, you&#39;ll see that it&#39;s part of <code>gh-pages</code> branch.</p>
+<li><p>Now when you&#39;re in the <code>www</code> directory, you&#39;ll see that it&#39;s part of <code>gh-pages</code> orphaned branch.</p>
 </li>
 </ol>
 <pre><code class="language-bash"># in project root directory
@@ -137,20 +161,19 @@ $: git add .
 $: git commit -m &quot;Message&quot;
 $: git push origin gh-pages
 </code></pre>
-<p>Now take a look at the <code>gh-pages</code> branch on your Github repo and you should see your compiled code pushed.</p>
+<p>If you take a look at the <code>gh-pages</code> branch on your Github repo (using your browser), you should see your compiled code has been pushed up.  It should also be available to view through the project site.</p>
 <p>Done.</p>
-<h4>Protips</h4><p>These are mostly just stylistic / best practices...</p>
-<ol>
-<li><p>Use NPM to install HarpJS and Bower locally. This allows team members to spin up the project without the need for global dependencies.</p>
+<h4>Protips</h4><ol>
+<li><p>As a best practice, use NPM to install HarpJS and Bower as local packages. This allows team members to spin up the project without the need for global dependencies.</p>
 </li>
-<li><p>Add a run script to your <code>package.json</code> file and use npm to compile for you.</p>
+<li><p>Add a run script to your <code>package.json</code> file and use npm to compile the static pages for you.</p>
 <pre><code class="language-js">// package.json
 ...
 &quot;scripts&quot;: {
  &quot;compile&quot; : &quot;./node_modules/harp/bin/harp compile&quot;
 }
 </code></pre>
-<p>Now you can run <code>$: npm run compile</code> to build your static files.</p>
+<p>Now you can run <code>npm run compile</code> to build your static files.</p>
 </li>
 </ol>
         </article>
