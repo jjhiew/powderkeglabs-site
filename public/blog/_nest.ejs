@@ -15,8 +15,19 @@
       <div class="col s12">
         <article>
           <h3><%= title %></h3>
-          <div class="article-meta">
-              <time class="time"><%= date %></time>
+          <div class="article-meta info flex">
+            <div class="date flex">
+              <i class="material-icons">today</i>
+              <time class="date-text"><%= date %></time>
+            </div>
+            <div class="tags flex">
+              <i class="material-icons">label</i>
+              <span class="tags-text"><%= tags %></span>
+            </div>
+            <div class="author flex">
+              <i class="material-icons">person</i>
+              <span class="author-text">by <%= author %></span>
+            </div>
           </div>
           <%- yield %>
         </article>

@@ -46,6 +46,7 @@
   margin-right:20px;
 }
 
+.author-text,
 .date-text,
 .tags-text {
   margin-left: 5px;
@@ -78,3 +79,32 @@ section.article {
     @extend .responsive-img;
   }
 }
+
+.article-meta {
+  color: color("grey", "darken-1");
+  flex-flow: column nowrap;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
+.tags.flex,
+.date.flex,
+.author.flex {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+
+// // @media (min-width: 768px) {
+// //   .article-meta{
+// //     flex-flow: row nowrap;
+// //     justify-content: flex-start;
+// //   }
+// //
+// //   .tags.flex,
+// //   .date.flex,
+// //   .author.flex {
+// //     flex: 0 1 33%;
+// //   }
+// }
