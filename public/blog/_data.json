@@ -1,9 +1,9 @@
 {
   "harpjs-and-github-pages": {
-    "title": "Static website lovin with HarpJS and Github Pages",
-    "snippet": "How to host your site on Github pages for free using HarpJS",
+    "title": "A better way to deploy HarpJS compiled sites to Github Pages",
+    "snippet": "If you're publishing HarpJS sites to Github pages, then you've probably had to deal with a mess with the offical documented Github Deployment instructions. Here's a better way to handle it using Git Submodules.",
     "date": "October 21, 2015",
-    "image": "",
+    "image": "/assets/images/backgrounds/development.jpeg",
     "author": "JJ Hiew",
     "tags": "Code, Tutorial"
   },
@@ -12,14 +12,6 @@
     "snippet": "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.",
     "date": "July 05, 2015",
     "image": "//res.cloudinary.com/dvqnohq4c/image/upload/v1436117541/blog/sparkler.jpg",
-    "author": "JJ Hiew",
-    "tags": "Case Study"
-  },
-  "snapmed": {
-    "title": "Snapmed -- Improving patient care, one snap at a time.",
-    "snippet": "Selena Gomez crystal skies looking at me banjo. Secret Session like a magazine banjo 2 a.m.. Katy Perry wonderland dvd moonman new romantics forevermore this. Love rabbit hole handsome as hell this sick beat.",
-    "date": "September 12, 2014",
-    "image": "",
     "author": "JJ Hiew",
     "tags": "Case Study"
   }

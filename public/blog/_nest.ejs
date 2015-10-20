@@ -1,3 +1,4 @@
+<% if (image) { %>
 <header class="article" style="background-image: url(<%= image %>)">
   <div class="container">
     <div class="row">
@@ -6,6 +7,7 @@
     </div>
   </div>
 </header>
+<% } %>
 
 <main>
   <section class="article">
@@ -22,5 +24,4 @@
     </div>
   </section>
 
-  <%- partial("../_shared_partials/learn_more", {}) %>
 </main>
