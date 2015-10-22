@@ -1,0 +1,22 @@
+{
+  "about": {
+    "title": "Team",
+    "description": "ADSFDFDF",
+    "path": "about.html"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "ADSFDFDF",
+    "path": "contact.html"
+  },
+  "work": {
+    "title": "Case Studies",
+    "description": "AADSFASDFASDF",
+    "path": "work.html"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "ADFADSFASDF",
+    "path": "blog"
+  }
+}
