@@ -1,22 +1,25 @@
 {
   "about": {
     "title": "Team",
-    "description": "ADSFDFDF",
+    "description": "Meet the team at PowderKeg Labs.",
     "path": "about.html"
   },
   "contact": {
     "title": "Contact Us",
-    "description": "ADSFDFDF",
+    "description": "Drop us a line and tell us how we can help.",
     "path": "contact.html"
   },
   "work": {
     "title": "Case Studies",
-    "description": "AADSFASDFASDF",
+    "description": "Take a look at the work we've done.",
     "path": "work.html"
   },
   "blog": {
     "title": "Blog",
-    "description": "ADFADSFASDF",
+    "description": "Tutorials on all things JavaScript",
     "path": "blog"
+  },
+  "sitemap": {
+    "layout": false
   }
 }
