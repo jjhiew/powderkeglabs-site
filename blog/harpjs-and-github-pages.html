@@ -151,6 +151,7 @@ $: cd www
 $: git status
 On branch gh-pages
 </code></pre>
+<p>&nbsp;</p>
 <h4>Compiling and publishing to production</h4><p>Easy!</p>
 <pre><code class="language-bash">$: harp compile
 
@@ -163,20 +164,18 @@ $: git commit -m &quot;Message&quot;
 $: git push origin gh-pages
 </code></pre>
 <p>If you take a look at the <code>gh-pages</code> branch on your Github repo (using your browser), you should see your compiled code has been pushed up.  It should also be available to view through the project site.</p>
-<p>Done.</p>
-<h4>Protips</h4><ol>
-<li><p>As a best practice, use NPM to install HarpJS and Bower as local packages. This allows team members to spin up the project without the need for global dependencies.</p>
-</li>
-<li><p>Add a run script to your <code>package.json</code> file and use npm to compile the static pages for you.</p>
+<p>&nbsp;</p>
+<h4>Protips</h4><p><strong>1. Install Harp and Bower locally using NPM </strong></p>
+<p>This allows team members to spin up the project without the need for global dependencies.</p>
+<p><strong>2. Use NPM to set up your run and compile scripts</strong></p>
+<p>Again, this is mostly to help team members get started.  </p>
 <pre><code class="language-js">// package.json
 ...
 &quot;scripts&quot;: {
- &quot;compile&quot; : &quot;./node_modules/harp/bin/harp compile&quot;
+    &quot;compile&quot; : &quot;./node_modules/harp/bin/harp compile&quot;
 }
 </code></pre>
 <p>Now you can run <code>npm run compile</code> to build your static files.</p>
-</li>
-</ol>
         </article>
       </div>
     </div>
