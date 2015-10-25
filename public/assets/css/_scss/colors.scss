@@ -39,6 +39,12 @@ a {
   color: $accent-color;
 }
 
+.header-fill-overlay{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
 .fill-overlay{
   height: 100%;
   width: 100%;

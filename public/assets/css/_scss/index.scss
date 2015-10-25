@@ -12,9 +12,19 @@ header.index-header {
   font-size: 42px;
 }
 
+.header-list {
+  text-align:left;
+  flex: 0 1 50%;
+}
+
+.header-list li {
+  list-style: disc;
+  margin-left: 28px;
+}
+
 .lead-in {
   font-weight: 300;
-  // font-size: 16px;
+  font-size: 16px;
 }
 
 .subheading {
