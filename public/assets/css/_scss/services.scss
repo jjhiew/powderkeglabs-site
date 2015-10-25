@@ -1,0 +1,13 @@
+.services .flex {
+  justify-content: center;
+  flex-flow: row;
+}
+
+.services .item {
+  flex: 0 1 25%;
+  text-align: center;
+}
+
+.services span {
+  display: block;
+}
