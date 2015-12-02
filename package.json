@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
-    "compile": "./node_modules/harp/bin/harp compile"
+    "compile": "./node_modules/harp/bin/harp compile",
+    "start": "./node_modules/harp/bin/harp server"
   },
   "dependencies": {
     "bower": "^1.5.3",
-    "harp": "*"
+    "harp": "*",
+    "node-sass": "^3.4.2"
   },
   "devDependencies": {}
 }
