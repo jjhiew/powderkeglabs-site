@@ -1,4 +1,14 @@
 {
+  "electronic-condo-proxies": {
+    "title": "How this condo never has to fear missing quorum again",
+    "snippet": "How our condominium corporation used electronic proxies and simple email marketing to easily achieve quorum without the need to canvas.",
+    "date": "December 2, 2015",
+    "image": "/assets/images/work/proxies/proxies.jpg",
+    "author": "JJ Hiew",
+    "tags": "Case Study, Condominiums",
+    "description": "Electronic condo proxy forms",
+    "path": "blog/electronic-condo-proxies.html"
+  },
   "harpjs-and-github-pages": {
     "title": "A better way to deploy HarpJS compiled sites to Github Pages",
     "snippet": "If you're publishing HarpJS sites to Github pages, then you've probably had to deal with a mess with the offical documented Github Deployment instructions. Here's a better way to handle it using Git Submodules.",
