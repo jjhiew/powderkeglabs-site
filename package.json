@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "./node_modules/bower/bin/bower install",
     "compile": "./node_modules/harp/bin/harp compile",
-    "start": "./node_modules/harp/bin/harp server"
+    "start": "./node_modules/harp/bin/harp server",
+    "www": "./node_modules/harp/bin/harp server www"
   },
   "dependencies": {
     "bower": "^1.5.3",
