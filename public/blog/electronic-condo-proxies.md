@@ -85,7 +85,7 @@ I’m confident we’ll never have to fear about missing quorum again.
 
 
 #### Is This Legal?
-Yes! We have consulted with a number of top condominium law firms in Toronto, including Miller Thomson LLP, who have confirmed that these electronic proxies are legally valid.
+Yes! We have consulted with a number of top condominium law firms in Toronto, including Miller Thomson LLP, who have confirmed that these electronic proxies are legally valid. In fact, all the law firms we've spoken with have agreed that electronic proxies, when done correctly, are better at preventing fraud than from traditional paper proxies.
 
 
 #### Want to see a demo?
