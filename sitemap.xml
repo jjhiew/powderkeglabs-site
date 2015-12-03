@@ -2,32 +2,37 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
     <loc>http://powderkeglabs.com/about</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.789Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.474Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/contact</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.790Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.474Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.791Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.474Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/team</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.791Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.474Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/work</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.791Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.474Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/blog/cloverawards</loc>
     <changefreq>daily</changefreq>
     <lastmod>2015-07-05T04:00:00.000Z</lastmod>
+</url>
+<url>
+    <loc>http://powderkeglabs.com/blog/electronic-condo-proxies</loc>
+    <changefreq>daily</changefreq>
+    <lastmod>2015-12-02T05:00:00.000Z</lastmod>
 </url>
 <url>
     <loc>http://powderkeglabs.com/blog/harpjs-and-github-pages</loc>
@@ -37,6 +42,6 @@
 <url>
     <loc>http://powderkeglabs.com/blog/</loc>
     <changefreq>daily</changefreq>
-    <lastmod>2015-11-09T20:37:05.792Z</lastmod>
+    <lastmod>2015-12-03T05:08:57.475Z</lastmod>
 </url>
 </urlset>
