@@ -10,9 +10,9 @@ Why?
 There are a lot of reasons, but the primary one is "owner apathy" - owners just don't care enough to attend or submit a proxy.
 
 #### So what if quorum's not reached?
-Then the meeting must be adjourned and rescheduled for a later date. The challenge is you won't know if you reached quorum until the meeting commences. Having to adjourn and reschedule an in-progress meeting is a huge waste of time and money, especially for condos that lack the facilities hold it on site. There are also costs related to the service of notice (printing and postage), auditor attendance, minute takers, catering, and more.
+Then the meeting must be adjourned and rescheduled for a later date. The challenge is you won't know if you reached quorum until the meeting commences. Having to adjourn and reschedule an in-progress meeting is a huge waste of time and money, especially for condos that lack the facilities hold it on site. There are also costs related to the service of notice (printing and postage), auditor attendance, minute takers, and more.
 
-In my condo's case, it's **$2500 in hard costs** to hold each meeting.
+In my condo's case, it's approximately $2500 in hard costs to hold each meeting.
 
 #### How do condos deal with quorum now?
 They ask owners to fill out a proxy and register it with the condo immediately. It's basically the only way we can guarantee representation. But getting owners to do this is easier said than done. More often than not, it requires significant effort by the directors and management to canvas and solicit owners for proxies.  
@@ -85,7 +85,7 @@ I’m confident we’ll never have to fear about missing quorum again.
 
 
 #### Is This Legal?
-Yes! We have consulted with a number of top condominium law firms in Toronto, including Miller Thomson LLP, who have confirmed that these electronic proxies are legally valid. In fact, all the law firms we've spoken with have agreed that electronic proxies, when done correctly, are better at preventing fraud than from traditional paper proxies.
+Yes! We have consulted with a number of top condominium law firms in Toronto who have confirmed that these electronic proxies are legally valid. In fact, the firms have agreed that electronic proxies, when done correctly, are better at preventing fraud than from traditional paper proxies.
 
 
 #### Want to see a demo?
