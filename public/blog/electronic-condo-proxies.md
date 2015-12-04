@@ -22,13 +22,13 @@ Directors are volunteers and often lack the time (or will) to canvas. I definite
 
 There’s got to be a better way. Maybe some sort of online proxy form? Luckily we happen to be some kick-ass software developers.
 
-#### THE EXPERIMENT
+#### THE ELECTRONIC PROXY FORM
 We believed we could achieve quorum through proxies alone by:
 
 1. Making it even easier and more convenient for owners to submit them
 2. Giving owners a reason to care about quorum
 
-##### Making it easy - the Electronic Proxy Form
+##### 1. Making it easy
 <div class="flex">
 ![The Proxy Form](/assets/images/work/proxies/proxyform_ipad.jpg "The Proxy Form")
 *The Electronic Proxy*
@@ -38,7 +38,7 @@ We created a simple and secure electronic proxy form web app that only registere
 
 But the electronic proxy is only effective if owners know to use it. Fortunately our owners have opted ­in to email communications from the Corporation. We applied basic online email marketing techniques to inform owners about the proxy tool. An initial email was sent with links to the electronic proxy, then automatic recurring emails would be sent reminding owners to fill out the form. Only owners that haven’t yet filled out the form would receive the reminders.
 
-##### Giving owners a reason to care
+##### 2. Giving owners a reason to care
 Apathy: it’s a powerful force. Ease and convenience matters not, unless owners care enough to take action. So let’s give them a reason to care about quorum.
 
 It was important that our reminder emails educate owners on how quorum relates to their money.
@@ -85,7 +85,9 @@ I’m confident we’ll never have to fear about missing quorum again.
 
 
 #### Is This Legal?
-Yes! We have consulted with a number of top condominium law firms in Toronto who have confirmed that these electronic proxies are legally valid. In fact, the firms have agreed that electronic proxies, when done correctly, are better at preventing fraud than from traditional paper proxies.
+Yes! We have consulted with a number of top condominium law firms in Toronto who have confirmed that these electronic proxies are legally valid. In fact, the firms have agreed that electronic proxies, when done correctly, are better at preventing condo proxy fraud than from traditional paper methods.
+
+Electronic Proxies aren't a new idea either, they've been used for public corporation shareholder meetings for the last two decades. A [Proxy Protocol](https://www.stac.ca/Public/PublicShowFile.aspx?fileID=229) is even defined by the [Security Transfers Association of Canada](https://www.stac.ca) for electronic voting.
 
 
 #### Want to see a demo?
