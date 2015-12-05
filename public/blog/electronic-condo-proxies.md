@@ -1,26 +1,42 @@
-*I'm on my condominium corporation's volunteer board of directors, so this is a bit of a personal project.*
+*I'm on my condominium corporation's volunteer board of directors, so this is a bit of a personal project for PKL.*
 
-According to the [Ontario Condominium Act](), every condo needs to hold an annual general meeting of owners (the AGM). The meeting is used to conduct business that requires all owners to vote, like electing new directors and voting on by-laws. It's very similar to the AGM's held by traditional public corporations.  
+---
 
-Each meeting requires "quorum" -- a minimum number of owners to be present -- in order for it to be considered valid. The Condo Act mandates the minimums to be at least 25% of units in a condo. Owners can attend in person or be represented by proxy. A proxy is someone that's designated to be able to vote on the owners behalf through through a legal form.
+As per the [Ontario Condominium Act](http://www.ontario.ca/laws/statute/98c19), every condo needs to hold an annual general meeting (AGM) for unit owners. The meeting is used to [conduct business that requires owners to vote](http://www.condoinformation.ca/owners-meetings-voting) such as the election new directors or the addition of new by-laws. It's similar to the AGM's held by traditional public corporations.  
+
+##### What is "Quorum"?
+Each meeting requires a minimum number of units to be present in order for it to be considered valid. The Condo Act requires quorum to be at least 25% of the units in a condo. Owners can either attend the meeting in person or be represented by proxy.
+
+##### What is a "Proxy"?
+Owners can fill out a form that legally assigns power of representation to a third party. A Proxy also has the power to vote on that owners behalf, but are typically obligated to vote according to the owner's wishes.
 
 ##### Many condos struggle to achieve quorum
 Why?
 
-There are a lot of reasons, but the primary one is "owner apathy" - owners just don't care enough to attend or submit a proxy.
+It's a complex question, but it really comes down to this:  owners just don't care enough to attend meetings or submit a proxy form. Actually, owners don't care enough to do *anything* that requires significant effort or that poses an inconvenience to them.
 
-#### So what if quorum's not reached?
-Then the meeting must be adjourned and rescheduled for a later date. The challenge is you won't know if you reached quorum until the meeting commences. Having to adjourn and reschedule an in-progress meeting is a huge waste of time and money, especially for condos that lack the facilities hold it on site. There are also costs related to the service of notice (printing and postage), auditor attendance, minute takers, and more.
+The condo industry has a term for this -- "Owner Apathy".
 
-In my condo's case, it's approximately $2500 in hard costs to hold each meeting.
+We can't blame owners for being apathetic, life is too busy to worry about boring meetings and legal forms.
 
-#### How do condos deal with quorum now?
-They ask owners to fill out a proxy and register it with the condo immediately. It's basically the only way we can guarantee representation. But getting owners to do this is easier said than done. More often than not, it requires significant effort by the directors and management to canvas and solicit owners for proxies.  
+##### So what if quorum's not reached?
+The meeting must be adjourned and rescheduled for a later date. The challenge is this: you won't know if you'll reached quorum until the meeting commences. It's not something you can plan for; having to adjourn and reschedule an in-progress meeting is a huge waste of time and money. This is especially true for condos that lack the facilities to hold meetings on site.
 
-##### *You want me to canvas after a full day of work? Ain't NOBODY got time for that!*
-Directors are volunteers and often lack the time (or will) to canvas. I definitely *don't* want to spend the few precious hours I have every evening knocking on doors disturbing owners. And management shouldn’t be soliciting owners for political reasons.
+There are also costs related to the service of notice (printing and postage), auditor attendance, minute takers, and more. In my condo's case, it's approximately $2500 in hard costs to hold a meeting.
 
-There’s got to be a better way. Maybe some sort of online proxy form? Luckily we happen to be some kick-ass software developers.
+##### How do condos deal with quorum now?
+They ask owners to fill out a proxy and send it to the management office immediately -- it's basically the only way we can guarantee representation. But getting owners to submit a proxy is easier said than done,  remember what I said about apathy?
+
+Getting an owner to read the AGM informational package, fill out a proxy form, then drop it off at the management office is no simple task. It usually requires significant effort by the directors and management to canvas door-to-door and solicit owners for proxies.  
+
+##### *What?! You want *me* to canvas after a full day of work? Ain't NOBODY got time for that!*
+Directors are volunteers and often lack the time or will to canvas. I *definitely* don't want to spend the few precious hours I have in the evenings knocking on doors. Owners don't want their evenings to be disturbed either.
+
+And management shouldn’t be soliciting owners for political reasons.
+
+There’s got to be a better way, and we had an idea...
+
+---
 
 #### THE ELECTRONIC PROXY FORM
 We believed we could achieve quorum through proxies alone by:
@@ -34,23 +50,24 @@ We believed we could achieve quorum through proxies alone by:
 *The Electronic Proxy*
 </div>
 
-We created a simple and secure electronic proxy form web app that only registered owners could fill out. On submission, a protected PDF copy of the proxy is emailed to the owner for confirmation, then sent to the Corporation for owner verification. The proxies are printed and registered by the manager for the meeting. Simple, easy, and quick; it took owners 2 minutes on average to submit a form, all from the comfort of their web browser.
+We created a simple and secure proxy form web application that only registered owners could fill out. On submission, a protected PDF copy of the proxy is emailed to the owner for confirmation then sent to the Corporation for verification. The proxies are printed and registered by the manager ahead of the meeting. Simple, easy, and quick; it took owners 2 minutes on average to fill out a form, and owners could do it all from the comfort of their device's web browser.
 
-But the electronic proxy is only effective if owners know to use it. Fortunately our owners have opted ­in to email communications from the Corporation. We applied basic online email marketing techniques to inform owners about the proxy tool. An initial email was sent with links to the electronic proxy, then automatic recurring emails would be sent reminding owners to fill out the form. Only owners that haven’t yet filled out the form would receive the reminders.
+But the electronic proxy is only effective if owners know to use it. Fortunately for us, our owners have opted ­in to email communications from the Corporation. We applied basic online email marketing techniques to inform owners about the proxy tool. An initial email was sent with a link to the electronic proxy, then automatic recurring emails would remind owners to fill out the form. Only owners that haven’t yet filled out the form would receive the reminders.
 
 ##### 2. Giving owners a reason to care
-Apathy: it’s a powerful force. Ease and convenience matters not, unless owners care enough to take action. So let’s give them a reason to care about quorum.
-
-It was important that our reminder emails educate owners on how quorum relates to their money.
+Apathy is a powerful force; ease and convenience matters not unless owners care enough to take action. So let’s give them a reason to care about achieving quorum. It was important that our reminder emails educate owners on why it matters -- how quorum relates to their *money*.
 
 <div class="flex">
 ![Our educational email reminders](/assets/images/work/proxies/quorum-email.jpg)
 *Our educational email reminders*
 </div>
 
-Holding a meeting is expensive, in our case it’s approximately $2500 in hard costs. Having to adjourn and reschedule a meeting would cost even more money. That’s $2500 times how ever many failed meeting attempts. It’s a crazy amount of time and money to waste, and we made sure owners knew this.
+Holding a meeting is expensive, in our case it’s approximately $2500 in hard costs. Having reschedule the meeting would cost even more money. That’s $2500 multiplied by however many meeting attempts are required. It’s a crazy amount of time and money to waste, we made sure owners knew this.
 
 #### The Results Of Our AGM Campaign?
+
+Below are our AGM attendance numbers from the last two years. Our minimum for quorum is 25% or approximately 50 owners.
+
 <table class="striped">
   <thead>
     <tr>
@@ -61,23 +78,23 @@ Holding a meeting is expensive, in our case it’s approximately $2500 in hard c
   </thead>
   <tbody>
     <tr><td>In-person</td><td>19</td><td>29</td></tr>
-    <tr><td>By-proxy</td><td style="color: green">56</td><td>29</td></tr>
+    <tr><td>By-proxy</td><td style="color: green">**56**</td><td style="color: red">29</td></tr>
     <tr><td>Total</td><td>75</td><td>58</td></tr>    
   </tbody>
 </table>
 
-Our minimum for quorum? 25% or approximately 50 owners.
-
 #### Success!
-Proxy submissions in 2015 almost doubled those from 2014.  Proxies accounted for 29% of owners represented at this year's AGM. The electronic proxies alone were enough for us to achieve quorum. And because the forms are automatically sent to the Corporation, we knew we reached quorum days before our AGM. Owners definitely took to the online tool.
+Proxies in 2015 almost doubled those from 2014 -- they accounted for approximately 29% of owners represented at this year's AGM -- enough for us to achieve quorum on them alone. And because the forms are automatically sent to the Corporation, we knew we reached quorum days before our AGM.
 
-In contrast to 2014, we did not know what our attendance numbers would be until the meeting started. As a condo director, there’s a real fear and and dread at having to adjourn an in­-progress meeting and reschedule it. With the new proxy tool, that fear was gone.
+The results speak for themselves, owners definitely took to the online proxies.
+
+Contrast this to our 2014 numbers, we did not know what our attendance numbers would be until the meeting started. As a condo director there’s an anxiety at the thought of having to adjourn a meeting. With the new proxy tool that fear was gone.
 
 While the overall numbers in 2015 may not look that impressive, it’s important to note that we launched the online proxy tool only 7 days before our AGM. I’m confident our numbers would be higher had we launched earlier.
 
 
 #### The best thing?
-We didn’t have to do any canvassing or solicitation. The directors and management barely lifted a finger. Ok, so we did some keyboard jockeying, but that can be done at home in our PJs.
+We didn’t have to do any canvassing and owners didn't need to be disturbed. The directors and management barely lifted a finger. Ok, so we did some keyboard jockeying, but that can be done at home in our pajamas.
 
 We’re definitely using this strategy for future meetings.
 
@@ -85,15 +102,15 @@ I’m confident we’ll never have to fear about missing quorum again.
 
 
 #### Is This Legal?
-Yes! We have consulted with a number of top condominium law firms in Toronto who have confirmed that these electronic proxies are legally valid. In fact, the firms have agreed that electronic proxies, when done correctly, are better at preventing condo proxy fraud than from traditional paper methods.
+Yes! We have consulted with a number of top condominium law firms in Toronto who have confirmed that these electronic proxies are legally valid. In fact, the firms agreed that electronic proxies, when done correctly, are better at preventing condo proxy fraud than through traditional paper forms.
 
-Electronic Proxies aren't a new idea either, they've been used for public corporation shareholder meetings for the last two decades. A [Proxy Protocol](https://www.stac.ca/Public/PublicShowFile.aspx?fileID=229) is even defined by the [Security Transfers Association of Canada](https://www.stac.ca) for electronic voting.
+Electronic Proxies aren't a new idea either, they've been used for public corporation shareholder meetings for the last  decade or two. A [Proxy Protocol](https://www.stac.ca/Public/PublicShowFile.aspx?fileID=229) is even defined by the [Security Transfers Association of Canada](https://www.stac.ca) for electronic voting.
 
 
 #### Want to see a demo?
-Check out http://proxy.powderkeglabs.com for a generic demo version.
+Check out http://proxy.powderkeglabs.com.
 
-The final email to the condo corp. will use the same one entered into the "Your email address" field. This way you can see the full end-­to-­end workflow
+Note that the final email to the condo will use the same one entered into the "Your email address" field. This way you can see the full end-­to-­end workflow
 
 #### Want to use electronic proxies at your condo?
 Easy, [send us an email](mailto:kaboom@powderkeglabs.com) and we'll help you set it up.
