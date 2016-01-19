@@ -59,21 +59,21 @@ header img {
   }
 
   .flex-hero {
-    flex: 0 1 35%;
+    flex: 0 1 50%;
   }
 
   .flex-text {
-    flex: 0 1 65%;
+    flex: 0 1 50%;
     text-align: left;
   }
 
   //Alternating
   .alt .flex-hero {
-    order: 2;
+    order: 1;
   }
 
   .alt .flex-text {
-    order: 1;
+    order: 2;
   }
 }
 ////// END Alternating Flex Layout Elements

@@ -17,55 +17,58 @@
 
 <main>
 
-
-
-
-
-  <%//- partial('_shared_partials/services')
-  %>
-
-  <section class="projects grey lighten-4">
+  <section class="pkl-approach">
     <div class="container">
-      <div class="row">
-        <div class="col s12 center-align">
-          <!--<h3>Featured Projects</h3>-->
+      <div class="row flex">
+        <div class="flex-text col">
+          <h3>Approach</h3>
+          <p class="text-muted">
+            Launch fast, iterate faster. Using Lean development methodologies, we launch a high-quality market-ready product in weeks.
+          </p>
+        </div>
+        <div class="flex-hero col">
+          <div class="hero-img">
+            <%# <img class="responsive-img" src="/assets/images/work/quorum_hero.png" />%>
+            <i class="material-icons" style="font-size: 200px; opacity: .87; color: #365c8a">donut_small</i>
+          </div>
         </div>
       </div>
-      <%- partial('_shared_partials/project', {
-          name: "Quorum",
-          url: "/blog/electronic-condo-proxies.html",
-          image: "/assets/images/work/quorum_hero.png",
-          description: "Quorum - Electronic Proxy Forms For Condominium Shareholder Meetings",
-          alt: null
-        }) %>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <section class="projects grey lighten-4">
+  <section class="pkl-simplicity grey lighten-5">
     <div class="container">
-      <%- partial('_shared_partials/project', {
-          name: "Visory (beta)",
-          url: "",
-          image: "/assets/images/work/visory.jpg",
-          description: "Find a tech advisor. We connect you with the best developers, technical founders, and technology experts in Toronto to help your organization solve it's challenges.",
-          alt: 'alt'
-        }) %>
+      <div class="row flex alt">
+        <div class="flex-text col">
+          <h3>Design</h3>
+          <p class="text-muted">
+            When it comes to the User Experience, simplicity always wins. We engineer our products with simplicity at the forefront.
+          </p>
+        </div>
+        <div class="flex-hero col">
+          <div class="hero-img">
+            <img class="responsive-img" src="/assets/images/work/quorum_hero.png" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="divider"></div>
-
-  <section class="projects">
+  <section class="pkl-technology">
     <div class="container">
-      <%- partial('_shared_partials/project', {
-          name: "Clover Awards",
-          url: "/blog/cloverawards.html",
-          image: "/assets/images/work/clover/clover_home_mentor_mbp.jpg",
-          description: "A crowd-powered social enterprise platform that rewards the commitment, effort and talent of everyday heroes through recognition and financial support for their individual causes.",
-          alt: null
-        }) %>
+      <div class="row flex">
+        <div class="flex-text col">
+          <h3>Technology</h3>
+          <p class="text-muted">
+            We speak JavaScript, the universal language of the Web. JS allows us to create high-quality, multi-platform apps in a short amount of time.
+          </p>
+        </div>
+        <div class="flex-hero col">
+          <div class="hero-img">
+            <img class="responsive-img" src="/assets/images/logos.png" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
