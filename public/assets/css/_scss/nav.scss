@@ -26,12 +26,3 @@ li.side-nav-brand {
 li.side-nav-brand:hover {
   background-color: $fill-color;
 }
-
-@media (min-width: 600px) {
-  .brand-logo .full {
-    display: block
-  }
-  .brand-logo .small {
-    display: none;
-  }
-}

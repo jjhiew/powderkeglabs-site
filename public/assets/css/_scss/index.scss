@@ -1,16 +1,19 @@
-header.index-header {
+.index-header {
   min-height: 450px;
   text-align: center;
-  // background-image: url('/assets/images/backgrounds/desktop-bt-1200.jpg');
   background-position: center;
   background-size: cover;
-  background-color: #494E54;
+  background-color: $fill-color;
+}
+
+.index-header-logo {
+  margin-top: 40px;
 }
 
 .uvp {
-  // text-transform: uppercase;
-  font-weight: 600;
-  font-size: 42px;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 24px;
 }
 
 .header-list {
@@ -26,27 +29,4 @@ header.index-header {
 .lead-in {
   font-weight: 300;
   font-size: 24px;
-}
-
-.subheading {
-  padding-bottom: 25px;
-}
-
-.subheading-text {
-  // font-size: 16px;
-}
-
-.subheading div.service-col {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.small-heading {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  // background-color: color("grey", "lighten-4");
-}
-
-.small-heading .row {
-  margin-bottom: 0px;
 }

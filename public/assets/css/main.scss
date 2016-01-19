@@ -4,8 +4,10 @@ $icons-font-path: '/assets/components/Materialize/font/material-design-icons/';
 // Materialize Import
 @import '../components/Materialize/sass/materialize.scss';
 
-// App Styles Import
+// Set default colors
 @import '_scss/colors.scss';
+
+// App Styles Import
 @import '_scss/nav.scss';
 @import '_scss/index.scss';
 @import '_scss/page.scss';

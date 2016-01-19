@@ -1,6 +1,6 @@
-$primary-color: color("materialize-red", "lighten-2") !default;
-$primary-color-light: lighten($primary-color, 15%) !default;
-$primary-color-dark: darken($primary-color, 15%) !default;
+$primary-color: color("materialize-red", "lighten-2");
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
 
 $secondary-color: color("red", "") !default;
 $success-color: color("green", "base") !default;
@@ -13,10 +13,13 @@ $dark-color: color("grey", "darken-4");
 $text-secondary-color: #fff;
 $text-muted: #727272;
 $accent-color: #FF3B2F;
+
+// Header fill color
 $fill-color: #494E54;
+$fill-color-dark: darken($fill-color, 10%);
 
 .dark-color {
-  background-color: $dark-color;
+  background-color: $fill-color-dark;
 }
 
 .transparent-color {
@@ -26,6 +29,7 @@ $fill-color: #494E54;
 .fill-color {
   background-color: $fill-color;
 }
+
 
 .accent-color {
   @extend .red;
@@ -42,7 +46,7 @@ a {
 .header-fill-overlay{
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.5);
+  // background: rgba(0,0,0,0.5);
 }
 
 .fill-overlay{
