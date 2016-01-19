@@ -4,14 +4,9 @@ a.brand-logo {
   align-items: center;
 }
 
-.brand-logo .full {
-  display:none;
+.brand-logo-text {
+  font-weight: 600;
 }
-
-.brand-logo  .small {
-  display:block;
-}
-
 .brand-logo > img {
   max-height: 36px;
   width: auto;
