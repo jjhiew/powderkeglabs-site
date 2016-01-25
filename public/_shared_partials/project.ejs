@@ -1,17 +1,17 @@
 <!-- Item -->
 <div class="project row flex <%= alt %>">
-  <div class="flex-hero col">
-    <div class="hero-img">
-      <img class="responsive-img" src="<%= image %>">
-    </div>
-  </div>
   <div class="flex-text col">
     <span class="name"><%= name %></span>
     <p class="text-muted"><%- description %></p>
     <% if (url) { %>
-      <a class="btn red waves-effect waves-light" href="<%= url %>">Read the Case Study</a>
+      <a class="btn btn-large btn-secondary waves-effect waves-light" href="<%= url %>">Read the Case Study</a>
       <!--a href="<%= url %>"><b>Read the Case Study</b></a-->
     <% } %>
+  </div>
+  <div class="flex-hero col">
+    <div class="hero-img">
+      <img class="responsive-img" src="<%= image %>">
+    </div>
   </div>
 </div>
 <!-- /Item -->

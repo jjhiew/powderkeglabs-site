@@ -12,30 +12,39 @@
 
   <section id="about" class="about">
     <div class="container">
+      <div class="col s12">
+        <h4>PowderKeg Labs (PKL)</h4>
+        <p>PKL is a JavaScript software engineering consultancy specializing in rapid, iterative, feedback-driven, and data-driven development. We believe in the Lean methodology of "<i><b>launch fast, iterate faster</b></i>". Our goal is to deploy a version of your product, with only key features, as quickly as possible (the Minimum Viable Product). Then rapidly delivering new features on a continuous release cycle depending on user data and feedback.</p>
+        <p>Our style of development allows you to really understand which features are important to your business, thereby reducing project costs and maintaining your budgets.</p>
+      </div>
+    </div>
+  </section>
 
-      <h4>PowderKeg Labs (PKL)</h4>
+  <section id="team" class="team grey lighten-5" >
+    <div class="container">
+      <%- partial('_shared_partials/member', {
+        name: "JJ Hiew",
+        role: "Founder",
+        image: "/assets/images/team/jj.jpg",
+        description: "JJ is a full-stack JavaScript developer with over 10 years of experience as a CTO and solutions architect. He has worked on projects for clients such as IBM, GE and Castrol Wakefield. JJ graduated from UofT with a B.Sc in Computer Science. He’s obsessed with turning his love of delicious baked goods and technology into a billion dollar business.",
+         alt: ""
+       }) %>
 
-      <p>PKL is a JavaScript software engineering consultancy specializing in rapid, iterative, feedback-driven, and data-driven development. We believe in the Lean methodology of "<i><b>launch fast, iterate faster</b></i>". Our goal is to deploy a version of your product, with only key features, as quickly as possible (the Minimum Viable Product). Then rapidly delivering new features on a continuous release cycle depending on user data and feedback.</p>
+      <%- partial('_shared_partials/member', {
+        name: "Trevor Zeyl",
+        role: "Advisor",
+        image: "/assets/images/team/trevor.jpg",
+        description: "Trevor is a business lawyer with the global law firm Norton Rose Fulbright Canada LLP, where he specializes in corporate finance and M&A. Trevor attended the University of Windsor and the London School of Economics where he attained his JD and LLM, respectively. When he’s not closing multi-million dollar deals he can be found sobbing at the latest Toronto Raptors loss.",
+        alt: "alt"
+      }) %>
 
-      <p>Our style of development allows you to really understand which features are important to your business, thereby reducing project costs and maintaining your budgets.</p>
-
-
-      <br />
-      <h4>Your Tech Team</h4>
-
-      <p>PKL is your Chief Technology Officer and highly-skilled Agile development team. Along with being expert JavaScript developers, we provide strategic technical guidance to help your organization grow and succeed.</p>
-
-
-      <br />
-      <h4>The <i>Anti-Consultancy</i> Model</h4>
-
-      <p>Fair warning, we take a practical, rational, and value-centric approach to our work. We look out for what's actually in your best interests. This means expressing our opinions regarding features we believe are unnecessary or should be deferred.</p>
-
-      <blockquote><b><i>In fact, we'll often tell you to cut​ features instead of add them.</i></b></blockquote>
-
-      <p>It’s an “anti-consultancy model”; developers typically push clients to add more features which translates to higher revenues for themselves. That's not what we do, we question whether a feature will bring you value. And you can use us as little or as much as you want.
-
-      <p>Our clients seem to appreciate this - take a look at our <a href="/#testimonials">testimonials</a>. Because of this approach, we are selective about who we work with.</p>
+      <%- partial('_shared_partials/member', {
+        name: "Ben Zelikovitz",
+        role: "Advisor",
+        image: "/assets/images/team/ben.jpg",
+        description: "Ben is a Director at Sitescout and has 10+ years of experience in Enterprise SaaS sales and operations. Prior to that, Ben was an Account Manager for Randstad Canada's technology recruiting division. Ben graduated from Wilfrid Laurier University with a B.A in Political Science. His heroes are Justin Bieber and Drake, in that order.",
+        alt: ""
+      }) %>
 
     </div>
   </section>

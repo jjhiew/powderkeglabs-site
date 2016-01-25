@@ -1,5 +1,7 @@
 section.team {
 
+  // padding-top: 0px;
+
   .member:not(:last-child) {
     padding-bottom: 40px;
   }
@@ -18,8 +20,21 @@ section.team {
     text-align: left;
   }
 
-  .hero-img img {
+  .hero-img img.circle {
     height: 225px;
     width: 225px;
   }
+
+
+}
+
+.member .hero-img { padding-bottom: 12px; }
+.member .flex-hero { order: 1; flex: 0 1 35%}
+.member .flex-text { order: 2; flex: 0 1 60%}
+
+@media(min-width: 768px) {
+  .member.row.flex { justify-content: space-between; }
+  .member .hero-img { padding-bottom: 0px; }
+  .member.alt .flex-hero { order: 2; }
+  .member.alt .flex-text { order: 1; }
 }
