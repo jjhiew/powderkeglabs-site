@@ -108,9 +108,9 @@ Electronic Proxies aren't a new idea either, they've been used for public corpor
 
 
 #### Want to see a demo?
-Check out http://proxy.powderkeglabs.com.
+Check out https://demo.getquorum.com.
 
 Note that the final email to the condo will use the same one entered into the "Your email address" field. This way you can see the full end-­to-­end workflow
 
 #### Want to use electronic proxies at your condo?
-Easy, [send us an email](mailto:kaboom@powderkeglabs.com) and we'll help you set it up.
+Easy, check us out at https://www.getquorum.com.
