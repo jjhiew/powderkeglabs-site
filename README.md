@@ -21,19 +21,19 @@ The hosting is done through [GitHub Pages](http://pages.github.com) (look at the
 
 ## Deploying
 
-Harp and Github pages makes deploying to production *really* easy.
+Because of the static nature of this site, hosting is done through AWS S3 and Cloudfront.  We use Harp and Gulp to publish the statically generated pages.
 
-1. Run `npm run compile` to compile the source in the `/public` directory in the `/www` directory.
+1. Run `npm run compile` to compile the source in the `/public` directory into the `/www` directory.
 
-2. Commit and push changes to the orphaned `gh-pages` branch
+2. Publish to S3 with Gulp. Note, you must set up AWS credentials and policies as per the [Node AWS-SDK docs](http://docs.aws.amazon.com/AWSJavaScriptSDK/guide/node-configuring.html).
 ```bash
-$: cd www
-$: git add .
-$: git commit -m "message"
-$: git push origin gh-pages
+$: S3_REGION=<YOUR_REGION> S3_BUCKET=<YOUR_BUCKET> gulp publish
 ```
+*Note: It's suggested that you create a `.env` file with your Bucket and Region config*
 
-**Note**: The `/www` directory is a submodule pointing the `gh-pages` orphan branch. This is just an easy way to handle deployment without having to constantly switch branches.  See [this blog post](http://blog.revathskumar.com/2014/07/publish-github-pages-using-git-submodules.html) for more details.
+## Changelog
+
+**2016-07-29:** Switch to publishing with Gulp and S3
 
 License
 -------
