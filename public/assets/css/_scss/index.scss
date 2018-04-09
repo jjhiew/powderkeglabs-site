@@ -1,5 +1,5 @@
 .index-header {
-  min-height: 450px;
+  height: 100vh;
   text-align: center;
   background-position: center;
   background-size: cover;
@@ -11,13 +11,13 @@
 }
 
 .uvp {
-  text-transform: capitalize;
+  text-transform: none;
   font-weight: 300;
   font-size: 24px;
 }
 
 .header-list {
-  text-align:left;
+  text-align: left;
   flex: 0 1 50%;
 }
 
@@ -29,4 +29,8 @@
 .lead-in {
   font-weight: 300;
   font-size: 24px;
+}
+
+.gq-logo {
+  max-width: 250px;
 }
